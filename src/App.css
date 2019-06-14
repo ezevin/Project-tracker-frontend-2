@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon{
+  color: white;
+  font-size: xx-large;
+  text-shadow: 3px 2px #0A0806;
+}
+
+.box {
+  border-color: black
+}
+
+.done {
+  color: red;
+  text-decoration: line-through;
+}
+
+.undone {
+  color: #61DAFB;
+}
+
+.looks {
+  border-style: dotted;
+  border-color: green
+}
+
+.gallerycard {
+  object-fit: cover;
+}
+
+.inventory {
+  height: 270px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.projects {
+  /* margin-right: 50px; */
+  height: 214px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.gallery {
+  height: 325px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.shadow {
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 45px;
+  background-color: #323232;
+  border-color: white;
+  box-shadow: 10px 10px #3A3A3A;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
