@@ -47,10 +47,10 @@ class App extends Component {
         this.setState({id: id})
       })
     }
-
-    fetch('http://localhost:3001/api/v1/project_materials')
-    .then(res => res.json())
-    .then(data => this.setState({pm: data}))
+    //
+    // fetch('http://localhost:3001/api/v1/project_materials')
+    // .then(res => res.json())
+    // .then(data => this.setState({pm: data}))
 
     // fetch(`http://localhost:3001/api/v1/projects/${this.state.pID}`)
     // .then(res => res.json())
@@ -250,8 +250,7 @@ class App extends Component {
                projectMaterials={this.state.projectMaterials}
                fetchProjectMaterials={this.fetchProjectMaterials}
                addProjectMaterial={this.addProjectMaterial}
-               pm={this.state.pm}
-               userId={this.state.id}
+               fetchMaterials={this.fetchMaterials}        userId={this.state.id}
                />}}
                />
           <Route path="/profile" render={() => {

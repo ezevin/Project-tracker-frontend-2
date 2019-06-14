@@ -6,7 +6,7 @@ import ProjectMaterialInfo from './ProjectMaterialInfo'
 class ProjectMaterialItem extends Component {
 
   render(){
-
+    console.log(this.props)
     return (
       <Container>
         <Grid >
@@ -24,21 +24,18 @@ class ProjectMaterialItem extends Component {
             <List >
               <List.Item><ProjectMaterialInfo
                 key={this.props.id}
-                materials={this.props.material}
                 label={this.props.label}
                 price={this.props.price}
-                quantity="quantity"
                 description={this.props.description}
                 id={this.props.id}
                 image_url={this.props.image_url}
-                place_purchased={this.props.place_purchased}
-                fetchMaterials={this.props.fetchMaterials}/>
+                place_purchased={this.props.place_purchased}/>
               </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
             <List >
-              <List.Item><h4 onClick={()=> {this.props.deleteMaterial(this.props.id)}}><Button>X</Button></h4></List.Item>
+              <List.Item><h4 onClick={()=> {this.props.deleteInventory(this.props)}}><Button>X</Button></h4></List.Item>
             </List>
           </Grid.Column>
         </Grid>

@@ -24,7 +24,8 @@ class Show extends Component {
     projectMaterials: [],
     notes: [],
     id: "",
-    pm: []
+    pm: [],
+    inventory: []
   }
 
   componentDidMount(){
@@ -34,11 +35,8 @@ class Show extends Component {
     }else {
       fetch(`http://localhost:3001/api/v1/projects/${this.props.slug}`)
       .then(res => res.json())
-      .then(data => this.setState({projects: data, researches: data.researches, toDoList: data.to_do_lists, projectMaterials: data.materials, notes: data.notes, id: data.id}))
+      .then(data => this.setState({projects: data, researches: data.researches, toDoList: data.to_do_lists, inventory: data.inventories, notes: data.notes, id: data.id}), console.log(this.state))
 
-      // fetch('http://localhost:3001/api/v1/project_materials')
-      // .then(res => res.json())
-      // .then(data => this.setState({pm: data},console.log("PM", data)))
     }
   }
 
@@ -48,37 +46,36 @@ class Show extends Component {
     .then(data => this.setState({projects: data}))
   }
 
-  fetchProjectMaterials = () => {
+  fetchInventory = () => {
     fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
-    .then(data => this.setState({projectMaterials: data.materials}))
+    .then(data => this.setState({inventory: data.inventories}))
   }
 
-  fetchPM = () => {
-    fetch('http://localhost:3001/api/v1/project_materials')
-    .then(res => res.json())
-    .then(data => this.setState({pm: data},console.log("PM", data)))
+  // fetchPM = () => {
+  //   fetch('http://localhost:3001/api/v1/project_materials')
+  //   .then(res => res.json())
+  //   .then(data => this.setState({pm: data},console.log("PM", data)))
+  // }
+
+  addToInventory = (item) => {
+    this.setState({inventory: [...this.state.inventory, item]})
   }
 
-  addProjectMaterial = (projectmaterial) => {
-    this.setState({pm: [...this.state.pm, projectmaterial]})
-  }
+  deleteInventory = (item) => {
+    fetch(`http://localhost:3001/api/v1/inventories/${item.id}`, {
+      method: "delete"
+      })
+    .then(() =>this.fetchInventory())
 
-  deleteProjectMaterials = (id) => {
-     const deleted = this.state.projectMaterials.find(material => material.id === id)
-     this.props.pm.find(item => {
-       if (item.project_id === this.state.id && item.material_id === deleted.id){
-         fetch(`http://localhost:3001/api/v1/project_materials/${item.id}`, {
-           method: "delete"
-         })
-         .then(() =>this.fetchProjectMaterials())
-       }})
-       // window.location.reload()
-
+    console.log(this.state.inventory);
     const material = this.props.materials.filter(material => {
-                        if (material.id === id){return material}
+                        if (material.label === item.label){return material}
                       })
-    const total = material.map(item => item.quantity)
+
+    const id = material.map(material => material.id)
+    const total = material.map(material => material.quantity)
+
     fetch(`http://localhost:3001/api/v1/materials/${id}`, {
       method: "PATCH",
       headers: {
@@ -89,6 +86,9 @@ class Show extends Component {
          })
            .then(res=>res.json())
            .then(data => {this.setState(data)})
+           // .then(() => this.fetchInventory())
+           .then(() => this.props.fetchMaterials())
+           window.location.reload()
   }
 
   handleSearch = (e, {value}) => {
@@ -138,24 +138,25 @@ class Show extends Component {
   }
 
   render(){
+    console.log(this.state.projects);
 
-    const { id, title, details, start_date, due_date, finished, budget } = this.state.projects
+    const { title, details, start_date, due_date, finished, budget } = this.state.projects
 
-    const prices = this.state.projectMaterials.map(material => material.price)
+    const prices = this.state.inventory.map(material => material.price)
 
     const total = prices.reduce((a,b) => a+b, 0)
 
     const { projectId } = this.props
 
-    const pmId = this.state.projectMaterials.map(pm => pm.id)
+    const item = this.state.inventory.map(item => item.label)
 
     const allFilteredMaterials = this.props.materials.filter(material => {
-      if(!pmId.includes(material.id)){
+      if(!item.includes(material.label)){
         return material
       }
     })
 
-    const filteredMaterials = this.state.projectMaterials.filter(material =>{
+    const filteredMaterials = this.state.inventory.filter(material =>{
       return material.label.toLowerCase().includes(this.state.search.toLowerCase())
     })
 
@@ -169,19 +170,19 @@ class Show extends Component {
             <Grid padded>
               <Grid.Row>
                 <Grid.Column width={6} floated='left'>Date Started: {start_date}
-                  <StartDate id={id} start_date={start_date} fetchProjects={this.fetchProjects}/>
+                  <StartDate id={this.state.id} start_date={start_date} fetchProjects={this.fetchProjects}/>
                 </Grid.Column>
 
                 <Grid.Column width={5}>
-                  <Finished projectId={id} finished={finished} fetchProjects={this.fetchProjects}/>
+                  <Finished projectId={this.state.id} finished={finished} fetchProjects={this.fetchProjects}/>
                 </Grid.Column>
 
                 <Grid.Column width={3} floated='right'>Date Due: {due_date}
-                  <DueDate id={id} due_date={due_date} fetchProjects={this.fetchProjects}/>
+                  <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Column width={6} floated='left'>Budget: ${budget}
-                <Budget id={id} budget={budget} fetchProjects={this.fetchProjects}/>
+                <Budget id={this.state.id} budget={budget} fetchProjects={this.fetchProjects}/>
               </Grid.Column>
 
               <Grid.Column width={3} floated='right'>Remaining Budget: ${budget - (total )}</Grid.Column>
@@ -204,12 +205,10 @@ class Show extends Component {
                     materials={filteredMaterials}
                     handleSearch={this.handleSearch}
                     allMaterials={allFilteredMaterials}
-                    fetchProjectMaterials={this.fetchProjectMaterials}
-                    addProjectMaterial={this.addProjectMaterial}
-                    deleteMaterial={this.deleteProjectMaterials}
-                    fetchPM={this.fetchPM}
-                    pm={this.props.pm}
-                    handleAddMaterial={this.props.handleAddMaterial}/>
+                    fetchInventory={this.fetchInventory}
+                    addToInventory={this.addToInventory}
+                    deleteInventory={this.deleteInventory}
+                    pm={this.props.pm}/>
                 </Grid.Column>
               </Grid>
               <Grid>
@@ -220,7 +219,7 @@ class Show extends Component {
                   <ProcessPics fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={projectId} />
                 </Grid.Column>
               </Grid>
-              <Button onClick={()=> this.props.deleteProject(id)}>Delete Project</Button>
+              <Button onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
             </div>
       )
   }

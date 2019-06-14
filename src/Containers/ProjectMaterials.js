@@ -23,33 +23,37 @@ class ProjectMaterials extends Component {
     this.setState({isOpen: false})
   }
 
-  handleClick = (id) => {
+  handleClick = (item) => {
+
     const token = localStorage.getItem('token')
     const material = this.props.allMaterials.filter(material => {
-      if (material.id === id){
+      if (material.id === item.id){
         return material
       }
     })
     const total = material.map(item => item.quantity)
 
-    fetch('http://localhost:3001/api/v1/project_materials', {
+    fetch('http://localhost:3001/api/v1/inventories', {
       method: "POST",
       headers: {
         Accept: 'application/json',
         'Content-type': 'application/json',
-        Authorization: token
       },
       body: JSON.stringify({
           project_id: this.props.id,
-          material_id: id
+          label: item.label,
+          price: item.price,
+          description: item.description,
+          image_url: item.image_url,
+          place_purchased: item.place_purchased
       })
     })
-      .then(res=>{res.json()})
-      .then(data => {this.props.addProjectMaterial(data)})
-      .then(()=>this.props.fetchProjectMaterials())
-      .then(()=>this.props.fetchPM())
+      .then(res=> res.json())
+      .then(data => {this.props.addToInventory(data)})
+      // .then(()=>this.props.fetchInventory())
+      // .then(()=>this.props.fetchPM())
 
-      fetch(`http://localhost:3001/api/v1/materials/${id}`, {
+      fetch(`http://localhost:3001/api/v1/materials/${item.id}`, {
             method: "PATCH",
             headers: {
               Accept: 'application/json',
@@ -60,11 +64,11 @@ class ProjectMaterials extends Component {
           .then(res=>res.json())
           .then(data => {this.setState(data)})
       this.setState({isOpen: false})
-      window.location.reload()
+      // window.location.reload()
   }
 
   render (){
-
+    console.log(this.props)
     const filtered = this.props.allMaterials.filter(material => {
      if(material.quantity > 0){
        return material
@@ -75,7 +79,7 @@ class ProjectMaterials extends Component {
 
       return  (
                 <List>
-                  <Button onClick={()=>this.handleClick(material.id)}>{material.label} ${material.price}</Button><span floated="right">{material.quantity} Left</span>
+                  <Button onClick={()=>this.handleClick(material)}>{material.label} ${material.price}</Button><span floated="right">{material.quantity} Left</span>
                 </List>)
               })
 
@@ -94,16 +98,14 @@ class ProjectMaterials extends Component {
             key={material.id}
             label={material.label}
             price={material.price}
-            // quantity={material.quantity}
             description={material.description}
             id={material.id}
-            fetchpm={this.props.fetchPM}
+            materials={this.props.allMaterials}
             image_url={material.image_url}
             place_purchased={material.place_purchased}
-            deleteMaterial={this.props.deleteMaterial}
-            fetchMaterials={this.props.fetchMaterials}
-            pm={this.props.pm}
-            handleAddMaterial={this.handleAddMaterial}/>
+            deleteInventory={this.props.deleteInventory}
+            fetchInventory={this.props.fetchInventory}
+            pm={this.props.pm}/>
         ))}<br />
         <center><center><Popup trigger={<Button content='Add A Material' />}
                   content={form}
