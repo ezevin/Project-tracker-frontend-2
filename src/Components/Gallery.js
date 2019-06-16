@@ -42,6 +42,7 @@ componentDidMount(){
   }
 
   render(){
+    console.log(this.props);
 
     const material = this.props.materials.map(material => material.label)
 
@@ -50,7 +51,7 @@ componentDidMount(){
                     </Card></div>
 
 
-    const notes = this.state.notes.filter(note => {
+    const notes = this.props.allNotes.filter(note => {
       if(note.project_id === this.props.projectId){
         return note
       }
@@ -69,8 +70,8 @@ componentDidMount(){
               </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
-              <ResearchModal  projectId={this.props.projectId} research={this.state.research} />
-              <ProcessModal  projectId={this.props.projectId} toDoList={this.state.toDoList} />
+              <ResearchModal  projectId={this.props.projectId} research={this.props.research} />
+              <ProcessModal  projectId={this.props.projectId} toDoList={this.props.toDoList} />
             </Modal.Actions>
           </Modal><br />
         </div>

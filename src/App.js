@@ -22,7 +22,10 @@ class App extends Component {
     pm: [],
     users: [],
     user: [],
-    finished: []
+    finished: [],
+    allResearch: [],
+    allToDo: [],
+    allNotes: []
   }
 
   componentDidMount(){
@@ -180,7 +183,7 @@ class App extends Component {
     let id = this.state.currentUser.id
     fetch(`http://localhost:3001/api/v1/users/${id}`)
     .then(res => res.json())
-    .then(data => this.setState({materials: data.materials}, console.log("USER Materials", this.state.materials)))
+    .then(data => this.setState({materials: data.materials}))
   }
 
   deleteMaterial = (dmaterial) => {
@@ -197,6 +200,7 @@ class App extends Component {
   /******************************************/
 
   render (){
+    console.log(this.state);
 
     const unfinished = this.state.projects.filter(project => {
       if(project.finished === false){
@@ -229,9 +233,9 @@ class App extends Component {
                     id={this.state.id}
                     fetchMaterials={this.fetchMaterials}
                     dropDown={this.dropDown}
-                    research={this.state.research}
-                    toDoList={this.state.toDoList}
-                    notes={this.state.notes}
+                    research={this.state.allResearch}
+                    toDoList={this.state.allToDo}
+                    notes={this.state.allNotes}
                     // um={this.state.um}
                     />}}/>
           <Route path="/login" render={() => {

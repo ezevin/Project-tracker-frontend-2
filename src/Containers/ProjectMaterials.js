@@ -25,7 +25,6 @@ class ProjectMaterials extends Component {
 
   handleClick = (item) => {
 
-    const token = localStorage.getItem('token')
     const material = this.props.allMaterials.filter(material => {
       if (material.id === item.id){
         return material
@@ -50,7 +49,7 @@ class ProjectMaterials extends Component {
     })
       .then(res=> res.json())
       .then(data => {this.props.addToInventory(data)})
-      // .then(()=>this.props.fetchInventory())
+      .then(()=>this.props.fetchInventory())
       // .then(()=>this.props.fetchPM())
 
       fetch(`http://localhost:3001/api/v1/materials/${item.id}`, {
@@ -63,12 +62,11 @@ class ProjectMaterials extends Component {
           })
           .then(res=>res.json())
           .then(data => {this.setState(data)})
+          .then(() => this.props.fetchMaterials())
       this.setState({isOpen: false})
-      // window.location.reload()
   }
 
   render (){
-    console.log(this.props)
     const filtered = this.props.allMaterials.filter(material => {
      if(material.quantity > 0){
        return material

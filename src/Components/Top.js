@@ -10,7 +10,7 @@ class Top extends Component {
     return (
        <Menu>
         <Link to="/home" >
-          <Menu.Item name='home'>
+          <Menu.Item name='home' refresh="true">
               Home
           </Menu.Item>
         </Link>

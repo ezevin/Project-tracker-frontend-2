@@ -6,7 +6,7 @@ import ProjectMaterialInfo from './ProjectMaterialInfo'
 class ProjectMaterialItem extends Component {
 
   render(){
-    console.log(this.props)
+
     return (
       <Container>
         <Grid >

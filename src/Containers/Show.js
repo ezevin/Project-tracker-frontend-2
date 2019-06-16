@@ -86,9 +86,7 @@ class Show extends Component {
          })
            .then(res=>res.json())
            .then(data => {this.setState(data)})
-           // .then(() => this.fetchInventory())
            .then(() => this.props.fetchMaterials())
-           window.location.reload()
   }
 
   handleSearch = (e, {value}) => {
@@ -138,7 +136,6 @@ class Show extends Component {
   }
 
   render(){
-    console.log(this.state.projects);
 
     const { title, details, start_date, due_date, finished, budget } = this.state.projects
 
@@ -208,6 +205,7 @@ class Show extends Component {
                     fetchInventory={this.fetchInventory}
                     addToInventory={this.addToInventory}
                     deleteInventory={this.deleteInventory}
+                    fetchMaterials={this.props.fetchMaterials}
                     pm={this.props.pm}/>
                 </Grid.Column>
               </Grid>

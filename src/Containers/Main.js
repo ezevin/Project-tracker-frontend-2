@@ -9,11 +9,7 @@ import Materials from './Materials'
 class Main extends Component {
   state = {
     search: '',
-    psearch: '',
-    research: [],
-    toDoList: [],
-    allNotes: [],
-    finished: []
+    psearch: ''
   }
 
   componentDidMount() {
@@ -46,6 +42,7 @@ class Main extends Component {
   }
 
   render(){
+    console.log(this.props);
 
     const filteredMaterials = this.props.materials.filter(material =>{
       return material.label.toLowerCase().includes(this.state.search.toLowerCase())
@@ -85,7 +82,7 @@ class Main extends Component {
           </Grid.Column>
         </Grid>
         <Container className="look container">
-          <MainGallery projects={this.props.finished} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.allNotes}/>
+          <MainGallery projects={this.props.finished} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.notes}/>
         </Container>
       </>
     )
