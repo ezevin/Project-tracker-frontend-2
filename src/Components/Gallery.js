@@ -30,6 +30,7 @@ componentDidMount(){
     fetch('http://localhost:3001/api/v1/notes')
     .then(res => res.json())
     .then(data => this.setState({notes: data}))
+
   }
 }
 
@@ -42,7 +43,6 @@ componentDidMount(){
   }
 
   render(){
-    console.log(this.props);
 
     const material = this.props.materials.map(material => material.label)
 
@@ -52,9 +52,7 @@ componentDidMount(){
 
 
     const notes = this.props.allNotes.filter(note => {
-      if(note.project_id === this.props.projectId){
-        return note
-      }
+      return note.project_id === this.props.projectId
     })
 
       return(
@@ -64,9 +62,9 @@ componentDidMount(){
               <Image  wrapped size='medium' src={this.props.photo} />
               <Modal.Description>
                 <Header>{this.props.title}</Header>
-                <Header className="scroll" as="h4">Date Finished: {this.props.date.toString()}</Header>
+                <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>
                   <Header className="scroll" as="h4">Project Notes: {notes.map(note => note.note)}</Header>
-                <Header as="h4">Materials: {material.toString()}</Header>
+                <Header as="h4">Materials: {material.toString().split(", ")}</Header>
               </Modal.Description>
             </Modal.Content>
             <Modal.Actions>

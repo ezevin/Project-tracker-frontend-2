@@ -44,6 +44,7 @@ class Finished extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { finished_image } = this.state
+    this.props.history.push('/gallery')
 
     fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
@@ -51,33 +52,32 @@ class Finished extends Component {
             Accept: 'application/json',
             'Content-type': 'application/json'
           },
-          body: JSON.stringify({ finished_image })
+          body: JSON.stringify({ finished_image, finished: true })
         })
         .then(res=>res.json())
-        .then(data => {this.setState(data)})
-        .then(()=> this.props.fetchProjects())
-        this.props.history.push('/gallery')
+        .then(data => {this.setState(data)}, this.props.fetchProjects())
   }
 
   render(){
-    // console.log(this.props);
+    console.log(this.props);
+    const form =   <Form onSubmit={this.handleSubmit}>
+                     <Form.Field>
+                       <label>Picture URL:</label>
+                       <input onChange={this.handleChange}/>
+                     </Form.Field>
+                      <Button icon='check' type="submit">All Done</Button>
+                    </Form>
     return (
       <>
-      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button>I've Finished!</Button>}>
+      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button type="button">I've Finished!</Button>}>
         <center><Modal.Header>CONGRATULATIONS!</Modal.Header></center>
-        <Modal.Header inverted as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
+        <Modal.Header as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
           <Modal.Actions>
-            <Button negative onClick={this.handleClick}>No</Button>
+            <Button type="button" negative onClick={this.handleClick}>No</Button>
             <Modal size='small' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes' />}>
               <Modal.Header>Add Picture</Modal.Header>
                 <Modal.Content>
-                  <Form onSubmit={this.handleSubmit}>
-                   <Form.Field>
-                     <label>Picture URL:</label>
-                     <input onChange={this.handleChange}/>
-                   </Form.Field>
-                    <Button onClick={this.handleClick} icon='check' type="submit">All Done</Button>
-                  </Form>
+                  {form}
                 </Modal.Content>
                 <Modal.Actions>
                 </Modal.Actions>

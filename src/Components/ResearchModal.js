@@ -18,9 +18,7 @@ class ResearchModal extends Component {
 
   render(){
     const research = this.props.research.filter(research => {
-      if(research.project_id === this.props.projectId){
-        return research
-      }
+      return research.project_id === this.props.projectId
     })
 
     return (

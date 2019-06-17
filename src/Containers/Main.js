@@ -42,7 +42,6 @@ class Main extends Component {
   }
 
   render(){
-    console.log(this.props);
 
     const filteredMaterials = this.props.materials.filter(material =>{
       return material.label.toLowerCase().includes(this.state.search.toLowerCase())
@@ -56,7 +55,7 @@ class Main extends Component {
       <>
         <br />
         <Grid className="look container">
-          <Grid.Column className="look" floated='left' width={8}>
+          <Grid.Column className="look projectContainer" floated='left' width={8}>
             <Projects
               slug={this.props.slug}
               projects={filteredProjects}
@@ -70,7 +69,7 @@ class Main extends Component {
               toDoList={this.props.toDoList}
             />
           </Grid.Column>
-          <Grid.Column floated="right" width={8}>
+          <Grid.Column floated="right" width={8} className="materialContainer">
             <Materials materials={filteredMaterials}
              addMaterial={this.props.addMaterial}
              id={this.props.id}

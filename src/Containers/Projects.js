@@ -62,25 +62,25 @@ class Projects extends Component {
 
     return(
       <div className="shadow">
-        <Header inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
-          <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
+        <Header className="text" inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
+          <center><Search className="text" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
           <Grid >
             <Grid.Column width={8}>
-          <center><span>Sort By Project Name:</span>
-                <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/></center><br />
+          <center><span className="text">Sort By Project Name:</span>
+                <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/></center><br />
             </Grid.Column>
             <Grid.Column width={6}>
-                <center><span>Sort By Date:</span>
+                <center><span className="text">Sort By Date:</span>
                       <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/></center><br />
             </Grid.Column>
           </Grid>
             <center><Container align="center">
               <Grid>
                 <Grid.Column width={6}>
-                  <span>Project Name:</span>
+                  <span className="text">Project Name:</span>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                  <span>Due Date:</span>
+                  <span className="text">Due Date:</span>
                 </Grid.Column>
               </Grid>
             </Container></center>
@@ -92,7 +92,7 @@ class Projects extends Component {
           ))
         }
         </div>
-        <br /><center><Popup trigger={<Button content='Start A New Project' />}
+        <br /><center><Popup trigger={<button className="button"> Start A New Project</button>}
                   content={form}
                   on='click'
                   position='bottom right'

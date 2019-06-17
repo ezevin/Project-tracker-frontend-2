@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .icon{
   color: white;
@@ -51,10 +51,10 @@
   color: #61DAFB;
 }
 
-.looks {
+/* .look {
   border-style: dotted;
   border-color: green
-}
+} */
 
 .gallerycard {
   object-fit: cover;
@@ -67,26 +67,61 @@
 }
 
 .projects {
-  /* margin-right: 50px; */
-  height: 214px;
+  margin-right: 50px;
+  height: 200px;
   width: 100%;
+  margin-right: 100px;
   overflow-y: scroll;
+  color: white;
+}
+
+.text {
+  text-shadow: -1px -1px 0 #001,
+		1px -1px 0 #001,
+		-1px 1px 0 #001,
+		1px 1px 0 #001;
+}
+
+.materials {
+  margin-right: 50px;
+  padding-left: 50px;
+  height: 200px;
+  width: 100%;
+  margin-right: 100px;
+  color: white;
+  text-shadow: -1px -1px 0 #001,
+		1px -1px 0 #001,
+		-1px 1px 0 #001,
+		1px 1px 0 #001;
+}
+
+.projectContainer {
+  /* margin-left: -50px; */
+  margin-right: 100px
+}
+
+.materialContainer {
+  /* margin-right: -0px; */
+
 }
 
 .gallery {
   height: 325px;
   width: 100%;
+  /* margin-left: -50px; */
   overflow-y: scroll;
 }
 
 .shadow {
-  padding-left: 50px;
-  padding-top: 30px;
+  padding-left: 10px;
+  /* padding-right: 5px; */
+  padding-top: 15px;
   padding-bottom: 30px;
   margin-bottom: 45px;
-  background-color: #323232;
-  border-color: white;
-  box-shadow: 10px 10px #3A3A3A;
+  background-color: #5B5B5B;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #3B6C7B;
 }
 .container {
   display: flex;
@@ -97,4 +132,36 @@
   width: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+}
+
+.button {
+  background-color: #9C95AD;
+  border: 2px solid;
+  border-radius: 8px;
+  height: 40px;
+  font-weight: bold;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }

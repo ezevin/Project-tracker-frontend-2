@@ -85,7 +85,7 @@ class Login extends React.Component {
                   value={fields.password}
                   onChange={this.handleChange}/>
               <Button.Group>
-                <Button color='white'>Login</Button>
+                <Button>Login</Button>
               <Button.Or />
                 <Link to='signup'>
                 <Button color='blue'>Create An Account</Button></Link>

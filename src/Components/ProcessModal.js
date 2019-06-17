@@ -19,9 +19,7 @@ class ProcessModal extends Component {
   render(){
 
     const process = this.props.toDoList.filter(picture => {
-      if(picture.project_id === this.props.projectId){
-        return picture
-      }
+      return picture.project_id === this.props.projectId
     })
     return (
       <Modal

@@ -98,6 +98,7 @@ class App extends Component {
     this.setState({currentUser:user})
       this.fetchUserData()
       this.fetchProjects()
+      this.fetchMaterials()
   }
 
   handleLogout = () => {
@@ -112,7 +113,10 @@ class App extends Component {
       pm: [],
       users: [],
       user: [],
-      finished: []
+      finished: [],
+      allResearch: [],
+      allToDo: [],
+      allNotes: []
     })
     this.props.history.push('login')
   }
@@ -142,7 +146,7 @@ class App extends Component {
     let id = this.state.currentUser.id
     fetch(`http://localhost:3001/api/v1/users/${id}`)
     .then(res => res.json())
-    .then(data => this.setState({projects: data.projects}, console.log("USER PROJECTS", this.state.projects)))
+    .then(data => this.setState({projects: data.projects}))
     this.setState({id: id})
   }
 
@@ -159,13 +163,13 @@ class App extends Component {
     this.setState({projects: this.state.projects.sort((a,b) =>{
       return a.title.localeCompare(b.title)})})
   }
-  //
-  // handleDateSort = () => {
-  //   this.setState({projects: this.state.projects.sort((a,b)=>{
-  //
-  //   console.log("Date", a.due_date)
-  // })})
-  // }
+
+  handleDateSort = () => {
+    this.setState({projects: this.props.projects.sort((a, b) => {
+          a = new Date(a.due_date);
+          b = new Date(b.due_date);
+          return a>b ? -1 : a<b ? 1 : 0})})
+  }
 
   /******************************************/
   /*                                        */
@@ -200,18 +204,13 @@ class App extends Component {
   /******************************************/
 
   render (){
-    console.log(this.state);
 
     const unfinished = this.state.projects.filter(project => {
-      if(project.finished === false){
-      return project
-      }
+      return project.finished === false
     })
 
     const finished = this.state.projects.filter(project => {
-      if(project.finished){
-      return project
-      }
+      return project.finished
     })
 
     return (
@@ -244,6 +243,8 @@ class App extends Component {
               return <Signup handleUserLogin={this.handleUserLogin } handleLogout={this.handleLogout} addUsers={this.addUsers} users={this.state.users} currentUser={this.props.currentUser}/>}}/>
           <Route path="/gallery" render={(routerProps) => {
             return <FinishedPictures projects={finished} research={this.state.allResearch} toDoList={this.state.allToDo}   allNotes={this.state.allNotes}
+            fetchProjects={this.fetchProjects}
+            dateSort={this.handleDateSort}
             />}} />
           <Route path="/show/:slug" render={(routerProps) => {
             const slug = routerProps.match.params.slug

@@ -35,13 +35,13 @@ class Show extends Component {
     }else {
       fetch(`http://localhost:3001/api/v1/projects/${this.props.slug}`)
       .then(res => res.json())
-      .then(data => this.setState({projects: data, researches: data.researches, toDoList: data.to_do_lists, inventory: data.inventories, notes: data.notes, id: data.id}), console.log(this.state))
+      .then(data => this.setState({projects: data, researches: data.researches, toDoList: data.to_do_lists, inventory: data.inventories, notes: data.notes, id: data.id}))
 
     }
   }
 
   fetchProjects = () => {
-    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({projects: data}))
   }
@@ -70,7 +70,7 @@ class Show extends Component {
 
     console.log(this.state.inventory);
     const material = this.props.materials.filter(material => {
-                        if (material.label === item.label){return material}
+                        return material.label === item.label
                       })
 
     const id = material.map(material => material.id)
@@ -148,9 +148,7 @@ class Show extends Component {
     const item = this.state.inventory.map(item => item.label)
 
     const allFilteredMaterials = this.props.materials.filter(material => {
-      if(!item.includes(material.label)){
-        return material
-      }
+      return !item.includes(material.label)
     })
 
     const filteredMaterials = this.state.inventory.filter(material =>{
@@ -179,7 +177,7 @@ class Show extends Component {
                 </Grid.Column>
               </Grid.Row>
               <Grid.Column width={6} floated='left'>Budget: ${budget}
-                <Budget id={this.state.id} budget={budget} fetchProjects={this.fetchProjects}/>
+                <Budget id={this.state.id} fetchProjects={this.fetchProjects}/>
               </Grid.Column>
 
               <Grid.Column width={3} floated='right'>Remaining Budget: ${budget - (total )}</Grid.Column>

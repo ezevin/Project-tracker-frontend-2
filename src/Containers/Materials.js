@@ -77,17 +77,18 @@ class Materials extends Component {
 
     return (
       <div className="shadow">
-        <Header inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
+        <Header className="text" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
         <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
         <div className="inventory">
           <Grid>
-            <Grid.Column width={3}><span>Item:</span></Grid.Column>
-            <Grid.Column width={3}><span>Price:</span></Grid.Column>
-            <Grid.Column width={3}><span>Quantity:</span></Grid.Column>
+            <Grid.Column width={1}><span></span></Grid.Column>
+            <Grid.Column className="text" width={3}><span>Item:</span></Grid.Column>
+            <Grid.Column className="text" width={3}><span>Price:</span></Grid.Column>
+            <Grid.Column className="text" width={3}><span>Quantity:</span></Grid.Column>
             <Grid.Column width={3}></Grid.Column>
             <Grid.Column width={3}></Grid.Column>
           </Grid>
-          <Container className="scroll">
+          <Container className="materials">
           {this.props.materials.map(material => (
             <MaterialsList
               key={material.id}

@@ -26,9 +26,7 @@ class ProjectMaterials extends Component {
   handleClick = (item) => {
 
     const material = this.props.allMaterials.filter(material => {
-      if (material.id === item.id){
-        return material
-      }
+      return material.id === item.id
     })
     const total = material.map(item => item.quantity)
 
@@ -68,9 +66,7 @@ class ProjectMaterials extends Component {
 
   render (){
     const filtered = this.props.allMaterials.filter(material => {
-     if(material.quantity > 0){
-       return material
-     }
+     return material.quantity > 0
     })
 
     const form = filtered.map(material => {
