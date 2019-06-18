@@ -81,7 +81,7 @@ class Materials extends Component {
           <Grid>
             <Grid.Row>
               <Grid.Column width={9}>
-                <Header className="text" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
+                <Header className="textAll" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
               </Grid.Column>
               <Grid.Column width={5}>
                 <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
@@ -91,11 +91,11 @@ class Materials extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={1}><span></span></Grid.Column>
-              <Grid.Column className="text" width={3}><span>Item:</span></Grid.Column>
-              <Grid.Column className="text" width={3}><span>Price:</span></Grid.Column>
-              <Grid.Column className="text" width={3}><span>Quantity:</span></Grid.Column>
+              <Grid.Column className="textAll" width={3}><span>Item:</span></Grid.Column>
+              <Grid.Column className="textAll" width={3}><span>Price:</span></Grid.Column>
+              <Grid.Column className="textAll" width={3}><span>Quantity:</span></Grid.Column>
               <Grid.Column width={3}></Grid.Column>
-              <Grid.Column className="text" width={3}><span>Remove:</span></Grid.Column>            
+              <Grid.Column className="textAll" width={3}><span>Remove:</span></Grid.Column>            
             </Grid.Row>
           </Grid>
           <Container className="materials">

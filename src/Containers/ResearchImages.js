@@ -73,7 +73,7 @@ class ResearchImages extends Component {
                 </Form>
 
     return(
-      <div className="look researchContainer text">
+      <div className="look researchContainer textAll">
         <Header inverted color='grey' textAlign="center" as='h2'>
           <Popup trigger={<Icon size="small" name='add'/>}
                   content={form}

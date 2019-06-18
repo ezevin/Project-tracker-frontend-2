@@ -10,17 +10,17 @@ class ProjectMaterialItem extends Component {
     return (
       <Container>
         <Grid >
-          <Grid.Column width={3}>
+          <Grid.Column width={4}>
             <List>
               <List.Item><h4>{this.props.label}</h4></List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={4}>
             <List >
               <List.Item><h4>${this.props.price}</h4></List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={4}>
             <List >
               <List.Item><ProjectMaterialInfo
                 key={this.props.id}
@@ -33,7 +33,7 @@ class ProjectMaterialItem extends Component {
               </List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={4}>
             <List >
               <List.Item><h4 onClick={()=> {this.props.deleteInventory(this.props)}}><Button>X</Button></h4></List.Item>
             </List>

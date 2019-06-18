@@ -59,7 +59,7 @@ componentDidMount(){
         <div>
           <Modal trigger={trigger}>
             <Modal.Content image>
-              <img width="100%" height="100%" size='large' src={this.props.photo} />
+              <img src={this.props.photo} />
               <Modal.Description>
                 <Header>{this.props.title}</Header>
                 <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>

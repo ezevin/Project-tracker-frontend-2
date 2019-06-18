@@ -3,7 +3,7 @@ import { Header, Grid } from 'semantic-ui-react'
 
 import Gallery from '../Components/Gallery'
 
-const NUM_PROJECTS = 5
+const NUM_PROJECTS = 6
 
 class MainGallery extends Component {
 
@@ -57,21 +57,21 @@ currentSlide(n) {
     return(
     <>
       <div className="shadowGallery">
-        <Header className="text" inverted color='grey' textAlign="center" as='h2'>Photo Gallery</Header>
+        <Header className="textAll" inverted color='grey' textAlign="center" as='h2'>Photo Gallery</Header>
         <div>
           <Grid columns={5} padded className="cards">
             <Grid.Column width={1}>
               <button className="mainGalleryButton" onClick={this.minusSlides}>&#10094;</button>
             </Grid.Column>
             <Grid.Column width={14}><center>
-              <Grid columns={5} padded className="link cards">
+              <Grid columns={6} padded className="link mainGallery cards">
                 {displayedProjects.map(project =>{
                    return <Gallery key={project.id} photo={project.finished_image} title={project.title} details={project.details} finished_image={project.finished_image} projectId={project.id} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.allNotes} materials={project.inventories}
                    date={new Date(project.updated_at)}/>
                 })}
               </Grid></center>
             </Grid.Column>
-          <Grid.Column width={1}>
+          <Grid.Column width={1} textAlign="right">
             <button className="mainGalleryButton" onClick={this.plusSlides}>&#10095;</button>
           </Grid.Column>
         </Grid>

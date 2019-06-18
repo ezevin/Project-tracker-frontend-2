@@ -156,59 +156,54 @@ class Show extends Component {
     })
 
         return (
-          <>
-          <div className="look">
+        <>
+          <div className="">
             <Grid padded className="">
               <Grid.Row className="">
-                <Grid.Column width={5} floated='left'>
-                  Date Started: {start_date}
-                  <StartDate id={this.state.id} start_date={start_date} fetchProjects={this.fetchProjects}/>
-                </Grid.Column>
-                <Grid.Column width={6}>
-                  <Header inverted color='grey' textAlign='center' as='h1'>{title}
+                  <Grid.Column width={4} textAlign="center">
+                    <div className="textAll startDate">
+                      Date Started: {start_date}
+                      <StartDate id={this.state.id} start_date={start_date} fetchProjects={this.fetchProjects}/>
+                    </div><br /> <br /><br /><br /><br />
+                    <div className="budget textAll">
+                      Budget: ${budget}
+                      <Budget id={this.state.id} fetchProjects={this.fetchProjects}/>
+                    </div>
+                  </Grid.Column>
+                <Grid.Column width={6} className="projectName text">
+                  <Header inverted color='grey' textAlign='center' as='h1'>
+                    {title}
                     <Title id={this.state.id} title={title} fetchProjects={this.fetchProjects}/>
-                  </Header>
-                </Grid.Column>
-                <Grid.Column width={5} textAlign="right">
-                  Date Due: {due_date}
-                  <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
-                </Grid.Column>
-              </Grid.Row>
-
-              <Grid.Row>
-                <Grid.Column width={3} className="" floated='left'>
-                Budget: ${budget}
-                <Budget id={this.state.id} fetchProjects={this.fetchProjects}/>
-                </Grid.Column>
-                <Grid.Column className="" width={10}>
-                  <Header  inverted color='grey' textAlign='center' as="h3">
+                  </Header><br />
+                  <center>
                     Summary: {details}
                     <ProjectDeets id={this.state.id} details={details} fetchProjects={this.fetchProjects}/>
-                    </Header>
-                </Grid.Column>
-                <Grid.Column  className="" width={3} textAlign='right'>
-                  Remaining Budget: ${budget - (total )}
-                </Grid.Column>
-                </Grid.Row>
-                <Grid.Column className="" width={16}>
-                  <center>
-                    <Finished projectId={this.state.id} finished={finished} fetchProjects={this.fetchProjects}/>
                   </center>
                 </Grid.Column>
+                <Grid.Column width={5} textAlign="center">
+                  <div className="dueDate textAll">
+                  Date Due: {due_date}
+                  <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
+                  </div><br /><br /><br /><br /><br />
+                  <div className="remainingBudget textAll">
+                    Remaining Budget: ${budget - (total )}
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
               </Grid>
 
-            <Divider inverted/>
-            <br />
+            <Divider className="" inverted/>
 
-              <Grid padded>
-                <Grid.Column floated='left' width={5}>
+
+              <Grid padded className=" listContainer">
+                <Grid.Column floated='left' className="" width={5}>
                   <Notes notes={this.state.notes} fetchNotes={this.fetchNotes} deleteNote={this.deleteNote} projectId={this.state.id}/>
                 </Grid.Column>
 
-                <Grid.Column  width={6}>
+                <Grid.Column className="" width={6}>
                   <ToDo fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={this.state.id} deleteToDo={this.deleteToDo}/>
                 </Grid.Column>
-                <Grid.Column floated="right" width={5}>
+                <Grid.Column className="" floated="right" width={5}>
                   <ProjectMaterials
                     id={this.state.id}
                     materials={filteredMaterials}
@@ -222,16 +217,23 @@ class Show extends Component {
                 </Grid.Column>
               </Grid>
               <Grid>
-                <Grid.Column  width={7}>
+                <Grid.Column className="" width={7}>
                   <ResearchImages fetchResearchImages={this.fetchResearchImages} researches={this.state.researches} projectId={this.state.id} deleteResearch={this.deleteResearch}/>
                 </Grid.Column>
-                <Grid.Column floated="right" width={7}>
+                <Grid.Column className="" floated="right" width={7}>
                   <ProcessPics fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={projectId} />
                 </Grid.Column>
               </Grid><br />
             </div>
-            <Button onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
-            </>
+            <Grid>
+              <Grid.Column width={7}>
+                <Button onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
+              </Grid.Column>
+              <Grid.Column width={8}>
+                  <Finished projectId={this.state.id} finished={finished} fetchProjects={this.fetchProjects}/>
+              </Grid.Column>
+            </Grid>
+          </>
       )
   }
 }

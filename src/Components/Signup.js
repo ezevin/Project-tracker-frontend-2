@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'semantic-ui-react'
-import { withRouter} from 'react-router-dom'
+import { Form, Button, Header } from 'semantic-ui-react'
+import { Link, withRouter} from 'react-router-dom'
 
 class Signup extends Component {
 
@@ -75,24 +75,29 @@ class Signup extends Component {
     console.log("final", this.state);
       return (
         <center>
-          <Form inverted onSubmit={this.handleSubmit}>
-            <Form.Group widths='equal'>
-              <Form.Input fluid icon='user'
+          <Form className="signup textAll" inverted size="large" onSubmit={this.handleSubmit}>
+          <h4>Welcome Please Create an Account!</h4>
+              <Form.Input width={6}
+              fluid icon='user'
               name="username"
               iconPosition='left'
               label='User Name:'
               placeholder='username'
               onChange={this.handleChange} />
-              <Form.Input fluid icon='lock'
+              <Form.Input width={6}
+              fluid icon='lock'
               name="password"
               iconPosition='left'
               label='Password:'
               placeholder='password'
               type="password"
-              onChange={this.handleChange}/>
-            </Form.Group>
-
+              onChange={this.handleChange}/><br />
+            <Button.Group>
               <Button type="submit" color='black'>Create Account</Button>
+            <Button.Or />
+              <Link to='login'>
+              <Button color='blue'>Return to Login</Button></Link>
+            </Button.Group>
           </Form>
         </center>
       )

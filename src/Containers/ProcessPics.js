@@ -52,7 +52,7 @@ fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
         return pic.process_pic !== "https://image.shutterstock.com/image-vector/empty-background-style-png-blank-450w-676832590.jpg"
       })
       return(
-        <div className="look processContainer text">
+        <div className="look processContainer textAll">
           <Header inverted color='grey' textAlign="center" as='h2'>
             Process Pictures
           </Header>

@@ -66,19 +66,19 @@ class Projects extends Component {
           <Grid>
             <Grid.Row>
               <Grid.Column width={9}>
-                <Header className="text" inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
+                <Header className="textAll" inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
               </Grid.Column>
               <Grid.Column width={5}>
-                <center><Search className="text" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
+                <center><Search className="textAll" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={8}>
-            <center><span className="text">Sort By Project Name:</span>
+            <center><span className="textAll">Sort By Project Name:</span>
                   <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/></center><br />
               </Grid.Column>
               <Grid.Column width={6}>
-                  <center><span className="text">Sort By Date:</span>
+                  <center><span className="textAll">Sort By Date:</span>
                         <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/></center><br />
               </Grid.Column>
             </Grid.Row>
@@ -86,10 +86,10 @@ class Projects extends Component {
             <center><Container align="center">
               <Grid>
                 <Grid.Column width={6}>
-                  <span className="text">Project Name:</span>
+                  <span className="textAll">Project Name:</span>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                  <span className="text">Due Date:</span>
+                  <span className="textAll">Due Date:</span>
                 </Grid.Column>
               </Grid>
             </Container></center>
