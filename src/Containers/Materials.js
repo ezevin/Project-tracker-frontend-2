@@ -77,11 +77,11 @@ class Materials extends Component {
 
     return (
       <div className="shadowInventory">
-        <div className="inventory">
+        <div >
           <Grid>
             <Grid.Row>
               <Grid.Column width={9}>
-                <Header className="textAll" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
+                <Header className="textLead" inverted color='grey' textAlign="center" as='h1'>Inventory</Header>
               </Grid.Column>
               <Grid.Column width={5}>
                 <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
@@ -91,14 +91,14 @@ class Materials extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={1}><span></span></Grid.Column>
-              <Grid.Column className="textAll" width={3}><span>Item:</span></Grid.Column>
-              <Grid.Column className="textAll" width={3}><span>Price:</span></Grid.Column>
-              <Grid.Column className="textAll" width={3}><span>Quantity:</span></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h2>Item:</h2></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h2>Price:</h2></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h2>Quantity:</h2></Grid.Column>
               <Grid.Column width={3}></Grid.Column>
-              <Grid.Column className="textAll" width={3}><span>Remove:</span></Grid.Column>            
+              <Grid.Column className="textLead" width={3}><h2>Remove:</h2></Grid.Column>
             </Grid.Row>
-          </Grid>
-          <Container className="materials">
+          </Grid><br />
+          <Container className="inventory textAll">
           {this.props.materials.map(material => (
             <MaterialsList
               key={material.id}

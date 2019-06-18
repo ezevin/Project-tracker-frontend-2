@@ -41,7 +41,7 @@ class Notes extends Component {
     return(
       <div className="notesContainer textAll">
         <center>
-          <Header inverted color='grey' as='h2'>Notes:</Header>
+          <Header inverted color='grey' as='h2' className="textLead" >Notes:</Header><br />
         </center>
         <Grid columns={5} padded className="link cards notesList">
           {this.props.notes.map(note =>(

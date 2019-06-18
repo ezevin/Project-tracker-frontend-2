@@ -57,7 +57,7 @@ currentSlide(n) {
     return(
     <>
       <div className="shadowGallery">
-        <Header className="textAll" inverted color='grey' textAlign="center" as='h2'>Photo Gallery</Header>
+        <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Photo Gallery</Header>
         <div>
           <Grid columns={5} padded className="cards">
             <Grid.Column width={1}>

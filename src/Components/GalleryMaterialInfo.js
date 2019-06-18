@@ -7,7 +7,7 @@ class GalleryMaterialInfo extends Component {
 
     return (
       <Modal size="mini" trigger={<a>{this.props.label}, </a>}>
-        <Header as="h3">{this.props.label}</Header><br />
+        <Header as="h3" className="underline">{this.props.label}</Header><br />
         <Image
           className="box"
           floated='right'

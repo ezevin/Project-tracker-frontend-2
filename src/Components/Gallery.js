@@ -67,7 +67,7 @@ componentDidMount(){
             <Modal.Content image className="">
               <img className="modalImg" src={this.props.photo}/>
               <Modal.Description>
-                <Header>{this.props.title}</Header>
+                <Header className="underline" as="h2">{this.props.title}</Header>
                 <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>
                 <div className="finalNote">
                   <Header as="h4">

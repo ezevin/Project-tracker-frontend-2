@@ -35,7 +35,6 @@ class NoteList extends Component {
                <Icon name="delete"  onClick={()=> this.props.deleteNote(this.props.id)}/>
              </Grid.Column>
             </Grid><br />
-
        </Container>
 
 

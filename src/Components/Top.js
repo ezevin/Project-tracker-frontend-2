@@ -12,11 +12,11 @@ class Top extends Component {
         <Menu.Menu size="massive" textAlign="center">
           <Link to="/home" >
             <Menu.Item>
-              <Header as="h1"> FabFolio: </Header>
+              <Header as="h1" className='underline'> FabFolio: </Header>
             </Menu.Item>
           </Link>
           <Link to="/home" >
-            <Menu.Item>
+            <Menu.Item className="headSummary">
               <Header as="h3"> A Fabricator's Portfolio </Header>
             </Menu.Item>
           </Link>
@@ -25,7 +25,7 @@ class Top extends Component {
         <Menu.Menu position='right'>
           {
             this.props.currentUser &&
-            <Link to="/profile">
+            <Link to="/profile" className="underline">
               <Menu.Item
                 float='right'
                 name='logout'>

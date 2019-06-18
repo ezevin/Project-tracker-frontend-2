@@ -53,7 +53,7 @@ fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
       })
       return(
         <div className="look processContainer textAll">
-          <Header inverted color='grey' textAlign="center" as='h2'>
+          <Header inverted color='grey' textAlign="center" as='h2' className="textLead">
             Process Pictures
           </Header>
           <Grid className="">

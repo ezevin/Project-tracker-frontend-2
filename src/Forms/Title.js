@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup, Header } from 'semantic-ui-react'
 
 class Title extends Component {
 
@@ -57,9 +57,9 @@ class Title extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<Header className="textLead"  inverted color='grey'>{this.props.title}</Header>}
         on='click'
-        position='bottom right'
+        position='bottom'
         open={this.state.isOpen}
         onOpen={this.handleOpen}
         onClose={this.handleClose}

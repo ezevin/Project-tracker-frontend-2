@@ -6,18 +6,18 @@ import { } from 'react-router-dom'
   class ProjectList extends Component {
 
     render() {
-  
+
       return (
-        <Container align="center">
+        <Container align="center" className="textAll">
           <Grid>
             <Grid.Column width={6}>
-              <span>{this.props.project}</span>
+              <h3>{this.props.project}</h3>
             </Grid.Column>
             <Grid.Column width={4}>
 
             </Grid.Column>
             <Grid.Column width={6}>
-              <span>{this.props.dueDate}</span>
+              <h3>{this.props.dueDate}</h3>
             </Grid.Column>
           </Grid>
         </Container>

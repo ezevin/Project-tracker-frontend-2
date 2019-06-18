@@ -12,17 +12,17 @@ class MaterialsList extends Component {
         <Grid >
           <Grid.Column width={3}>
             <List>
-              <List.Item><h4>{this.props.label}</h4></List.Item>
+              <List.Item><h3>{this.props.label}</h3></List.Item>
             </List>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={2}>
             <List >
-              <List.Item><h4>${this.props.price}</h4></List.Item>
+              <center><List.Item><h3>${this.props.price}</h3></List.Item></center>
             </List>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={5}>
             <List >
-              <List.Item><h4>{this.props.quantity}</h4></List.Item>
+              <center><List.Item><h3>{this.props.quantity}</h3></List.Item></center>
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
@@ -43,7 +43,7 @@ class MaterialsList extends Component {
           </Grid.Column>
           <Grid.Column width={3}>
             <List >
-              <List.Item><center><h4 onClick={()=> this.props.deleteMaterial(this.props.id)} textAlign="center"> X </h4></center></List.Item>
+              <List.Item><center><h3 onClick={()=> this.props.deleteMaterial(this.props.id)} textAlign="center"> X </h3></center></List.Item>
             </List>
           </Grid.Column>
         </Grid>

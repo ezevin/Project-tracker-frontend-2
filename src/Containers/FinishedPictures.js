@@ -49,7 +49,7 @@ class FinishedPictures extends Component {
         <Grid.Column width={6}>
         </Grid.Column>
         <Grid.Column className="textAll" width={4}>
-          <Header inverted color='grey' textAlign="center" as='h2'>Photo Gallery</Header>
+          <Header inverted color='grey' textAlign="center" as='h2' className="textLead">Photo Gallery</Header>
         </Grid.Column>
         <Grid.Column textAlign="right">
           <center>

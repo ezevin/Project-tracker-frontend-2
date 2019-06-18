@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup, Icon, Image } from 'semantic-ui-react'
 
 class ItemImage extends Component {
 
@@ -37,7 +37,7 @@ class ItemImage extends Component {
         this.setState({isOpen: false})
   }
   render(){
-    // console.log(this.props);
+    console.log(this.props);
     const form = <Form onSubmit={this.handleSubmit}>
                   <Form.Field>
                     <label>Update Item Image:</label>
@@ -49,7 +49,7 @@ class ItemImage extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<Image size="small" src={this.props.image_url}/>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

@@ -53,7 +53,7 @@ class ToDo extends Component {
 
     return(
       <div className="toDoListContainer">
-        <Header inverted color='grey' className="textAll" textAlign="center" as='h2'>To Do List:</Header>
+        <Header inverted color='grey' className="textLead" textAlign="center" as='h2'>To Do List:</Header>
         <center>
           <Form inverted onSubmit={this.handleSubmit}>
             <center>
@@ -71,10 +71,10 @@ class ToDo extends Component {
           </Form>
         </center><br />
         <Grid className=" toDoListHeader">
-        <Grid.Column width={2}><span>Done?</span></Grid.Column>
-        <Grid.Column width={5}><span>Task:</span></Grid.Column>
-        <Grid.Column width={5}><span>Add Picture:</span></Grid.Column>
-        <Grid.Column width={3}><span>Remove:</span></Grid.Column>
+        <Grid.Column width={2}><span className="textLead">Done?</span></Grid.Column>
+        <Grid.Column width={5}><span className="textLead">Task:</span></Grid.Column>
+        <Grid.Column width={5}><span className="textLead">Add Picture:</span></Grid.Column>
+        <Grid.Column width={3}><span className="textLead">Remove:</span></Grid.Column>
         <Grid.Column width={3}></Grid.Column>
         </Grid>
         <Grid columns={5} padded className="link cards toDoListList">

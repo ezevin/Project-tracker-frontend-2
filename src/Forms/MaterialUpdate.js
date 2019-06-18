@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Image, Modal, Header } from 'semantic-ui-react'
+import { Button, Image, Modal, Header, Grid } from 'semantic-ui-react'
 
 import Item from '../Forms/Item'
 import ItemImage from '../Forms/ItemImage'
@@ -14,15 +14,17 @@ class MaterialUpdate extends Component {
 
     return (
       <Modal size="mini" trigger={<Button>Info</Button>}>
-        <Header as="h3">
-          <Item label={this.props.label} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>{this.props.label}</Header><br />
-        <ItemImage image_url={this.props.image_url} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
-        <Image
-          className="box"
-          floated='right'
-          size='mini'
-          src={this.props.image_url}>
-        </Image>
+      <br />
+      <Grid>
+        <Grid.Column width={8}>
+          <Header as="h1" className="underline">
+            <Item label={this.props.label} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>{this.props.label}
+          </Header>
+        </Grid.Column>
+        <Grid.Column width={6} floated="right">
+          <ItemImage image_url={this.props.image_url} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
+        </Grid.Column>
+      </Grid>
         <Header as="h4">
           <Price price={this.props.price} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>Price:{this.props.price}</Header>
         <Header as="h4">
