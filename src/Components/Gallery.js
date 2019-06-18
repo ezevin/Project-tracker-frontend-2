@@ -30,7 +30,6 @@ componentDidMount(){
     fetch('http://localhost:3001/api/v1/notes')
     .then(res => res.json())
     .then(data => this.setState({notes: data}))
-
   }
 }
 
@@ -46,9 +45,10 @@ componentDidMount(){
 
     const material = this.props.materials.map(material => material.label)
 
-    const trigger = <div className="card"><Card  className="gallerycard" color='teal' fluid>
-                      <Image src={this.props.finished_image}  size='medium'/>
-                    </Card></div>
+    const trigger = <div className="card"><Card className="finishedimg" color='teal'>
+                      <Image wrapped src={this.props.finished_image}  size='big'/>
+                      <Header className="centered" as="h3">{this.props.title}</Header>
+                    </Card><br /><br /></div>
 
 
     const notes = this.props.allNotes.filter(note => {
@@ -59,7 +59,7 @@ componentDidMount(){
         <div>
           <Modal trigger={trigger}>
             <Modal.Content image>
-              <Image  wrapped size='medium' src={this.props.photo} />
+              <img width="100%" height="100%" size='large' src={this.props.photo} />
               <Modal.Description>
                 <Header>{this.props.title}</Header>
                 <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>

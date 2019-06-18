@@ -26,7 +26,6 @@ class Finished extends Component {
   handleClick = () => {
     // const { finished } = this.state
     // this.setState({finished: true})
-    console.log("state",this.state);
     fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
           headers: {
@@ -44,7 +43,6 @@ class Finished extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { finished_image } = this.state
-    this.props.history.push('/gallery')
 
     fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
@@ -56,6 +54,9 @@ class Finished extends Component {
         })
         .then(res=>res.json())
         .then(data => {this.setState(data)}, this.props.fetchProjects())
+        this.props.history.push('/gallery')
+        this.forceUpdate()
+
   }
 
   render(){
@@ -65,7 +66,7 @@ class Finished extends Component {
                        <label>Picture URL:</label>
                        <input onChange={this.handleChange}/>
                      </Form.Field>
-                      <Button icon='check' type="submit">All Done</Button>
+                      <Button type="submit">All Done</Button>
                     </Form>
     return (
       <>

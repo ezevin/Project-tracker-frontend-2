@@ -61,18 +61,27 @@ class Projects extends Component {
                 </Form>
 
     return(
-      <div className="shadow">
-        <Header className="text" inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
-          <center><Search className="text" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
-          <Grid >
-            <Grid.Column width={8}>
-          <center><span className="text">Sort By Project Name:</span>
-                <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/></center><br />
-            </Grid.Column>
-            <Grid.Column width={6}>
-                <center><span className="text">Sort By Date:</span>
-                      <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/></center><br />
-            </Grid.Column>
+      <div className="shadowProjects">
+        <div className="projects">
+          <Grid>
+            <Grid.Row>
+              <Grid.Column width={9}>
+                <Header className="text" inverted color='grey' textAlign="center" as='h2'>Current Projects</Header>
+              </Grid.Column>
+              <Grid.Column width={5}>
+                <center><Search className="text" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column width={8}>
+            <center><span className="text">Sort By Project Name:</span>
+                  <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/></center><br />
+              </Grid.Column>
+              <Grid.Column width={6}>
+                  <center><span className="text">Sort By Date:</span>
+                        <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/></center><br />
+              </Grid.Column>
+            </Grid.Row>
           </Grid>
             <center><Container align="center">
               <Grid>
@@ -84,7 +93,6 @@ class Projects extends Component {
                 </Grid.Column>
               </Grid>
             </Container></center>
-        <div className="projects">
         {this.props.projects.map(project =>(
           <Link to={`/show/${project.id}`} key={project.id} onClick={()=>this.props.dropDown(project.id)}>
           <ProjectList key={project.id} project={project.title} dueDate={project.due_date} id={project.id} dropDown={this.props.dropDown} projects={this.props.projects}/>

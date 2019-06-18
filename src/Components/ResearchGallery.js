@@ -4,7 +4,7 @@ import { Image, Modal, Card, Button } from 'semantic-ui-react'
 class ResearchGallery extends Component {
   render(){
 
-    const trigger = <Card color='teal' fluid>
+    const trigger = <Card color='teal' className="look showimg" fluid>
                       <Image src={this.props.photo}  size='medium'/>
                     </Card>
 
@@ -12,7 +12,7 @@ class ResearchGallery extends Component {
         <>
           <Modal size="fullscreen" basic  trigger={trigger}>
           <center>
-              <Card>
+              <Card className="look showmodal">
                 <Image wrapped size='medium' src={this.props.photo} />
               </Card>
               <Button circular onClick={()=> this.props.deleteResearch(this.props.id)}>Delete</Button>

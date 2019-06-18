@@ -213,6 +213,7 @@ class App extends Component {
       return project.finished
     })
 
+    
     return (
       <>
         <Top id={this.state.id} projects={unfinished} dropDown={this.dropDown} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/><br />
