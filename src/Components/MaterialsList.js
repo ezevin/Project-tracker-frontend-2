@@ -5,21 +5,7 @@ import MaterialUpdate from '../Forms/MaterialUpdate'
 
 class MaterialsList extends Component {
 
-  state = {
-    um: []
-  }
-
-  componentDidMount(){
-    // fetch('http://localhost:3001/api/v1/user_materials')
-    // .then(res => res.json())
-    // .then(data => this.setState({um: data}))
-  }
-
   render(){
-    // const quantity = this.state.um.map(um => {
-    //   if(um.material_id === this.props.id){
-    //     return um.quantity
-    //   }} )
 
     return (
       <Container>

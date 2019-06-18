@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup, Icon, Modal } from 'semantic-ui-react'
 
 class NoteUpdate extends Component {
 
@@ -55,15 +55,19 @@ class NoteUpdate extends Component {
                 </Form>
 
     return (
+      <>
       <Popup
         content={form}
-        trigger={<Icon size="small" name='pencil alternate' />}
+        trigger={<Button icon><Icon size="small" name='pencil alternate' /></Button>}
         on='click'
         position='top left'
         open={this.state.isOpen}
         onOpen={this.handleOpen}
         onClose={this.handleClose}
             />
+
+
+    </>
 
     )
   }

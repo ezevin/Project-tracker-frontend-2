@@ -40,6 +40,7 @@ class Details extends Component {
         .then(()=> this.props.fetchMaterials())
         this.setState({isOpen: false})
   }
+  
   render(){
 
     const value = this.state.description

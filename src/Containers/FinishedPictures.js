@@ -42,6 +42,7 @@ class FinishedPictures extends Component {
       return project.title.toLowerCase().includes(this.state.search.toLowerCase())
     })
 
+    console.log(this.props.projects);
     return(
       <>
         <Grid >

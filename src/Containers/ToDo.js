@@ -52,12 +52,14 @@ class ToDo extends Component {
   render(){
 
     return(
-      <div className="toDoListContainer textAll">
-        <Header inverted color='grey' textAlign="center" as='h2'>To Do List:</Header>
+      <div className="toDoListContainer">
+        <Header inverted color='grey' className="textAll" textAlign="center" as='h2'>To Do List:</Header>
         <center>
           <Form inverted onSubmit={this.handleSubmit}>
             <center>
               <Grid className="">
+                <Grid.Column  width={2}>
+                </Grid.Column>
                 <Grid.Column width={8}>
                   <Form.Input  placeholder="Add A New ToDo" onChange={this.handleChange}/>
                 </Grid.Column>

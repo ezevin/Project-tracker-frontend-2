@@ -13,7 +13,7 @@ import Profile from './Components/Profile'
 
 class App extends Component {
   state = {
-    projects: [],
+    projects: [], // pass callback down to finished form on submit
     materials: [],
     pID: null,
     currentUser: null,
@@ -213,7 +213,9 @@ class App extends Component {
       return project.finished
     })
 
-    
+    console.log('projects', this.state.projects)
+    console.log('unfinished', unfinished)
+    console.log('finished', finished)
     return (
       <>
         <Top id={this.state.id} projects={unfinished} dropDown={this.dropDown} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/><br />

@@ -9,15 +9,18 @@ class Top extends Component {
   render(){
     return (
        <Menu>
-      
         <Menu.Menu size="massive" textAlign="center">
-          <Menu.Item>
-          <Header as="h1"> FabFolio: </Header>
-          </Menu.Item>
-          <Menu.Item>
-          <Header as="h3"> A Fabricator's Portfolio </Header>
-          </Menu.Item>
-        </Menu.Menu>
+          <Link to="/home" >
+            <Menu.Item>
+              <Header as="h1"> FabFolio: </Header>
+            </Menu.Item>
+          </Link>
+          <Link to="/home" >
+            <Menu.Item>
+              <Header as="h3"> A Fabricator's Portfolio </Header>
+            </Menu.Item>
+          </Link>
+        </Menu.Menu>`
 
         <Menu.Menu position='right'>
           {

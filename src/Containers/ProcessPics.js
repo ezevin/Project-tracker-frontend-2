@@ -24,7 +24,7 @@ plusSlides = (n) => {
 minusSlides = (n) => {
   let count = this.state.slideIndex+NUM_PROJECTS
 
-  if (count > 21){
+  if (count > 5){
     this.setState({slideIndex: this.state.slideIndex - NUM_PROJECTS})
   }
 }

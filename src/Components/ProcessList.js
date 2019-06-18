@@ -12,7 +12,7 @@ class ProcessList extends Component {
 
       return(
         <>
-          <Modal size="fullscreen" basic  trigger={trigger}>
+          <Modal size="mini" basic  trigger={trigger}>
           <center>
               <Card className="showmodal">
                 <Image wrapped size='medium' src={this.props.photo} />

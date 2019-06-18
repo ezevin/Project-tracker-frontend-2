@@ -7,7 +7,7 @@ class Finished extends Component {
   state = {
     finished: false,
     isOpen: false,
-    finished_image: "https://image.shutterstock.com/image-vector/empty-background-style-png-blank-450w-676832590.jpg"
+    finished_image: "https://images-na.ssl-images-amazon.com/images/I/51UW1849rJL._SX466_.jpg"
   }
 
   handleOpen = () => {
@@ -36,7 +36,7 @@ class Finished extends Component {
         })
         .then(res=>res.json())
         .then(data => {this.setState(data)})
-        .then(this.props.history.push('/gallery'))
+        .then(() => this.props.history.push('/gallery'))
         .then(()=> this.props.fetchProjects())
   }
 
@@ -53,9 +53,11 @@ class Finished extends Component {
           body: JSON.stringify({ finished_image, finished: true })
         })
         .then(res=>res.json())
-        .then(data => {this.setState(data)}, this.props.fetchProjects())
-        this.props.history.push('/gallery')
-        this.forceUpdate()
+        .then(data => {
+          this.setState({data})
+          this.props.fetchProjects()
+          this.props.history.push('/gallery')
+        })
 
   }
 

@@ -4,6 +4,8 @@ import { Image, Modal, Header, Card } from 'semantic-ui-react'
 
 import ResearchModal from './ResearchModal'
 import ProcessModal from './ProcessModal'
+import GalleryMaterialInfo from './GalleryMaterialInfo'
+
 
 class Gallery extends Component {
 
@@ -43,7 +45,9 @@ componentDidMount(){
 
   render(){
 
-    const material = this.props.materials.map(material => material.label)
+    const label = this.props.materials.map(material => material.label)
+
+    const price = this.props.materials.map(material => material.price)
 
     const trigger = <div className="card"><Card className="finishedimg" color='teal'>
                       <Image wrapped src={this.props.finished_image}  size='big'/>
@@ -55,16 +59,34 @@ componentDidMount(){
       return note.project_id === this.props.projectId
     })
 
+    const list = notes.map(note => note.note)
+
       return(
         <div>
           <Modal trigger={trigger}>
-            <Modal.Content image>
-              <img src={this.props.photo} />
+            <Modal.Content image className="">
+              <img className="modalImg" src={this.props.photo}/>
               <Modal.Description>
                 <Header>{this.props.title}</Header>
                 <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>
-                  <Header className="scroll" as="h4">Project Notes: {notes.map(note => note.note)}</Header>
-                <Header as="h4">Materials: {material.toString().split(", ")}</Header>
+                <div className="finalNote">
+                  <Header as="h4">
+                  Notes From Project:
+                  {notes.map(note => {
+                      return <li>{note.note}</li>
+                  })}
+                  </Header>
+                </div>
+                <Header as="h4">Materials: {this.props.materials.map(material => (
+                  <GalleryMaterialInfo
+                    key={material.id}
+                    label={material.label}
+                    price={material.price}
+                    description={material.description}
+                    id={material.id}
+                    image_url={material.image_url}
+                    place_purchased={material.place_purchased}/>
+                ))}</Header>
               </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
