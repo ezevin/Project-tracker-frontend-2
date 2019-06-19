@@ -7,7 +7,7 @@ class Finished extends Component {
   state = {
     finished: false,
     isOpen: false,
-    finished_image: "https://images-na.ssl-images-amazon.com/images/I/51UW1849rJL._SX466_.jpg"
+    finished_image: ""
   }
 
   handleOpen = () => {
@@ -61,9 +61,25 @@ class Finished extends Component {
 
   }
 
+  openWidget = () => {
+    window.cloudinary.createUploadWidget(
+    {
+      cloudName: "dwmlcwpfp",
+      uploadPreset: "urxqwcln"
+    },
+    (error, result) => {
+    if(result && result.event === "success"){
+      this.setState({
+        finished_image: `https://res.cloudinary.com/${"dwmlcwpfp"}/image/upload/${result.info.path}`, uploaded: true
+      });
+    }
+    }
+  ).open()
+  }
+
   render(){
-    console.log(this.props);
-    const form =   <Form onSubmit={this.handleSubmit}>
+    // console.log(this.props);
+    const form =   <Form type="submit" onSubmit={this.handleSubmit}>
                      <Form.Field>
                        <label>Picture URL:</label>
                        <input onChange={this.handleChange}/>
@@ -77,13 +93,10 @@ class Finished extends Component {
         <Modal.Header as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
           <Modal.Actions>
             <Button type="button" negative onClick={this.handleClick}>No</Button>
-            <Modal size='small' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes' />}>
-              <Modal.Header>Add Picture</Modal.Header>
+            <Modal size='small' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes'  onClick={this.openWidget}/>}>
                 <Modal.Content>
                   {form}
                 </Modal.Content>
-                <Modal.Actions>
-                </Modal.Actions>
             </Modal>
           </Modal.Actions>
       </Modal>

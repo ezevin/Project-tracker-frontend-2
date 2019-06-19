@@ -4,10 +4,6 @@ import { Icon, Grid, Container } from 'semantic-ui-react'
 import AddProcess from '../Forms/AddProcess'
 
 class ItemList extends Component {
-  state = {
-    done: false
-  }
-
 
   render (){
 

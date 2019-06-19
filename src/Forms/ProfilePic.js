@@ -36,20 +36,34 @@ class ProfilePic extends Component {
         .then(()=> this.props.fetchUserData())
         this.setState({isOpen: false})
   }
+
+  openWidget = () => {
+    window.cloudinary.createUploadWidget(
+    {
+      cloudName: "dwmlcwpfp",
+      uploadPreset: "urxqwcln"
+    },
+    (error, result) => {
+    if(result && result.event === "success"){
+      this.setState({
+          profile_picture: `https://res.cloudinary.com/${"dwmlcwpfp"}/image/upload/${result.info.path}`, uploaded: true
+      });
+    }
+    }
+  ).open()
+  }
+
   render(){
     // console.log(this.props);
     const form = <Form onSubmit={this.handleSubmit}>
-                  <Form.Field>
-                    <label>Update Profile Picture:</label>
-                    <input placeholder={this.props.profile_picture} onChange={this.handleChange}/>
-                  </Form.Field>
+
                   <Button type='submit'>Submit</Button>
                 </Form>
 
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<Icon size="small" name='add'  onClick={this.openWidget} />}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

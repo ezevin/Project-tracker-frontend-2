@@ -36,20 +36,33 @@ class ItemImage extends Component {
         .then(()=> this.props.fetchMaterials())
         this.setState({isOpen: false})
   }
+
+  openWidget = () => {
+    window.cloudinary.createUploadWidget(
+    {
+      cloudName: "dwmlcwpfp",
+      uploadPreset: "urxqwcln"
+    },
+    (error, result) => {
+    if(result && result.event === "success"){
+      this.setState({
+        image_url: `https://res.cloudinary.com/${"dwmlcwpfp"}/image/upload/${result.info.path}`, uploaded: true
+      });
+    }
+    }
+  ).open()
+  }
+
   render(){
     console.log(this.props);
     const form = <Form onSubmit={this.handleSubmit}>
-                  <Form.Field>
-                    <label>Update Item Image:</label>
-                    <input placeholder={this.props.image_url} onChange={this.handleChange}/>
-                  </Form.Field>
                   <Button type='submit'>Submit</Button>
-                </Form>
+                 </Form>
 
     return (
       <Popup
         content={form}
-        trigger={<Image size="small" src={this.props.image_url}/>}
+        trigger={<Image size="small" src={this.props.image_url} onClick={this.openWidget}/>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

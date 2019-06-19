@@ -135,6 +135,10 @@
   /* margin-right: 10px; */
 }
 
+.deleteButton {
+  margin-left: 70px;
+}
+
 .shadowProjects {
   padding-left: 10px;
   /* padding-right: 5px; */

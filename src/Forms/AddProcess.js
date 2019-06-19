@@ -17,7 +17,6 @@ class AddProcess extends Component {
   }
 
   handleChange = (e) => {
-    console.log(e.target.value);
     this.setState({process_pic: e.target.value})
   }
 
@@ -40,20 +39,32 @@ class AddProcess extends Component {
         this.setState({isOpen: false})
   }
 
+  openWidget = () => {
+    window.cloudinary.createUploadWidget(
+    {
+      cloudName: "dwmlcwpfp",
+      uploadPreset: "urxqwcln"
+    },
+    (error, result) => {
+    if(result && result.event === "success"){
+      this.setState({
+        process_pic: `https://res.cloudinary.com/${"dwmlcwpfp"}/image/upload/${result.info.path}`, uploaded: true
+      });
+    }
+    }
+  ).open()
+  }
+
   render(){
     // console.log(this.props);
-    const form = <Form onSubmit={this.handleSubmit}>
-                  <Form.Field>
-                    <label>Add A Process Picture:</label>
-                    <input placeholder="Process Picture" onChange={this.handleChange}/>
-                  </Form.Field>
+    const form = <Form  type='submit' onSubmit={this.handleSubmit}>
                   <Button type='submit'>Submit</Button>
                 </Form>
 
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='file image outline' />}
+        trigger={<Icon size="small" name='file image outline' onClick={this.openWidget} />}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

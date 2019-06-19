@@ -225,10 +225,10 @@ class Show extends Component {
               </Grid><br />
             </div>
             <Grid>
-              <Grid.Column width={7}>
+              <Grid.Column className="deleteButton" width={8}>
                 <Button inverted color='red' onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
               </Grid.Column>
-              <Grid.Column width={8} textAlign="right">
+              <Grid.Column width={7} textAlign="right">
                   <Finished projectId={this.state.id} finished={finished} fetchProjects={this.props.fetchProjects}/>
               </Grid.Column>
             </Grid>

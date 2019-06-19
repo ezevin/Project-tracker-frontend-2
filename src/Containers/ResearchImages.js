@@ -60,22 +60,35 @@ class ResearchImages extends Component {
         .then(()=> this.props.fetchResearchImages())
         this.setState({isOpen: false})
   }
+
+  openWidget = () => {
+    window.cloudinary.createUploadWidget(
+    {
+      cloudName: "dwmlcwpfp",
+      uploadPreset: "urxqwcln"
+    },
+    (error, result) => {
+    if(result && result.event === "success"){
+      this.setState({
+        image: `https://res.cloudinary.com/${"dwmlcwpfp"}/image/upload/${result.info.path}`, uploaded: true
+      });
+    }
+    }
+  ).open()
+  }
+
   render(){
     const { slideIndex } = this.state
     const displayedResearch = this.props.researches.slice(slideIndex, slideIndex + NUM_PROJECTS)
 
     const form = <Form onSubmit={this.handleSubmit}>
-                  <Form.Field>
-                    <label>Image Url:</label>
-                    <input placeholder='Title' onChange={this.handleChange}/>
-                  </Form.Field>
                   <Button type='submit'>Add Image</Button>
-                </Form>
+                 </Form>
 
     return(
       <div className="look researchContainer textAll">
         <Header inverted color='grey' textAlign="center" as='h2' className="textLead">
-          <Popup trigger={<Icon size="small" name='add'/>}
+          <Popup trigger={<Icon size="small" name='add' onClick={this.openWidget}/>}
                   content={form}
                   on='click'
                   position='top left'
