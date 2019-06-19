@@ -6,7 +6,7 @@ import { } from 'react-router-dom'
   class ProjectList extends Component {
 
     render() {
-
+console.log(this.props);
       return (
         <Container align="center" className="textAll">
           <Grid>

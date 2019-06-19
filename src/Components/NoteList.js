@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Grid, Container, Popup } from 'semantic-ui-react'
+import { Icon, Grid, Container } from 'semantic-ui-react'
 
 import NoteUpdate from '../Forms/NoteUpdate'
 
@@ -28,11 +28,11 @@ class NoteList extends Component {
 
               </Grid.Column>
               <Grid.Column width={10}>
-               {this.props.note}
+               <h4>{this.props.note}</h4>
               </Grid.Column>
               <Grid.Column width={3} floated="right">
 
-               <Icon name="delete"  onClick={()=> this.props.deleteNote(this.props.id)}/>
+               <Icon name="delete" className="inverseText" onClick={()=> this.props.deleteNote(this.props.id)}/>
              </Grid.Column>
             </Grid><br />
        </Container>

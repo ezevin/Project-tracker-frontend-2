@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Grid, Popup, Icon, Form, Button } from 'semantic-ui-react'
+import { Grid, Popup, Form, Button } from 'semantic-ui-react'
 
 import ResearchGallery from '../Components/ResearchGallery'
 
@@ -87,16 +87,21 @@ class ResearchImages extends Component {
 
     return(
       <div className="look researchContainer textAll">
-        <Header inverted color='grey' textAlign="center" as='h2' className="textLead">
-          <Popup trigger={<Icon size="small" name='add' onClick={this.openWidget}/>}
+        <Grid>
+          <Grid.Column textAlign="right" width={10}>
+            <h2>Research Images:</h2>
+          </Grid.Column>
+          <Grid.Column width={4}>
+            <Popup trigger={<button onClick={this.openWidget} className="button">Add Image</button>}
                   content={form}
                   on='click'
                   position='top left'
                   open={this.state.isOpen}
                   onOpen={this.handleOpen}
                   onClose={this.handleClose}
-                  />Research Images:
-        </Header>
+                  />
+          </Grid.Column>
+        </Grid>
         <Grid className="">
           <Grid.Column width={1}>
             <button className="researchButton" onClick={this.minusSlides}>&#10094;</button>

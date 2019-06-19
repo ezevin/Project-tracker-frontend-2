@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Route } from 'react-router-dom'
 import { } from 'react-router-dom'
-import { Header, Grid, Button, Form } from 'semantic-ui-react'
+import { Header, Grid, Form } from 'semantic-ui-react'
 
 import ItemList from '../Components/ItemList'
 
@@ -64,17 +64,17 @@ class ToDo extends Component {
                   <Form.Input  placeholder="Add A New ToDo" onChange={this.handleChange}/>
                 </Grid.Column>
                 <Grid.Column>
-                  <Button type="submit">Add</Button>
+                  <button  className="button" type="submit">Add</button>
                 </Grid.Column>
               </Grid>
             </center>
           </Form>
         </center><br />
         <Grid className=" toDoListHeader">
-        <Grid.Column width={2}><span className="textLead">Done?</span></Grid.Column>
-        <Grid.Column width={5}><span className="textLead">Task:</span></Grid.Column>
-        <Grid.Column width={5}><span className="textLead">Add Picture:</span></Grid.Column>
-        <Grid.Column width={3}><span className="textLead">Remove:</span></Grid.Column>
+        <Grid.Column width={3}><span className="textLead"><h3>Done?</h3></span></Grid.Column>
+        <Grid.Column width={4}><span className="textLead"><h3>Task:</h3></span></Grid.Column>
+        <Grid.Column width={5} textAlign="right"><span className="textLead"><h3>Add Picture:</h3></span></Grid.Column>
+        <Grid.Column width={3}><span className="textLead"><h3>Remove:</h3></span></Grid.Column>
         <Grid.Column width={3}></Grid.Column>
         </Grid>
         <Grid columns={5} padded className="link cards toDoListList">

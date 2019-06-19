@@ -12,7 +12,7 @@ class Top extends Component {
         <Menu.Menu size="massive" textAlign="center">
           <Link to="/home" >
             <Menu.Item>
-              <Header as="h1" className='underline'> FabFolio: </Header>
+              <Header as="h1" className='underline header'> FabFolio: </Header>
             </Menu.Item>
           </Link>
           <Link to="/home" >

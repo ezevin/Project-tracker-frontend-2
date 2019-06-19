@@ -162,12 +162,10 @@ class Show extends Component {
               <Grid.Row className="">
                   <Grid.Column width={4} textAlign="center">
                     <div className="textAll startDate">
-                      Date Started: {start_date}
                       <StartDate id={this.state.id} start_date={start_date} fetchProjects={this.fetchProjects}/>
                     </div><br /> <br /><br /><br /><br />
                     <div className="budget textAll">
-                      Budget: ${budget}
-                      <Budget id={this.state.id} fetchProjects={this.fetchProjects}/>
+                      <Budget id={this.state.id} fetchProjects={this.fetchProjects} budget={budget}/>
                     </div>
                   </Grid.Column>
                 <Grid.Column width={6} className="projectName text">
@@ -175,17 +173,15 @@ class Show extends Component {
                     <Title id={this.state.id} title={title} fetchProjects={this.fetchProjects}/>
                   </Header><br />
                   <center>
-                    Summary: {details}
                     <ProjectDeets id={this.state.id} details={details} fetchProjects={this.fetchProjects}/>
                   </center>
                 </Grid.Column>
                 <Grid.Column width={5} textAlign="center">
                   <div className="dueDate textAll">
-                  Date Due: {due_date}
                   <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
                   </div><br /><br /><br /><br /><br />
                   <div className="remainingBudget textAll">
-                    Remaining Budget: ${budget - (total )}
+                    <h4>Remaining Budget: ${budget - (total )}</h4>
                   </div>
                 </Grid.Column>
               </Grid.Row>

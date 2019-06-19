@@ -1,37 +1,7 @@
-/* .App {
-  text-align: center;
+
+.header {
+  font-family: 'Gloria Hallelujah', cursive;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 .icon{
   color: white;
   font-size: xx-large;
@@ -44,7 +14,7 @@
 
 .done {
   color: #BF1641;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-decoration: line-through;
   text-shadow: -1px -1px 0 #001,
     1px -1px 0 #001,
@@ -53,9 +23,9 @@
 }
 
 .undone {
-  color: purple;
-  font-style: oblique;
-  font-weight: bold;
+  color: white;
+  /* font-style: oblique; */
+  /* font-weight: bold; */
   text-shadow: -1px -1px 0 #001,
     1px -1px 0 #001,
     -1px 1px 0 #001,
@@ -113,6 +83,9 @@
 
 .mainGalleryButton {
   height: 200px;
+  background-color: #1B998B;
+  border-color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .shadowGallery {
@@ -124,15 +97,10 @@
   margin-left: -251px;
   margin-right: -251px;
   overflow-y: scroll;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
-}
-
-.mainGallery{
-  margin-left: -px;
-  /* margin-right: 10px; */
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .deleteButton {
@@ -141,16 +109,15 @@
 
 .shadowProjects {
   padding-left: 10px;
-  /* padding-right: 5px; */
   padding-top: 15px;
   padding-bottom: 30px;
   margin-bottom: 45px;
   margin-left: 150px;
   margin-right: 50px;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .shadowInventory{
@@ -160,11 +127,12 @@
   margin-bottom: 75px;
   margin-right: 150px;
   margin-left: 50px;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
+
 .maincontainer {
   margin-left: 300px;
   display: flex;
@@ -179,11 +147,12 @@
 }
 
 .button {
-  background-color: #9C95AD;
+  background-color: #1B998B;
   border: 2px solid;
   border-radius: 8px;
   height: 40px;
   font-weight: bold;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .dot {
@@ -203,7 +172,6 @@
 
 .prev, .next {
   cursor: pointer;
-  /* position: absolute; */
   top: 50%;
   width: auto;
   padding: 16px;
@@ -225,61 +193,32 @@
   background-color: rgba(0,0,0,0.8);
 }
 
-/* .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-} */
-
-/* .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-} */
-
 .finishedButton {
   height: 640px;
 }
 
 .researchButton {
   height: 120px;
+  background-color: #1B998B;
+  border-color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .finishedgallery.img {
   width: 100%;
   height: auto;
 
 }
-/* .finishedgallery:hover {
-  border: 1px solid #777;
-} */
+
 .finishedgallery {
   margin: 5px;
   border: 1px solid #ccc;
   /* float: left; */
   width: 180px;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
-/* .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-} */
 
 .centered {
   position: absolute;
@@ -327,17 +266,17 @@
 .researchContainer{
   margin-top: 30px;
   margin-left: 75px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-right: 15px;
   padding-left: 15px;
   padding-bottom: 10px;
   border: 1px solid #ccc;
   width: 800px;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .processContainer{
@@ -351,10 +290,11 @@
   padding-bottom: 10px;
   border: 1px solid #ccc;
   width: 800px;
-  background-color: #5B5B5B;
+  height: 215px;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .notesContainer {
@@ -365,10 +305,10 @@
   border: 1px solid #ccc;
   width: 500px;
   height: 340px;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .notesList {
@@ -384,10 +324,10 @@
   border: 1px solid #ccc;
   width: 500px;
   height: -300;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .toDoListList {
@@ -407,18 +347,15 @@
   border: 1px solid #ccc;
   width: 500px;
   height: -300;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .materialList {
   overflow-y: scroll;
   height: 145px;
-}
-
-.listContainer{
 }
 
 .startDate {
@@ -432,10 +369,10 @@
   margin-right: 150px;
   margin-top: -20px;
   border: 1px solid #ccc;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .dueDate {
@@ -449,22 +386,22 @@
   margin-right: 60px;
   margin-top: -20px;
   border: 1px solid #ccc;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .projectName {
   position:absolute;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3B6C7B;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 120px;
   margin-top: -20px;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
   border: 1px solid #ccc;
 }
 
@@ -479,10 +416,10 @@
   margin-right: 60px;
   margin-top: -20px;
   border: 1px solid #ccc;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .remainingBudget {
@@ -496,10 +433,10 @@
   margin-right: 65px;
   margin-top: -20px;
   border: 1px solid #ccc;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .profile {
@@ -512,10 +449,10 @@
   border: 1px solid #ccc;
   width: 500px;
   height: -300;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .login {
@@ -529,10 +466,10 @@
   border: 1px solid #ccc;
   width: 600px;
   height: -300;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .signup {
@@ -546,10 +483,10 @@
   border: 1px solid #ccc;
   width: 600px;
   height: -300;
-  background-color: #5B5B5B;
+  background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #3B6C7B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .dropdown{
@@ -615,8 +552,21 @@
 
 .underline {
   text-decoration: underline;
+
 }
 
 .headSummary {
   margin-top: 12px;
+}
+
+.inverseText {
+  color: black
+}
+
+.black {
+  color: black
+}
+
+.blue {
+  color: #3B6C7B
 }

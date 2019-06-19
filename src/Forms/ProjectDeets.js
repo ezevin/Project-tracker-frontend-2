@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup } from 'semantic-ui-react'
 
 class ProjectDeets
  extends Component {
@@ -58,7 +58,7 @@ class ProjectDeets
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<h4>Summary: {this.props.details}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

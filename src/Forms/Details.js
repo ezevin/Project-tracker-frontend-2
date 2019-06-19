@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup } from 'semantic-ui-react'
 
 class Details extends Component {
 
@@ -40,7 +40,7 @@ class Details extends Component {
         .then(()=> this.props.fetchMaterials())
         this.setState({isOpen: false})
   }
-  
+
   render(){
 
     const value = this.state.description
@@ -55,7 +55,7 @@ class Details extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<h4> Details: {this.props.description}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

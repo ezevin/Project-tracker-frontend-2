@@ -64,7 +64,7 @@ class AddProcess extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='file image outline' onClick={this.openWidget} />}
+        trigger={<Icon size="small" className="blue" name='file image outline' onClick={this.openWidget} />}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

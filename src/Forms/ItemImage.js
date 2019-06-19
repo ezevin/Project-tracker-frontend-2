@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon, Image } from 'semantic-ui-react'
+import { Form, Button, Popup, Image } from 'semantic-ui-react'
 
 class ItemImage extends Component {
 

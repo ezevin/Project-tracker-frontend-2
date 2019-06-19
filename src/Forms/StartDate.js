@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup } from 'semantic-ui-react'
 
 class StartDate extends Component {
 
@@ -55,7 +55,7 @@ class StartDate extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<h4>Date Started: {this.props.start_date}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

@@ -94,7 +94,7 @@ class Materials extends Component {
               <Grid.Column className="textLead" width={3}><h2>Item:</h2></Grid.Column>
               <Grid.Column className="textLead" width={3}><h2>Price:</h2></Grid.Column>
               <Grid.Column className="textLead" width={3}><h2>Quantity:</h2></Grid.Column>
-              <Grid.Column width={3}></Grid.Column>
+              <Grid.Column width={2}></Grid.Column>
               <Grid.Column className="textLead" width={3}><h2>Remove:</h2></Grid.Column>
             </Grid.Row>
           </Grid><br />
@@ -113,7 +113,7 @@ class Materials extends Component {
           ))}</Container>
         </div>
         <br />
-        <center><Popup trigger={<Button content='Add A New Material' />}
+        <center><Popup trigger={<button className="button">Add A New Material</button>}
                   content={form}
                   on='click'
                   position='bottom right'

@@ -85,7 +85,7 @@ class ProjectMaterials extends Component {
               <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
               </Grid.Row> <br />
               <Grid.Row><center>
-              <Popup trigger={<Button content='Add A Material' />}
+              <Popup trigger={<button className="button">Add A Material</button>}
               content={form}
               on='click'
               position='bottom right'
@@ -100,10 +100,10 @@ class ProjectMaterials extends Component {
             </Grid.Column>
         </Grid>
         <Grid className="">
-          <Grid.Column width={4}><span className="textLead">Item:</span></Grid.Column>
-          <Grid.Column width={4}><span className="textLead">Price:</span></Grid.Column>
+          <Grid.Column width={4}><span className="textLead"><h3>Item:</h3></span></Grid.Column>
+          <Grid.Column width={4}><span className="textLead"><h3>Price:</h3></span></Grid.Column>
           <Grid.Column width={3}></Grid.Column>
-          <Grid.Column width={5} className="textLead">Remove Item</Grid.Column>
+          <Grid.Column width={5} className="textLead"><h3>Remove Item</h3></Grid.Column>
         </Grid><br />
         <div className="materialList">
           {this.props.materials.map(material => (

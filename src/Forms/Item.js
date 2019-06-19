@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup } from 'semantic-ui-react'
 
 class Item extends Component {
 
@@ -53,7 +53,7 @@ class Item extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<h3 className="inverseText">{this.props.label}</h3>}
         on='click'
         position='bottom right'
         onOpen={this.handleOpen}

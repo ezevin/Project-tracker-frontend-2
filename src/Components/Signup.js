@@ -96,7 +96,7 @@ class Signup extends Component {
               <Button type="submit" color='black'>Create Account</Button>
             <Button.Or />
               <Link to='login'>
-              <Button color='blue'>Return to Login</Button></Link>
+              <button className="button">Return to Login</button></Link>
             </Button.Group>
           </Form>
         </center>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Image, Modal, Header } from 'semantic-ui-react'
+import { Image, Modal, Header } from 'semantic-ui-react'
 
 class GalleryMaterialInfo extends Component {
 
@@ -9,6 +9,7 @@ class GalleryMaterialInfo extends Component {
       <Modal size="mini" trigger={<a>{this.props.label}, </a>}>
         <Header as="h3" className="underline">{this.props.label}</Header><br />
         <Image
+          href={this.props.label}
           className="box"
           floated='right'
           size='mini'

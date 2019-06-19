@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, List, Grid, Button, Icon } from 'semantic-ui-react'
+import { Container, List, Grid, Icon } from 'semantic-ui-react'
 
 import ProjectMaterialInfo from './ProjectMaterialInfo'
 
@@ -35,7 +35,7 @@ class ProjectMaterialItem extends Component {
           </Grid.Column>
           <Grid.Column width={4}>
             <List >
-              <List.Item><Icon name="delete" onClick={()=> {this.props.deleteInventory(this.props)}}/></List.Item>
+              <List.Item><Icon name="delete" className="black" onClick={()=> {this.props.deleteInventory(this.props)}}/></List.Item>
             </List>
           </Grid.Column>
         </Grid>

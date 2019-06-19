@@ -80,10 +80,6 @@ class Finished extends Component {
   render(){
     // console.log(this.props);
     const form =   <Form type="submit" onSubmit={this.handleSubmit}>
-                     <Form.Field>
-                       <label>Picture URL:</label>
-                       <input onChange={this.handleChange}/>
-                     </Form.Field>
                       <Button type="submit">All Done</Button>
                     </Form>
     return (

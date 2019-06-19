@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Popup, Icon } from 'semantic-ui-react'
+import { Form, Button, Popup } from 'semantic-ui-react'
 
 class Budget extends Component {
 
@@ -55,7 +55,7 @@ class Budget extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" name='add' />}
+        trigger={<h4>Budget: {this.props.budget}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

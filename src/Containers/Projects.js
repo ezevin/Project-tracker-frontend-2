@@ -104,13 +104,13 @@ class Projects extends Component {
             <div className="projects textAll">
               {this.props.projects.map(project =>(
                 <Link to={`/show/${project.id}`} key={project.id} onClick={()=>this.props.dropDown(project.id)}>
-                <ProjectList key={project.id} project={project.title} dueDate={project.due_date} id={project.id} dropDown={this.props.dropDown} projects={this.props.projects}/>
+                <ProjectList key={project.id} project={project.title} dueDate={project.due_date} id={project.id} dropDown={this.props.dropDown} projects={this.props.projects} toDoList={project.toDoList}/>
                 </Link>
                 ))
               }
             </div>
         </div>
-        <br /><center><Popup trigger={<Button> Start A New Project</Button>}
+        <br /><center><Popup trigger={<button className="button"> Start A New Project</button>}
                   content={form}
                   on='click'
                   position='bottom right'

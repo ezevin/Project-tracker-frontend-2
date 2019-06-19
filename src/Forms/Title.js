@@ -59,7 +59,7 @@ class Title extends Component {
         content={form}
         trigger={<Header className="textLead"  inverted color='grey'>{this.props.title}</Header>}
         on='click'
-        position='bottom'
+        position='bottom center'
         open={this.state.isOpen}
         onOpen={this.handleOpen}
         onClose={this.handleClose}

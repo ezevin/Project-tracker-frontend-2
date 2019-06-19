@@ -45,27 +45,23 @@ componentDidMount(){
 
   render(){
 
-    const label = this.props.materials.map(material => material.label)
-
-    const price = this.props.materials.map(material => material.price)
-
-    const trigger = <div className="card"><Card className="finishedimg" color='teal'>
-                      <Image wrapped src={this.props.finished_image}  size='big'/>
-                      <Header className="centered" as="h3">{this.props.title}</Header>
-                    </Card><br /><br /></div>
+    const trigger = <div className="card">
+                      <Card fluid className="finishedimg" color='teal'>
+                        <Image wrapped src={this.props.finished_image}  size='big'/>
+                        <Header className="centered" as="h3">{this.props.title}</Header>
+                      </Card><br /><br />
+                    </div>
 
 
     const notes = this.props.allNotes.filter(note => {
       return note.project_id === this.props.projectId
     })
 
-    const list = notes.map(note => note.note)
-
       return(
         <div>
           <Modal trigger={trigger}>
             <Modal.Content image className="">
-              <img className="modalImg" src={this.props.photo}/>
+              <img className="modalImg" alt={this.props.photo} src={this.props.photo}/>
               <Modal.Description>
                 <Header className="underline" as="h2">{this.props.title}</Header>
                 <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>

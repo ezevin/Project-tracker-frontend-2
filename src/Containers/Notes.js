@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import { Route } from 'react-router-dom'
+
 import { } from 'react-router-dom'
-import { Header, Grid, Button, Form } from 'semantic-ui-react'
+import { Header, Grid, Form } from 'semantic-ui-react'
 
 import NoteList from '../Components/NoteList'
 
@@ -11,10 +11,10 @@ class Notes extends Component {
   }
 
   handleChange = (e) => {
-    // console.log(e.target.value);
+
     this.setState({note: e.target.value})
   }
-  //
+
   handleSubmit = (e) => {
     e.preventDefault()
     e.target.reset();
@@ -56,7 +56,7 @@ class Notes extends Component {
                   <Form.TextArea  placeholder="Add A New Note" onChange={this.handleChange}/>
                 </Grid.Column>
                 <Grid.Column width={3} textAlign="center">
-                  <Button type="submit">Add</Button>
+                  <button className="button" type="submit">Add</button>
                 </Grid.Column>
               </Grid>
               </center>

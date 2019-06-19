@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom'
-import axios from 'axios'
-// import logo from './logo.svg';
+
 import './App.css';
 import Main from './Containers/Main'
 import Top from './Components/Top'
@@ -10,11 +9,10 @@ import Signup from './Components/Signup'
 import FinishedPictures from './Containers/FinishedPictures'
 import Show from './Containers/Show'
 import Profile from './Components/Profile'
-// import Footer from './Components/Footer'
 
 class App extends Component {
   state = {
-    projects: [], // pass callback down to finished form on submit
+    projects: [],
     materials: [],
     pID: null,
     currentUser: null,
@@ -214,9 +212,6 @@ class App extends Component {
       return project.finished
     })
 
-    console.log('projects', this.state.projects)
-    console.log('unfinished', unfinished)
-    console.log('finished', finished)
     return (
       <>
         <Top id={this.state.id} projects={unfinished} dropDown={this.dropDown} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/><br />
