@@ -67,6 +67,7 @@ class Main extends Component {
               id={this.props.id}
               dropDown={this.props.dropDown}
               toDoList={this.props.toDoList}
+              handleProgressSort = {this.handleProgressSort}
             />
           </Grid.Column>
           <Grid.Column floated="right" width={8}>

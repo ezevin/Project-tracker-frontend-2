@@ -81,6 +81,7 @@ class Projects extends Component {
               </h3>
             </center><br />
               </Grid.Column>
+              
               <Grid.Column width={6}>
                 <center>
                   <h3 className="textAll">
@@ -96,6 +97,9 @@ class Projects extends Component {
                 <Grid.Column width={6}>
                   <h2 className="textLead">Project Name:</h2>
                 </Grid.Column>
+                <Grid.Column>
+                  <h2 className="textLead">Progress:</h2>
+                </Grid.Column>
                 <Grid.Column width={8} textAlign="right">
                   <h2 className="textLead">Due Date:</h2>
                 </Grid.Column>
@@ -104,7 +108,7 @@ class Projects extends Component {
             <div className="projects textAll">
               {this.props.projects.map(project =>(
                 <Link to={`/show/${project.id}`} key={project.id} onClick={()=>this.props.dropDown(project.id)}>
-                <ProjectList key={project.id} project={project.title} dueDate={project.due_date} id={project.id} dropDown={this.props.dropDown} projects={this.props.projects} toDoList={project.toDoList}/>
+                <ProjectList key={project.id} project={project.title} dueDate={project.due_date} id={project.id} dropDown={this.props.dropDown} projects={this.props.projects} toDoList={project.to_do_lists}/>
                 </Link>
                 ))
               }
