@@ -24,7 +24,7 @@ class Login extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    fetch('http://localhost:3001/api/v1/auth',{
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/auth',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ class AboutMe extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { about_me } = this.state
-    fetch(`http://localhost:3001/api/v1/users/${this.props.id}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/users/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
