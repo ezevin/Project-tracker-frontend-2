@@ -19,6 +19,14 @@ class MaterialUpdate extends Component {
             <Grid>
               <Grid.Column width={6}>
                 <ItemImage image_url={this.props.image_url} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/><br />
+              </Grid.Column>
+              <Grid.Column  width={6}>
+                <Card.Header className="underline">
+                  <Item label={this.props.label} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
+                </Card.Header><br />
+                <Card.Meta>
+                  <Details description={this.props.description} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/><br />
+                </Card.Meta>
                 <Card.Description className="inverseText">
                   <Price price={this.props.price} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
                 </Card.Description>
@@ -28,14 +36,6 @@ class MaterialUpdate extends Component {
                 <Card.Description className="inverseText">
                   <Place place_purchased={this.props.place_purchased} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
                 </Card.Description>
-              </Grid.Column>
-              <Grid.Column  width={6}>
-                <Card.Header className="underline">
-                  <Item label={this.props.label} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/>
-                </Card.Header><br />
-                <Card.Meta>
-                  <Details description={this.props.description} fetchMaterials={this.props.fetchMaterials} id={this.props.id}/><br />
-                </Card.Meta>
             </Grid.Column>
            </Grid>
          </Card.Content>
