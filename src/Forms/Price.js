@@ -54,7 +54,7 @@ class Price extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Price:{this.props.price}</h4>}
+        trigger={<h4>Price: ${this.props.price}}
         on='click'
         position='bottom right'
         open={this.state.isOpen}
