@@ -55,7 +55,7 @@ class Budget extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Budget: {this.props.budget}</h4>}
+        trigger={<h4>Budget: ${this.props.budget}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}
