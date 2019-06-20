@@ -63,9 +63,9 @@ class ProcessModal extends Component {
         onOpen={this.handleOpen}
         onClose={this.handleClose}
         trigger={
-        <Button primary icon>
+        <button primary icon className="button">
           Process Pictures <Icon name='right chevron' />
-        </Button>} >
+        </button>} >
         <Modal.Content image>
         <Grid className="modalPicContainer">
           <Grid.Column width={1} className="">
@@ -86,7 +86,7 @@ class ProcessModal extends Component {
           </Grid.Column>
         </Grid>
         </Modal.Content>
-         <Button floated="right" icon='check' content='Back To Project Details' onClick={this.handleClose} />
+         <button floated="right" icon='check' className="button" onClick={this.handleClose}>Back To Project Details</button>
       </Modal>
     )}
   }

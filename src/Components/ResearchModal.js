@@ -52,9 +52,9 @@ class ResearchModal extends Component {
         onOpen={this.handleOpen}
         onClose={this.handleClose}
         trigger={
-          <Button floated="left" primary icon>
+          <button className="button" align="left" primary icon>
             Research Images <Icon name='right chevron' />
-          </Button>} >
+          </button>} >
         <Modal.Content image>
           <Grid className="modalPicContainer">
             <Grid.Column width={1} className="">
@@ -72,7 +72,7 @@ class ResearchModal extends Component {
           </Grid.Column>
         </Grid>
       </Modal.Content>
-      <Button floated="left" icon='check' content='Back To Project Details' onClick={this.handleClose} />
+      <button floated="left" icon='check' className="button" onClick={this.handleClose}>Back To Project Details</button>
     </Modal>
     )}
 

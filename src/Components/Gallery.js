@@ -44,7 +44,7 @@ componentDidMount(){
   }
 
   render(){
-
+    console.log("budget", this.props.budget, "materials", this.props.materials);
     const trigger = <div className="card">
                       <Card fluid className="finishedimg" color='teal'>
                         <Image wrapped src={this.props.finished_image}  size='big'/>
@@ -64,6 +64,7 @@ componentDidMount(){
               <img className="modalImg" alt={this.props.photo} src={this.props.photo}/>
               <Modal.Description>
                 <h1 className="underline inverseText" >{this.props.title}</h1>
+                <h4 className=" inverseText">Cost: {this.props.start.toString().slice(0, 15)}</h4>
                 <h4 className=" inverseText">Start Date: {this.props.start.toString().slice(0, 15)}</h4>
                 <h4 className=" inverseText">Date Finished: {this.props.date.toString().slice(0, 15)}</h4>
                 <h4 className=" inverseText">Date Due: {this.props.due.toString().slice(0, 15)}</h4>
