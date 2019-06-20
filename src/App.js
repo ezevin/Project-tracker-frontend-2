@@ -32,7 +32,7 @@ class App extends Component {
     const token = localStorage.getItem('token')
     console.log("token is", token);
     if(token){
-      fetch('http://localhost:3001/api/v1/current_user', {
+      fetch('https://fabfolio-backend.herokuapp.com/api/v1/current_user', {
         headers: {
           Authorization: token
         }
@@ -43,34 +43,34 @@ class App extends Component {
           this.setState({currentUser: user})
         }
         let id = this.state.currentUser.id
-        fetch(`http://localhost:3001/api/v1/users/${id}`)
+        fetch(`https://fabfolio-backend.herokuapp.com/api/v1/users/${id}`)
         .then(res => res.json())
         .then(data => this.setState({projects: data.projects, materials: data.materials, user: data}))
         this.setState({id: id})
       })
     }
     //
-    // fetch('http://localhost:3001/api/v1/project_materials')
+    // fetch('https://fabfolio-backend.herokuapp.com/api/v1/project_materials')
     // .then(res => res.json())
     // .then(data => this.setState({pm: data}))
 
-    // fetch(`http://localhost:3001/api/v1/projects/${this.state.pID}`)
+    // fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.pID}`)
     // .then(res => res.json())
     // .then(data => this.setState({projectMaterials: data.materials, research: data.researches, toDoList: data.to_do_lists, projectMaterials: data.materials, notes: data.notes}, console.log("PROJECTS", data)))
 
-    // fetch('http://localhost:3001/api/v1/user_materials')
+    // fetch('https://fabfolio-backend.herokuapp.com/api/v1/user_materials')
     // .then(res => res.json())
     // .then(data => this.setState({um: data}, console.log("UM", data)))
 
-    fetch('http://localhost:3001/api/v1/researches')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/researches')
     .then(res => res.json())
     .then(data => this.setState({allResearch: data}))
 
-    fetch('http://localhost:3001/api/v1/to_do_lists')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists')
     .then(res => res.json())
     .then(data => this.setState({allToDo: data}))
 
-    fetch('http://localhost:3001/api/v1/notes')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/notes')
     .then(res => res.json())
     .then(data => this.setState({allNotes: data}))
   }
@@ -134,7 +134,7 @@ class App extends Component {
 
   fetchUserData = () => {
     let id = this.state.currentUser.id
-    fetch(`http://localhost:3001/api/v1/users/${id}`)
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/users/${id}`)
     .then(res => res.json())
     .then(data => this.setState({user: data}))
   }
@@ -151,7 +151,7 @@ class App extends Component {
 
   fetchProjects = () => {
     let id = this.state.currentUser.id
-    fetch(`http://localhost:3001/api/v1/users/${id}`)
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/users/${id}`)
     .then(res => res.json())
     .then(data => this.setState({projects: data.projects}))
     this.setState({id: id})
@@ -159,7 +159,7 @@ class App extends Component {
 
   deleteProject = (dproject) => {
     const deleted = this.state.projects.find(project => project.id === dproject)
-    fetch(`http://localhost:3001/api/v1/projects/${deleted.id}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${deleted.id}`, {
       method:"delete"
     })
     .then(this.props.history.push('home'))
@@ -192,7 +192,7 @@ class App extends Component {
 
   fetchMaterials = () => {
     let id = this.state.currentUser.id
-    fetch(`http://localhost:3001/api/v1/users/${id}`)
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/users/${id}`)
     .then(res => res.json())
     .then(data => this.setState({materials: data.materials}))
   }
@@ -200,7 +200,7 @@ class App extends Component {
   deleteMaterial = (dmaterial) => {
     const deleted = this.state.materials.find(material => material.id === dmaterial)
     console.log("item", deleted.id);
-    fetch(`http://localhost:3001/api/v1/materials/${deleted.id}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${deleted.id}`, {
       method:"delete"
     })
     .then(() =>this.fetchMaterials())
