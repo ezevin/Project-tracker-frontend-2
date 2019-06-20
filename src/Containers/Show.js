@@ -176,7 +176,7 @@ class Show extends Component {
                     <ProjectDeets id={this.state.id} details={details} fetchProjects={this.fetchProjects}/>
                   </center>
                 </Grid.Column>
-                <Grid.Column width={5} textAlign="center">
+                <Grid.Column width={4} textAlign="center">
                   <div className="dueDate textAll">
                   <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
                   </div><br /><br /><br /><br /><br />

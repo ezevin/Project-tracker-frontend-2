@@ -96,7 +96,7 @@ class ProjectMaterials extends Component {
               </Grid.Row>
             </Grid.Column>
             <Grid.Column>
-              <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
+              <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
             </Grid.Column>
         </Grid>
         <Grid className="">
