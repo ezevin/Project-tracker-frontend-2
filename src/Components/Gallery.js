@@ -21,15 +21,15 @@ componentDidMount(){
   if(!token){
     this.props.history.push('login')
   }else {
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ researches')
+    fetch('http://localhost:3001/api/v1/researches')
     .then(res => res.json())
     .then(data => this.setState({research: data}))
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ to_do_lists')
+    fetch('http://localhost:3001/api/v1/to_do_lists')
     .then(res => res.json())
     .then(data => this.setState({toDoList: data}))
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ notes')
+    fetch('http://localhost:3001/api/v1/notes')
     .then(res => res.json())
     .then(data => this.setState({notes: data}))
   }

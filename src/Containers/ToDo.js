@@ -21,7 +21,7 @@ class ToDo extends Component {
 
     const { item } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ to_do_lists`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists`, {
           method: "POST",
           headers: {
             Accept: 'application/json',
@@ -35,7 +35,7 @@ class ToDo extends Component {
   }
 
   handleDone = (id) => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ to_do_lists/${id}`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',

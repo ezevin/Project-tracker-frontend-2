@@ -30,7 +30,7 @@ class ProjectMaterials extends Component {
     })
     const total = material.map(item => item.quantity)
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ inventories', {
+    fetch('http://localhost:3001/api/v1/inventories', {
       method: "POST",
       headers: {
         Accept: 'application/json',
@@ -50,7 +50,7 @@ class ProjectMaterials extends Component {
       .then(()=>this.props.fetchInventory())
       // .then(()=>this.props.fetchPM())
 
-      fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ materials/${item.id}`, {
+      fetch(`http://localhost:3001/api/v1/materials/${item.id}`, {
             method: "PATCH",
             headers: {
               Accept: 'application/json',

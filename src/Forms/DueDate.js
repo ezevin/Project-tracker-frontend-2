@@ -29,7 +29,7 @@ class DueDate extends Component {
 
     const { due_date } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ projects/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
