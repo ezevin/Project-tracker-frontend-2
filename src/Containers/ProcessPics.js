@@ -52,7 +52,7 @@ fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
         return pic.process_pic !== "https://image.shutterstock.com/image-vector/empty-background-style-png-blank-450w-676832590.jpg"
       })
       return(
-        <div className="look processContainer textAll">
+        <div className="processContainer textAll">
           <Header inverted color='grey' textAlign="center" as='h2' className="textLead">
             Process Pictures
           </Header>
@@ -61,7 +61,7 @@ fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
               <button className="researchButton" onClick={this.minusSlides}>&#10094;</button>
             </Grid.Column>
             <Grid.Column width={14}>
-              <Grid columns={5} padded className="cards ">
+              <Grid columns={5} padded className="cards look">
                 {real.map(pic =>(
                    <ProcessList key={pic.id} reset={this.handleReset} photo={pic.process_pic} title={pic.item} details={pic.details} finished_image={pic.finished_image} id={pic.id} research={this.props.research}/>
                 ))}

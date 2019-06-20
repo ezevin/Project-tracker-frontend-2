@@ -10,7 +10,7 @@ class Top extends Component {
     return (
        <Menu>
         <Menu.Menu size="massive" textAlign="center">
-          <Link to="/home" >
+          <Link to="/home" onClick={this.props.refresh}>
             <Menu.Item>
               <Header as="h1" className='underline header'> FabFolio: </Header>
             </Menu.Item>
@@ -36,7 +36,7 @@ class Top extends Component {
           {
             this.props.currentUser &&
            <Link to="/home" >
-             <Menu.Item name='home' refresh="true">
+             <Menu.Item name='home' onClick={this.props.refresh}>
                  Home
              </Menu.Item>
            </Link>

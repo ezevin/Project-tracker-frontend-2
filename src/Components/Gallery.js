@@ -53,7 +53,7 @@ componentDidMount(){
                     </div>
 
 
-    const notes = this.props.allNotes.filter(note => {
+    const notes = this.state.notes.filter(note => {
       return note.project_id === this.props.projectId
     })
 
@@ -63,17 +63,19 @@ componentDidMount(){
             <Modal.Content image className="">
               <img className="modalImg" alt={this.props.photo} src={this.props.photo}/>
               <Modal.Description>
-                <Header className="underline" as="h2">{this.props.title}</Header>
-                <Header className="scroll" as="h4">Date Finished: {this.props.date.toString().slice(0, 15)}</Header>
+                <h1 className="underline inverseText" >{this.props.title}</h1>
+                <h4 className=" inverseText">Start Date: {this.props.start.toString().slice(0, 15)}</h4>
+                <h4 className=" inverseText">Date Finished: {this.props.date.toString().slice(0, 15)}</h4>
+                <h4 className=" inverseText">Date Due: {this.props.due.toString().slice(0, 15)}</h4>
                 <div className="finalNote">
-                  <Header as="h4">
+                  <Header as="h4" className="scroll">
                   Notes From Project:
                   {notes.map(note => {
                       return <li>{note.note}</li>
                   })}
                   </Header>
                 </div>
-                <Header as="h4">Materials: {this.props.materials.map(material => (
+                <Header className="scroll" as="h4">Materials: {this.props.materials.map(material => (
                   <GalleryMaterialInfo
                     key={material.id}
                     label={material.label}
@@ -86,8 +88,8 @@ componentDidMount(){
               </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
-              <ResearchModal  projectId={this.props.projectId} research={this.props.research} />
-              <ProcessModal  projectId={this.props.projectId} toDoList={this.props.toDoList} />
+              <ResearchModal  projectId={this.props.projectId} research={this.state.research} />
+              <ProcessModal  projectId={this.props.projectId} toDoList={this.state.toDoList} />
             </Modal.Actions>
           </Modal><br />
         </div>

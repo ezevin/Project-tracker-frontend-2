@@ -56,9 +56,7 @@ class Finished extends Component {
         .then(data => {
           this.setState({data})
           this.props.fetchProjects()
-          this.props.history.push('/gallery')
-        })
-
+          this.props.history.push('/gallery')        })
   }
 
   openWidget = () => {
@@ -89,7 +87,7 @@ class Finished extends Component {
         <Modal.Header as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
           <Modal.Actions>
             <Button type="button" negative onClick={this.handleClick}>No</Button>
-            <Modal size='small' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes'  onClick={this.openWidget}/>}>
+            <Modal size='mini' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes'  onClick={this.openWidget}/>}>
                 <Modal.Content>
                   {form}
                 </Modal.Content>

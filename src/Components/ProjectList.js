@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Container } from 'semantic-ui-react'
+import { Grid, Container, Progress } from 'semantic-ui-react'
 import { } from 'react-router-dom'
 
 
@@ -18,11 +18,11 @@ import { } from 'react-router-dom'
             <Grid.Column width={6}>
               <h3>{this.props.project}</h3>
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column align="left" width={4}>
             {percent  ?
-              <h3>{percent}%</h3>
+              <Progress percent={percent} indicating/>
              :
-             <h3>0%</h3>
+             <Progress percent={0} indicating/>
             }
 
             </Grid.Column>

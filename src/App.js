@@ -84,6 +84,14 @@ class App extends Component {
     this.fetchProjects()
     window.location.reload()
   }
+
+  refresh = () => {
+      this.fetchUserData()
+      this.fetchProjects()
+      this.fetchMaterials()
+  }
+
+
   /******************************************/
   /*                                        */
   /******************************************/
@@ -214,7 +222,7 @@ class App extends Component {
 
     return (
       <>
-        <Top id={this.state.id} projects={unfinished} dropDown={this.dropDown} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/><br />
+        <Top id={this.state.id} projects={unfinished} dropDown={this.dropDown} currentUser={this.state.currentUser} handleLogout={this.handleLogout} refresh={this.refresh}/><br />
         <Switch>
           <Route path='/Home' render={(routerProps)=>{
             const slug = routerProps.match.params.slug
@@ -254,7 +262,7 @@ class App extends Component {
                projectMaterials={this.state.projectMaterials}
                fetchProjectMaterials={this.fetchProjectMaterials}
                addProjectMaterial={this.addProjectMaterial}
-               fetchMaterials={this.fetchMaterials}        userId={this.state.id}
+               fetchMaterials={this.fetchMaterials}   refresh={this.refresh}     userId={this.state.id}
                />}}
                />
           <Route path="/profile" render={() => {

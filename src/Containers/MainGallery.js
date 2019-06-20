@@ -67,7 +67,7 @@ currentSlide(n) {
               <Grid columns={6} padded className="link mainGallery cards">
                 {displayedProjects.map(project =>{
                    return <Gallery key={project.id} photo={project.finished_image} title={project.title} details={project.details} finished_image={project.finished_image} projectId={project.id} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.allNotes} materials={project.inventories}
-                   date={new Date(project.updated_at)}/>
+                   date={new Date(project.updated_at)} start={new Date(project.start_date)} due={new Date(project.due_date)}/>
                 })}
               </Grid></center>
             </Grid.Column>

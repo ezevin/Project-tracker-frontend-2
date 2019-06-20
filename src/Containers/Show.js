@@ -225,7 +225,7 @@ class Show extends Component {
                 <Button inverted color='red' onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
               </Grid.Column>
               <Grid.Column width={7} textAlign="right">
-                  <Finished projectId={this.state.id} finished={finished} fetchProjects={this.props.fetchProjects}/>
+                  <Finished projectId={this.state.id} finished={finished} fetchProjects={this.props.fetchProjects} fetchToDoList={this.fetchToDoList} fetchNotes={this.fetchNotes} refresh={this.props.refresh}/>
               </Grid.Column>
             </Grid>
           </>
