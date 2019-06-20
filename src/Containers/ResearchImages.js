@@ -47,7 +47,7 @@ class ResearchImages extends Component {
 
     const { image } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/researches`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ researches`, {
           method: "POST",
           headers: {
             Accept: 'application/json',

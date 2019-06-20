@@ -21,15 +21,15 @@ componentDidMount(){
   if(!token){
     this.props.history.push('login')
   }else {
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/researches')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ researches')
     .then(res => res.json())
     .then(data => this.setState({research: data}))
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ to_do_lists')
     .then(res => res.json())
     .then(data => this.setState({toDoList: data}))
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/notes')
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ notes')
     .then(res => res.json())
     .then(data => this.setState({notes: data}))
   }
@@ -44,7 +44,7 @@ componentDidMount(){
   }
 
   render(){
-    console.log("budget", this.props.budget, "materials", this.props.materials);
+    // console.log("budget", this.props.budget, "materials", this.props.materials);
     const trigger = <div className="card">
                       <Card fluid className="finishedimg" color='teal'>
                         <Image wrapped src={this.props.finished_image}  size='big'/>

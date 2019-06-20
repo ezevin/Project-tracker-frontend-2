@@ -21,7 +21,7 @@ class Notes extends Component {
 
     const { note } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/notes`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ notes`, {
           method: "POST",
           headers: {
             Accept: 'application/json',

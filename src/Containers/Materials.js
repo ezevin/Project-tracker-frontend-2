@@ -34,7 +34,7 @@ class Materials extends Component {
   handleSubmit = (e) => {
     const { label, price, quantity } = this.state
     // debugger
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/materials', {
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/ materials', {
       method: "POST",
       headers: {
         Accept: 'application/json',

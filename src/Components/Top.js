@@ -9,12 +9,19 @@ class Top extends Component {
   render(){
     return (
        <Menu>
-        <Menu.Menu size="massive" textAlign="center">
+        <Menu.Menu size="massive">
+        {
+          this.props.currentUser ?
           <Link to="/home" onClick={this.props.refresh}>
             <Menu.Item>
               <Header as="h1" className='underline header'> FabFolio: </Header>
             </Menu.Item>
           </Link>
+          :
+          <Menu.Item>
+            <Header as="h1" className='underline header'> FabFolio: </Header>
+          </Menu.Item>
+        }
           <Link to="/home" >
             <Menu.Item className="headSummary">
               <Header as="h3"> A Fabricator's Portfolio </Header>

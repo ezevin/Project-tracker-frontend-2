@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { } from 'react-router-dom'
-import { Image, Modal, Card, Button, Icon, Grid } from 'semantic-ui-react'
+import { Image, Modal, Card, Icon, Grid } from 'semantic-ui-react'
 
 const NUM_PROJECTS = 4
 

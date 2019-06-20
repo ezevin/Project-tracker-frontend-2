@@ -30,7 +30,7 @@ class ProjectDeets
 
     const { details } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/ projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
