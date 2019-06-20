@@ -18,9 +18,11 @@ class Top extends Component {
             </Menu.Item>
           </Link>
           :
-          <Menu.Item>
-            <Header as="h1" className='underline header'> FabFolio: </Header>
-          </Menu.Item>
+          <Link to="/login">
+            <Menu.Item>
+              <Header as="h1" className='underline header'> FabFolio: </Header>
+            </Menu.Item>
+          </Link>
         }
           <Link to="/home" >
             <Menu.Item className="headSummary">
