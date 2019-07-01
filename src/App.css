@@ -48,7 +48,7 @@
 
 .projects {
   margin-right: 50px;
-  height: 140px;
+  height: 150px;
   width: 100%;
   overflow-y: scroll;
   color: white;
@@ -89,8 +89,8 @@
 .shadowGallery {
   padding-left:0px;
   padding-right: 0px;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   margin-bottom: 45px;
   margin-left: -5px;
   margin-right: -5px;
@@ -109,8 +109,8 @@
 .shadowProjects {
   padding-left: 10px;
   padding-top: 15px;
-  padding-bottom: 30px;
-  margin-bottom: 45px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   margin-left: 150px;
   margin-right: 50px;
   background-color: #1A535C;
@@ -122,8 +122,8 @@
 .shadowInventory{
   padding-left: 10px;
   padding-top: 15px;
-  padding-bottom: 30px;
-  margin-bottom: 75px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
   margin-right: 150px;
   margin-left: 50px;
   background-color: #1A535C;
