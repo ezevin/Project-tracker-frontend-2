@@ -26,7 +26,7 @@ class Finished extends Component {
   handleClick = () => {
     // const { finished } = this.state
     // this.setState({finished: true})
-    fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -44,7 +44,7 @@ class Finished extends Component {
     e.preventDefault()
     const { finished_image } = this.state
 
-    fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
+    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
