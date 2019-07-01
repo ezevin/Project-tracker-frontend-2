@@ -21,7 +21,7 @@ class ToDo extends Component {
 
     const { item } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists`, {
           method: "POST",
           headers: {
             Accept: 'application/json',
@@ -35,7 +35,7 @@ class ToDo extends Component {
   }
 
   handleDone = (id) => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists/${id}`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists/${id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -71,8 +71,8 @@ class ToDo extends Component {
         </center><br />
         <Grid className=" toDoListHeader">
         <Grid.Column width={3}><span className="textLead"><h3>Done?</h3></span></Grid.Column>
-        <Grid.Column width={4}><span className="textLead"><h3>Task:</h3></span></Grid.Column>
-        <Grid.Column width={5} textAlign="right"><span className="textLead"><h3>Add Picture:</h3></span></Grid.Column>
+        <Grid.Column width={2}><span className="textLead"><h3>Task:</h3></span></Grid.Column>
+        <Grid.Column width={7} textAlign="right"><span className="textLead"><h3>Add Picture:</h3></span></Grid.Column>
         <Grid.Column width={3}><span className="textLead"><h3>Remove:</h3></span></Grid.Column>
         <Grid.Column width={3}></Grid.Column>
         </Grid>

@@ -27,7 +27,7 @@ class Details extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { description } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/materials/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -55,7 +55,7 @@ class Details extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4> Details: {this.props.description}</h4>}
+        trigger={<h4 className="pointer"> Details: {this.props.description}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

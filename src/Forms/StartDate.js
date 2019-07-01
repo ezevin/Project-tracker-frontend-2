@@ -29,7 +29,7 @@ class StartDate extends Component {
 
     const { start_date } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -55,7 +55,7 @@ class StartDate extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Date Started: {this.props.start_date}</h4>}
+        trigger={<h4 className="pointer">Date Started: {this.props.start_date}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

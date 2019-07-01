@@ -27,7 +27,7 @@ class Place extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { place_purchased } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/materials/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -53,7 +53,7 @@ class Place extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Place Purchased: {this.props.place_purchased}</h4>}
+        trigger={<h4 className="pointer">Place Purchased: {this.props.place_purchased}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

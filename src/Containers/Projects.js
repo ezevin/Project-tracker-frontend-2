@@ -32,7 +32,7 @@ class Projects extends Component {
   handleSubmit= (e) => {
     const { title } = this.state
 
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/projects', {
+    fetch('http://localhost:3001/api/v1/projects', {
           method: "POST",
           headers: {
             Accept: 'application/json',
@@ -65,8 +65,8 @@ class Projects extends Component {
         <div>
           <Grid>
             <Grid.Row>
-              <Grid.Column width={9}>
-                <Header className="textLead" inverted color='black' textAlign="center" as='h1'>Current Projects</Header>
+              <Grid.Column width={8}>
+                <Header className="textLead" inverted color='black' textAlign="center" as='h2'>Current Projects</Header>
               </Grid.Column>
               <Grid.Column width={5}>
                 <center><Search className="textAll" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
@@ -75,19 +75,19 @@ class Projects extends Component {
             <Grid.Row>
               <Grid.Column width={8} >
             <center>
-              <h3 className="textAll">
+              <h4 className="textAll">
                 Sort By Project Name:
                 <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/>
-              </h3>
+              </h4>
             </center><br />
               </Grid.Column>
-              
+
               <Grid.Column width={6}>
                 <center>
-                  <h3 className="textAll">
+                  <h4 className="textAll">
                     Sort By Date:
                     <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/>
-                  </h3>
+                  </h4>
                 </center><br />
               </Grid.Column>
             </Grid.Row>
@@ -95,13 +95,13 @@ class Projects extends Component {
             <center><Container align="center">
               <Grid>
                 <Grid.Column width={6}>
-                  <h2 className="textLead">Project Name:</h2>
+                  <h3 className="textLead">Project Name:</h3>
                 </Grid.Column>
                 <Grid.Column>
-                  <h2 className="textLead">Progress:</h2>
+                  <h3 className="textLead">Progress:</h3>
                 </Grid.Column>
                 <Grid.Column width={8} textAlign="right">
-                  <h2 className="textLead">Due Date:</h2>
+                  <h3 className="textLead">Due Date:</h3>
                 </Grid.Column>
               </Grid>
             </Container></center><br />

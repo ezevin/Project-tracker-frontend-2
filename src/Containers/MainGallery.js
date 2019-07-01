@@ -3,7 +3,7 @@ import { Header, Grid } from 'semantic-ui-react'
 
 import Gallery from '../Components/Gallery'
 
-const NUM_PROJECTS = 6
+const NUM_PROJECTS = 5
 
 class MainGallery extends Component {
 
@@ -23,7 +23,7 @@ plusSlides = (n) => {
 minusSlides = (n) => {
   let count = this.state.slideIndex+NUM_PROJECTS
 
-  if (count > 6){
+  if (count > 5){
     this.setState({slideIndex: this.state.slideIndex - NUM_PROJECTS})
   }
 }

@@ -25,7 +25,7 @@ class AddProcess extends Component {
     // debugger
     const { process_pic } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -64,7 +64,7 @@ class AddProcess extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Icon size="small" className="blue" name='file image outline' onClick={this.openWidget} />}
+        trigger={<Icon size="small" className="blue pointer" name='file image outline' onClick={this.openWidget} />}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

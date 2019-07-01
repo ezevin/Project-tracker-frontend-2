@@ -14,7 +14,7 @@ class MaterialUpdate extends Component {
 
     return (
       <Modal size="mini" trigger={<button className="button">Info</button>}>
-        <Card fluid float="left">
+        <Card fluid float="left" className="scroll">
           <Card.Content>
             <Grid>
               <Grid.Column width={6}>

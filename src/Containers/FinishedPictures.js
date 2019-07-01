@@ -54,31 +54,32 @@ class FinishedPictures extends Component {
         <Grid.Column textAlign="right">
           <center>
             <Search width={15} onSearchChange={this.handleSearch} showNoResults={false} />
-          </center><br />
+          </center>
         </Grid.Column>
         </Grid>
         <br />
         <br />
         <br />
-        <Container className="finished finishedgallery">
-        <Grid columns={5} padded className="link cards">
-
-          <Grid.Column width={1}>
-            <button className="finishedButton"
-            onClick={this.minusSlides}>&#10094;</button>
-          </Grid.Column>
-          <Grid.Column width={14}><center>
+        <Grid >
+          <Grid.Column className="finished finishedgallery">
             <Grid columns={5} padded className="link cards">
-              {filtered.map(project =>(
-                 <Gallery key={project.id} photo={project.finished_image} budget={project.budget} title={project.title} details={project.details} finished_image={project.finished_image} projectId={project.id} research={this.props.research} toDoList={this.props.toDoList} materials={project.inventories}  allNotes={this.props.allNotes} fetchProjects={this.props.fetchProjects} start={new Date(project.start_date)} due={new Date(project.due_date)} date={new Date(project.updated_at)}/>
-              ))}
-            </Grid></center>
-          </Grid.Column>
-          <Grid.Column width={1}>
-          <button className="finishedButton" onClick={this.plusSlides}>&#10095;</button>
+            <Grid.Column width={1}>
+              <button className="finishedButton"
+              onClick={this.minusSlides}>&#10094;</button>
+            </Grid.Column>
+            <Grid.Column width={14}><center>
+              <Grid columns={5} padded className="link cards">
+                {filtered.map(project =>(
+                   <Gallery key={project.id} photo={project.finished_image} budget={project.budget} title={project.title} details={project.details} finished_image={project.finished_image} projectId={project.id} research={this.props.research} toDoList={this.props.toDoList} materials={project.inventories}  allNotes={this.props.allNotes} fetchProjects={this.props.fetchProjects} start={new Date(project.start_date)} due={new Date(project.due_date)} date={new Date(project.updated_at)}/>
+                ))}
+              </Grid></center>
+            </Grid.Column>
+            <Grid.Column width={1}>
+            <button className="finishedButton" onClick={this.plusSlides}>&#10095;</button>
+              </Grid.Column>
+            </Grid>
             </Grid.Column>
           </Grid>
-          </Container>
 
 
 

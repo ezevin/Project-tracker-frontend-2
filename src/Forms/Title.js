@@ -29,7 +29,7 @@ class Title extends Component {
 
     const { title } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -57,7 +57,7 @@ class Title extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Header className="textLead"  inverted color='grey'>{this.props.title}</Header>}
+        trigger={<Header className="textLead pointer"  inverted color='grey'>{this.props.title}</Header>}
         on='click'
         position='bottom center'
         open={this.state.isOpen}

@@ -33,7 +33,7 @@ class Show extends Component {
     if(!token){
       this.props.history.push('login')
     }else {
-      fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.slug}`)
+      fetch(`http://localhost:3001/api/v1/projects/${this.props.slug}`)
       .then(res => res.json())
       .then(data => this.setState({projects: data, researches: data.researches, toDoList: data.to_do_lists, inventory: data.inventories, notes: data.notes, id: data.id}))
 
@@ -41,19 +41,19 @@ class Show extends Component {
   }
 
   fetchProjects = () => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({projects: data}))
   }
 
   fetchInventory = () => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({inventory: data.inventories}))
   }
 
   // fetchPM = () => {
-  //   fetch('https://fabfolio-backend.herokuapp.com/api/v1/project_materials')
+  //   fetch('http://localhost:3001/api/v1/project_materials')
   //   .then(res => res.json())
   //   .then(data => this.setState({pm: data},console.log("PM", data)))
   // }
@@ -63,7 +63,7 @@ class Show extends Component {
   }
 
   deleteInventory = (item) => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/inventories/${item.id}`, {
+    fetch(`http://localhost:3001/api/v1/inventories/${item.id}`, {
       method: "delete"
       })
     .then(() =>this.fetchInventory())
@@ -76,7 +76,7 @@ class Show extends Component {
     const id = material.map(material => material.id)
     const total = material.map(material => material.quantity)
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${id}`, {
+    fetch(`http://localhost:3001/api/v1/materials/${id}`, {
       method: "PATCH",
       headers: {
         Accept: 'application/json',
@@ -94,42 +94,42 @@ class Show extends Component {
   }
 
   fetchToDoList = () => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({toDoList: data.to_do_lists}))
   }
 
   deleteToDo = (item) => {
     const deleted = this.state.toDoList.find(list => list.id === item)
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists/${deleted.id}`, {
+    fetch(`http://localhost:3001/api/v1/to_do_lists/${deleted.id}`, {
       method:"delete"
     })
     .then(() =>this.fetchToDoList())
   }
 
   fetchNotes = () => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({notes: data.notes}))
   }
 
   deleteNote = (item) => {
     const deleted = this.state.notes.find(note => note.id === item)
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/notes/${deleted.id}`, {
+    fetch(`http://localhost:3001/api/v1/notes/${deleted.id}`, {
       method:"delete"
     })
     .then(() =>this.fetchNotes())
   }
 
   fetchResearchImages = () => {
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.state.id}`)
+    fetch(`http://localhost:3001/api/v1/projects/${this.state.id}`)
     .then(res => res.json())
     .then(data => this.setState({researches: data.researches}))
   }
 
   deleteResearch = (item) => {
     const deleted = this.state.researches.find(research => research.id === item)
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/researches/${deleted.id}`, {
+    fetch(`http://localhost:3001/api/v1/researches/${deleted.id}`, {
       method:"delete"
     })
     .then(() =>this.fetchResearchImages())

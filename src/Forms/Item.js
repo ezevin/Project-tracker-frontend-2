@@ -27,7 +27,7 @@ class Item extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { label } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/materials/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -53,7 +53,7 @@ class Item extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h3 className="inverseText">{this.props.label}</h3>}
+        trigger={<h3 className="inverseText pointer">{this.props.label}</h3>}
         on='click'
         position='bottom right'
         onOpen={this.handleOpen}

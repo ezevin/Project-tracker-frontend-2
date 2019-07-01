@@ -23,7 +23,7 @@ class Quantity extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { quantity } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/materials/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -49,7 +49,7 @@ class Quantity extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Quantity:{this.props.quantity}</h4>}
+        trigger={<h4 className="pointer">Quantity:{this.props.quantity}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

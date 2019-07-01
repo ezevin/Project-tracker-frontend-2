@@ -27,7 +27,7 @@ class Budget extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { budget } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -55,7 +55,7 @@ class Budget extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4>Budget: ${this.props.budget}</h4>}
+        trigger={<h4 className="pointer">Budget: ${this.props.budget}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}

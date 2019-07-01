@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Popup, Form, Button } from 'semantic-ui-react'
+import { Grid, Popup, Form, Button, Icon } from 'semantic-ui-react'
 
 import ResearchGallery from '../Components/ResearchGallery'
 
@@ -47,7 +47,7 @@ class ResearchImages extends Component {
 
     const { image } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/researches`, {
+    fetch(`http://localhost:3001/api/v1/researches`, {
           method: "POST",
           headers: {
             Accept: 'application/json',
@@ -92,7 +92,7 @@ class ResearchImages extends Component {
             <h2>Research Images:</h2>
           </Grid.Column>
           <Grid.Column width={4}>
-            <Popup trigger={<button onClick={this.openWidget} className="button">Add Image</button>}
+            <Popup trigger={<Icon size="large" className="blue pointer" name='file image outline' onClick={this.openWidget} />}
                   content={form}
                   on='click'
                   position='top left'

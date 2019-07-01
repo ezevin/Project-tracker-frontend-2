@@ -26,7 +26,7 @@ class Finished extends Component {
   handleClick = () => {
     // const { finished } = this.state
     // this.setState({finished: true})
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.projectId}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -44,7 +44,7 @@ class Finished extends Component {
     e.preventDefault()
     const { finished_image } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.projectId}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.projectId}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -82,12 +82,12 @@ class Finished extends Component {
                     </Form>
     return (
       <>
-      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button inverted color="teal" type="button">I've Finished!</Button>}>
+      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button  className="pointer" inverted color="teal" type="button">I've Finished!</Button>}>
         <center><Modal.Header>CONGRATULATIONS!</Modal.Header></center>
         <Modal.Header as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
           <Modal.Actions>
-            <Button type="button" negative onClick={this.handleClick}>No</Button>
-            <Modal size='mini' trigger={<Button positive icon='checkmark' labelPosition='right' content='Yes'  onClick={this.openWidget}/>}>
+            <Button type="button" className="pointer" negative onClick={this.handleClick}>No</Button>
+            <Modal size='mini' trigger={<Button positive icon='checkmark' className="pointer"labelPosition='right' content='Yes'  onClick={this.openWidget}/>}>
                 <Modal.Content>
                   {form}
                 </Modal.Content>

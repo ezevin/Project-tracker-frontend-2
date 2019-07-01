@@ -34,7 +34,7 @@ class Materials extends Component {
   handleSubmit = (e) => {
     const { label, price, quantity } = this.state
     // debugger
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/materials', {
+    fetch('http://localhost:3001/api/v1/materials', {
       method: "POST",
       headers: {
         Accept: 'application/json',
@@ -80,8 +80,8 @@ class Materials extends Component {
         <div >
           <Grid>
             <Grid.Row>
-              <Grid.Column width={9}>
-                <Header className="textLead" inverted color='grey' textAlign="center" as='h1'>Inventory</Header>
+              <Grid.Column width={8}>
+                <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
               </Grid.Column>
               <Grid.Column width={5}>
                 <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
@@ -91,11 +91,11 @@ class Materials extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={1}><span></span></Grid.Column>
-              <Grid.Column className="textLead" width={3}><h2>Item:</h2></Grid.Column>
-              <Grid.Column className="textLead" width={3}><h2>Price:</h2></Grid.Column>
-              <Grid.Column className="textLead" width={3}><h2>Quantity:</h2></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h3>Item:</h3></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h3>Price:</h3></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h3>Quantity:</h3></Grid.Column>
               <Grid.Column width={2}></Grid.Column>
-              <Grid.Column className="textLead" width={3}><h2>Remove:</h2></Grid.Column>
+              <Grid.Column className="textLead" width={3}><h3>Remove:</h3></Grid.Column>
             </Grid.Row>
           </Grid><br />
           <Container className="inventory textAll">

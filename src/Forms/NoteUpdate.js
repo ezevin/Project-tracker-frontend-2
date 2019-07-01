@@ -28,7 +28,7 @@ class NoteUpdate extends Component {
   handleSubmit= (id) => {
     const { note } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/notes/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/notes/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -58,7 +58,7 @@ class NoteUpdate extends Component {
       <>
       <Popup
         content={form}
-        trigger={<Icon size="small" className="blue" name='pencil alternate' />}
+        trigger={<Icon size="small" className="blue pointer" name='pencil alternate' />}
         on='click'
         position='top left'
         open={this.state.isOpen}

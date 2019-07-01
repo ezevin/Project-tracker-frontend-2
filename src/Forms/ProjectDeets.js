@@ -30,7 +30,7 @@ class ProjectDeets
 
     const { details } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`http://localhost:3001/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
@@ -58,7 +58,7 @@ class ProjectDeets
     return (
       <Popup
         content={form}
-        trigger={<h4>Summary: {this.props.details}</h4>}
+        trigger={<h4 className="pointer">Summary: {this.props.details}</h4>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}
