@@ -39,27 +39,20 @@
   object-fit: cover;
 }
 
+.textAll {
+  text-shadow: -1px -1px 0 #001,
+  1px -1px 0 #001,
+  -1px 1px 0 #001,
+  1px 1px 0 #001;
+  color: white;
+}
+
+/* main page inventory container css */
 .inventory {
   padding-left: 50px;
   height: 200px;
   width: 100%;
   overflow-y: scroll;
-}
-
-.projects {
-  margin-right: 50px;
-  height: 150px;
-  width: 100%;
-  overflow-y: scroll;
-  color: white;
-}
-
-.textAll {
-  text-shadow: -1px -1px 0 #001,
-		1px -1px 0 #001,
-		-1px 1px 0 #001,
-		1px 1px 0 #001;
-  color: white;
 }
 
 .materials {
@@ -75,9 +68,47 @@
 		1px 1px 0 #001;
 }
 
-.projectContainer {
-  margin-right: 200px
+.shadowInventory{
+  padding-left: 1vw;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  margin-right: 8vw;
+  margin-left: 50px;
+  background-color: #1A535C;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
+/* end main page inventory container css  */
+
+/* main page project container css */
+.projects {
+  margin-right: 50vw;
+  height: 10vw;
+  width: 100%;
+  overflow-y: scroll;
+  color: white;
+}
+
+.projectContainer {
+  margin-right: 200vw
+}
+
+.shadowProjects {
+  padding-left: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 8vw;
+  /* margin-right: vw; */
+  background-color: #1A535C;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
+}
+
+/* end main page project container css */
 
 .mainGalleryButton {
   height: 200px;
@@ -104,32 +135,6 @@
 
 .deleteButton {
   margin-left: 70px;
-}
-
-.shadowProjects {
-  padding-left: 10px;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  margin-left: 150px;
-  margin-right: 50px;
-  background-color: #1A535C;
-  border-style: solid;
-  border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
-
-.shadowInventory{
-  padding-left: 10px;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-  margin-right: 150px;
-  margin-left: 50px;
-  background-color: #1A535C;
-  border-style: solid;
-  border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
 .maincontainer {
