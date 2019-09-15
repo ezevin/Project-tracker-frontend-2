@@ -27,7 +27,7 @@ class Budget extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { budget } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/projects/${this.props.id}`, {
+    fetch(`http://localhost:3000/api/v1/projects/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',

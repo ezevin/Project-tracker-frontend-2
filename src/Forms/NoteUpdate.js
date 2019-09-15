@@ -28,7 +28,7 @@ class NoteUpdate extends Component {
   handleSubmit= (id) => {
     const { note } = this.state
 
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/notes/${this.props.id}`, {
+    fetch(`http://localhost:3000/api/v1/notes/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
