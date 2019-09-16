@@ -80,7 +80,7 @@ class Materials extends Component {
         <div >
           <Grid>
             <Grid.Row>
-              <Grid.Column width={8}>
+              <Grid.Column width={7}>
                 <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
               </Grid.Column>
               <Grid.Column width={5}>

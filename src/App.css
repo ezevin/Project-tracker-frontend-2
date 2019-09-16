@@ -49,18 +49,18 @@
 
 /* main page inventory container css */
 .inventory {
-  padding-left: 50px;
-  height: 200px;
+  height: 15vw;
   width: 100%;
   overflow-y: scroll;
+  color: white;
 }
 
 .materials {
-  margin-right: 50px;
-  padding-left: 50px;
-  height: 200px;
+  margin-right: 40vw;
+  padding-left: 50vw;
+  height: 200vw;
   width: 100%;
-  margin-right: 100px;
+  margin-right: 100vw;
   color: white;
   text-shadow: -1px -1px 0 #001,
 		1px -1px 0 #001,
@@ -69,12 +69,12 @@
 }
 
 .shadowInventory{
-  padding-left: 1vw;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-  margin-right: 8vw;
-  margin-left: 50px;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 2vw;
+  margin-bottom: 2vw;
+  margin-right: 6vw;
+  margin-left: 2vw;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
@@ -84,7 +84,7 @@
 
 /* main page project container css */
 .projects {
-  margin-right: 50vw;
+  margin-right: 40vw;
   height: 10vw;
   width: 100%;
   overflow-y: scroll;
@@ -100,16 +100,16 @@
   padding-top: 1vw;
   padding-bottom: 2vw;
   margin-bottom: 2vw;
-  margin-left: 8vw;
+  margin-left: 6vw;
   /* margin-right: vw; */
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
-
 /* end main page project container css */
 
+/* main page gallery container css */
 .mainGalleryButton {
   height: 200px;
   background-color: #1B998B;
@@ -132,6 +132,8 @@
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
+
+/* end main page gallery container css  */
 
 .deleteButton {
   margin-left: 70px;
