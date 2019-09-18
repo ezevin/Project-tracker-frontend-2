@@ -54,8 +54,9 @@ class Main extends Component {
     return (
       <>
         <br />
-        <Grid className="">
-          <Grid.Column floated='left' width={8}>
+
+          <div className="mainGrid">
+
             <Projects
               slug={this.props.slug}
               projects={filteredProjects}
@@ -69,8 +70,8 @@ class Main extends Component {
               toDoList={this.props.toDoList}
               handleProgressSort = {this.handleProgressSort}
             />
-          </Grid.Column>
-          <Grid.Column floated="right" width={8}>
+
+
             <Materials materials={filteredMaterials}
              addMaterial={this.props.addMaterial}
              id={this.props.id}
@@ -79,8 +80,9 @@ class Main extends Component {
              fetchMaterials={this.props.fetchMaterials}
              um={this.props.um}
             />
-          </Grid.Column>
-        </Grid>
+
+          </div>
+
         <Container>
           <MainGallery projects={this.props.finished} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.notes}/>
         </Container>
