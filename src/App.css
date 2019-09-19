@@ -60,6 +60,7 @@
 /* main page inventory container css */
 .inventory {
   height: 12vw;
+  padding-left: 2vw;
   /* width: 100%; */
   overflow-y: scroll;
   color: white;
@@ -85,7 +86,7 @@
   margin-top: -2vw;
   margin-bottom: 2vw;
   width: 75%;
-  margin-right: 10vw;
+  margin-right: 11vw;
   margin-left: -35vw;
   background-color: #1A535C;
   border-style: solid;
@@ -114,7 +115,7 @@
   /* padding-bottom: -2vw; */
   margin-top: -2vw;
   margin-bottom: 2vw;
-  width: 50%;
+  width: 51%;
   /* margin-left: 6vw; */
   margin-right: 1vw;
   background-color: #1A535C;
@@ -387,41 +388,41 @@
   overflow-y: scroll;
   height: 120px;
 }
-
+/* show page css  */
 .startDate {
   position:absolute;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 45px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: -30px;
-  border: 1px solid #ccc;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
+  padding-left: .5vw;
+  padding-right: .5vw;
+  height: 2.5vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: -2vw;
+  border: .1vw solid #ccc;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
+  box-shadow: .3px .3px 5px 5px #5B5B5B;
 }
 
 .dueDate {
   position:absolute;
-  height: 45px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 160px;
-  margin-right: 10px;
-  margin-top: -30px;
-  border: 1px solid #ccc;
+  height: 2.5vw;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
+  padding-left: .5vw;
+  padding-right: .5vw;
+  margin-left: 11vw;
+  margin-right: .5vw;
+  margin-top: -2vw;
+  border: .1vw solid #ccc;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
+  box-shadow: .3px .3px 5px 5px #5B5B5B;
 }
-
+/* end show page css  */
 .projectName {
   position:absolute;
   background-color: #1A535C;
