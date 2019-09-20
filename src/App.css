@@ -409,6 +409,7 @@
 .dueDate {
   position:absolute;
   height: 2.5vw;
+  width: 12vw;
   padding-top: .5vw;
   padding-bottom: .5vw;
   padding-left: .5vw;
