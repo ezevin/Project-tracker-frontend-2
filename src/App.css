@@ -219,7 +219,7 @@
 }
 
 .finishedButton {
-  height: 640px;
+  height: 35vw;
 }
 
 .researchButton {
@@ -234,11 +234,10 @@
 }
 
 .finishedgallery {
-  margin-left: 250px;
-  margin-right: 250px;
-  margin-bottom: 100px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  height: 40vw;
   border: 1px solid #ccc;
-  /* float: left; */
   width: 100px;
   background-color: #1A535C;
   border-style: solid;
