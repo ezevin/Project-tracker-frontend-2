@@ -31,7 +31,7 @@ minusSlides = (n) => {
 
 handleReset = (id) => {
 
-fetch(`http://localhost:3000/api/v1/to_do_lists/${id}`, {
+fetch(`https://fabfolio-backend.herokuapp.com/api/v1/to_do_lists/${id}`, {
       method: "PATCH",
       headers: {
         Accept: 'application/json',
