@@ -26,7 +26,7 @@ class Signup extends Component {
 
     e.preventDefault()
     // console.log(this.state.fields);
-    fetch('https://fabfolio-backend.herokuapp.com/api/v1/auth',{
+    fetch('http://localhost:3000/api/v1/auth',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ class Signup extends Component {
     const { username, password } = this.state
      e.preventDefault()
      console.log('works');
-     fetch('https://fabfolio-backend.herokuapp.com/api/v1/users', {
+     fetch('http://localhost:3000/api/v1/users', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',

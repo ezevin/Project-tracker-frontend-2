@@ -40,6 +40,7 @@
 }
 
 .textAll {
+  font-size: 1em;
   text-shadow: -1px -1px 0 #001,
   1px -1px 0 #001,
   -1px 1px 0 #001,
@@ -247,7 +248,7 @@
 
 .centered {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

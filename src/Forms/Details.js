@@ -27,7 +27,7 @@ class Details extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { description } = this.state
-    fetch(`https://fabfolio-backend.herokuapp.com/api/v1/materials/${this.props.id}`, {
+    fetch(`http://localhost:3000/api/v1/materials/${this.props.id}`, {
           method: "PATCH",
           headers: {
             Accept: 'application/json',
