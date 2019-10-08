@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import { Route } from 'react-router-dom'
 import { } from 'react-router-dom'
 import { Header, Grid, Form } from 'semantic-ui-react'
+
+import "../CSS/ToDoList.css"
 
 import ItemList from '../Components/ItemList'
 

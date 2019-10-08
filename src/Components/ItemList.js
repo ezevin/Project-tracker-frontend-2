@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Icon, Grid, Container } from 'semantic-ui-react'
 
+import "../CSS/ToDoList.css"
+
 import AddProcess from '../Forms/AddProcess'
 
 class ItemList extends Component {
