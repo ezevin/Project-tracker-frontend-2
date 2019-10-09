@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { } from 'react-router-dom'
 import { Header, Grid, Form } from 'semantic-ui-react'
 
+import "../CSS/Notes.css"
+
 import NoteList from '../Components/NoteList'
 
 class Notes extends Component {

@@ -322,7 +322,7 @@
   box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
-.notesContainer {
+/* .notesContainer {
   margin-top: -7px;
   margin-left: 50px;
   padding-left: 20px;
@@ -340,7 +340,7 @@
 .notesList {
   height: 150px;
   overflow-y: scroll;
-}
+} */
 
 /* .toDoListContainer {
   margin-top: -7px;

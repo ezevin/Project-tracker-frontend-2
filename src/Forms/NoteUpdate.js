@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button, Popup, Icon } from 'semantic-ui-react'
 
+import "../CSS/Notes.css"
+
 class NoteUpdate extends Component {
 
   state = {
