@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import { Button, Form } from 'semantic-ui-react'
 
+import "../CSS/LoginPageCSS.css"
 
 const initialState = {
   error: false,

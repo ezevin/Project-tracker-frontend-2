@@ -1,0 +1,33 @@
+.login {
+  margin-right: 50px;
+  margin-left: 400px;
+  margin-top: 200px;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border: 1px solid #ccc;
+  width: 600px;
+  height: -300;
+  background-color: #1A535C;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
+}
+
+.signup {
+  margin-right: 50px;
+  margin-left: 100px;
+  margin-top: 200px;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border: 1px solid #ccc;
+  width: 600px;
+  height: -300;
+  background-color: #1A535C;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
+}
