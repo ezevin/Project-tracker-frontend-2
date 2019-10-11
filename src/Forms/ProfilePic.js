@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button, Popup, Icon } from 'semantic-ui-react'
 
+import "../CSS/ProfileCSS.css"
+
 class ProfilePic extends Component {
 
   state = {
