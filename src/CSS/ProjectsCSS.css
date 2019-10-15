@@ -1,14 +1,17 @@
 .shadowProjects {
   padding-left: 1vw;
   padding-top: 1vw;
+  padding-bottom: 2.5vw;
   margin-top: -2vw;
   margin-bottom: 2vw;
-  width: 51%;
-  margin-right: 1vw;
+  margin-right: 3vw;
+  /* margin-left: 5vw; */
+  width: 43vw;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
+  align-items: center;
 }
 
 .projects {

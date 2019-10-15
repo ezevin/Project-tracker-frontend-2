@@ -85,6 +85,7 @@ class Materials extends Component {
               <Grid.Column width={7}>
                 <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
               </Grid.Column>
+              <br />
               <Grid.Column width={5}>
                 <center><Search width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
               </Grid.Column>

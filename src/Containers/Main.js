@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { Container } from 'semantic-ui-react'
+import { Container, Grid } from 'semantic-ui-react'
 
 import '../CSS/MainPageCSS.css'
 
@@ -56,30 +56,37 @@ class Main extends Component {
     return (
       <>
         <br />
-
-          <div className="mainGrid">
-            <Projects
-              slug={this.props.slug}
-              projects={filteredProjects}
-              addProject={this.props.addProject}
-              handleSearch={this.handlePSearch}
-              titles={this.handleTitleSort}
-              dateSort={this.handleDateSort}
-              dates={this.props.dates}
-              id={this.props.id}
-              dropDown={this.props.dropDown}
-              toDoList={this.props.toDoList}
-              handleProgressSort = {this.handleProgressSort}
-            />
-            <Materials materials={filteredMaterials}
-             addMaterial={this.props.addMaterial}
-             id={this.props.id}
-             handleSearch={this.handleSearch}
-             deleteMaterial={this.props.deleteMaterial}
-             fetchMaterials={this.props.fetchMaterials}
-             um={this.props.um}
-            />
-          </div>
+          <Grid>
+            <Grid.Column width={1}>
+            </Grid.Column>
+            <Grid.Column width={7}>
+              <Projects
+                slug={this.props.slug}
+                projects={filteredProjects}
+                addProject={this.props.addProject}
+                handleSearch={this.handlePSearch}
+                titles={this.handleTitleSort}
+                dateSort={this.handleDateSort}
+                dates={this.props.dates}
+                id={this.props.id}
+                dropDown={this.props.dropDown}
+                toDoList={this.props.toDoList}
+                handleProgressSort = {this.handleProgressSort}
+              />
+            </Grid.Column>
+            <Grid.Column width={7}>
+              <Materials materials={filteredMaterials}
+               addMaterial={this.props.addMaterial}
+               id={this.props.id}
+               handleSearch={this.handleSearch}
+               deleteMaterial={this.props.deleteMaterial}
+               fetchMaterials={this.props.fetchMaterials}
+               um={this.props.um}
+              />
+            </Grid.Column>
+            <Grid.Column width={1}>
+            </Grid.Column>
+          </Grid>
         <Container>
           <MainGallery projects={this.props.finished} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.notes}/>
         </Container>
