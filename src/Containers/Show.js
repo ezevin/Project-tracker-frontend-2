@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import { Header, Grid, Button, Divider } from 'semantic-ui-react'
 
+import '../CSS/ShowCSS.css'
+
 import ProjectMaterials from './ProjectMaterials'
 import StartDate from '../Forms/StartDate'
 import Budget from '../Forms/Budget'
@@ -168,7 +170,7 @@ class Show extends Component {
                       <Budget id={this.state.id} fetchProjects={this.fetchProjects} budget={budget}/>
                     </div>
                   </Grid.Column>
-                <Grid.Column width={6} className="projectName text">
+                <Grid.Column width={6} className="projectName">
                   <Header inverted color='grey' textAlign='center' as='h1'>
                     <Title id={this.state.id} title={title} fetchProjects={this.fetchProjects}/>
                   </Header><br />
@@ -186,15 +188,11 @@ class Show extends Component {
                 </Grid.Column>
               </Grid.Row>
               </Grid>
-
             <Divider className="" inverted/>
-
-
-              <Grid padded className=" listContainer">
+              <Grid padded className="">
                 <Grid.Column floated='left' className="" width={5}>
                   <Notes notes={this.state.notes} fetchNotes={this.fetchNotes} deleteNote={this.deleteNote} projectId={this.state.id}/>
                 </Grid.Column>
-
                 <Grid.Column className="" width={6}>
                   <ToDo fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={this.state.id} deleteToDo={this.deleteToDo}/>
                 </Grid.Column>

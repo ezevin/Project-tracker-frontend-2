@@ -43,7 +43,7 @@ class MaterialsList extends Component {
           </Grid.Column>
           <Grid.Column width={3}>
             <List >
-              <List.Item><center><h3 onClick={()=> this.props.deleteMaterial(this.props.id)} className="red" textAlign="center"> X </h3></center></List.Item>
+              <List.Item><center><h3 onClick={()=> this.props.deleteMaterial(this.props.id)} className="" textAlign="center"> X </h3></center></List.Item>
             </List>
           </Grid.Column>
         </Grid>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Header, Grid, Search, Container } from 'semantic-ui-react'
 
+import '../CSS/FinishedGalleryCSS.css'
+
 import Gallery from '../Components/Gallery'
 
 const NUM_PROJECTS = 12
@@ -61,7 +63,7 @@ class FinishedPictures extends Component {
         <br />
         <br />
         <Grid >
-          <Grid.Column className="finished finishedgallery">
+          <Grid.Column className="finishedgallery">
             <Grid columns={5} padded className="link cards">
             <Grid.Column width={1}>
               <button className="finishedButton"

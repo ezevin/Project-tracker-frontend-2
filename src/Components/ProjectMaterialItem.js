@@ -35,7 +35,7 @@ class ProjectMaterialItem extends Component {
           </Grid.Column>
           <Grid.Column width={4}>
             <List >
-              <List.Item><Icon name="delete" className="black" onClick={()=> {this.props.deleteInventory(this.props)}}/></List.Item>
+              <List.Item><Icon name="delete" className="" onClick={()=> {this.props.deleteInventory(this.props)}}/></List.Item>
             </List>
           </Grid.Column>
         </Grid>

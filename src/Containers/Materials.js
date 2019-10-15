@@ -1,6 +1,8 @@
  import React, { Component } from 'react'
 import { Header, Search, Button, Form, Popup, Grid, Container } from 'semantic-ui-react'
 
+import '../CSS/MaterialsCSS.css'
+
 import MaterialsList from '../Components/MaterialsList'
 
 class Materials extends Component {

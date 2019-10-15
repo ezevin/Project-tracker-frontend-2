@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Image, Modal, Header } from 'semantic-ui-react'
 
+import '../CSS/GalleryMaterialInfoCSS.css'
+
 class GalleryMaterialInfo extends Component {
 
   render(){

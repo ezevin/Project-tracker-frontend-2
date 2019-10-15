@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Container, Progress } from 'semantic-ui-react'
 import { } from 'react-router-dom'
 
-
-  class ProjectList extends Component {
+class ProjectList extends Component {
 
     render() {
 

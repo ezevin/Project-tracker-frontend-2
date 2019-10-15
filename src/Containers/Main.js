@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import { Grid, Container } from 'semantic-ui-react'
 
+import '../CSS/MainPageCSS.css'
+
 import Projects from './Projects'
 import MainGallery from './MainGallery'
 import Materials from './Materials'
@@ -56,7 +58,6 @@ class Main extends Component {
         <br />
 
           <div className="mainGrid">
-
             <Projects
               slug={this.props.slug}
               projects={filteredProjects}
@@ -70,8 +71,6 @@ class Main extends Component {
               toDoList={this.props.toDoList}
               handleProgressSort = {this.handleProgressSort}
             />
-
-
             <Materials materials={filteredMaterials}
              addMaterial={this.props.addMaterial}
              id={this.props.id}
@@ -80,9 +79,7 @@ class Main extends Component {
              fetchMaterials={this.props.fetchMaterials}
              um={this.props.um}
             />
-
           </div>
-
         <Container>
           <MainGallery projects={this.props.finished} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.notes}/>
         </Container>

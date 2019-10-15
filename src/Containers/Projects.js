@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { Header, Button, Popup, Form, Search, Grid, Container } from 'semantic-ui-react'
 
-import ProjectList from '../Components/ProjectList'
+import '../CSS/ProjectsCSS.css'
 
+import ProjectList from '../Components/ProjectList'
 
 class Projects extends Component {
   state = {
@@ -81,7 +82,6 @@ class Projects extends Component {
               </h4>
             </center><br />
               </Grid.Column>
-
               <Grid.Column width={6}>
                 <center>
                   <h4 className="textAll">

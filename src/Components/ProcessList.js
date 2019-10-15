@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Image, Modal, Card, Button, Header } from 'semantic-ui-react'
 
-
-
 class ProcessList extends Component {
 
     render(){

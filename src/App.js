@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom'
 
-import './App.css';
+// import './App.css';
 import Main from './Containers/Main'
 import Top from './Components/Top'
 import Login from './Components/Login'

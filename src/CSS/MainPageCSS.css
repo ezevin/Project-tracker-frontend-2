@@ -1,0 +1,8 @@
+.mainGrid{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: .5vw;
+  margin-right: -4vw;
+  margin-left: 5vw;
+}

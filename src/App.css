@@ -8,9 +8,9 @@
   text-shadow: 3px 2px #0A0806;
 }
 
-.box {
+/* .box {
   border-color: black
-}
+} */
 
 /* .done {
   color: #BF1641;
@@ -34,9 +34,9 @@
   border-color: green
 } */
 
-.gallerycard {
+/* .gallerycard {
   object-fit: cover;
-}
+} */
 
 .textAll {
   font-size: 1em;
@@ -47,24 +47,23 @@
   color: white;
 }
 /* main page css */
-.mainGrid{
+/* .mainGrid{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   padding: .5vw;
   margin-right: -4vw;
   margin-left: 5vw;
-}
+} */
 /* end main page css */
 
 /* main page inventory container css */
-.inventory {
+/* .inventory {
   height: 12vw;
   padding-left: 2vw;
-  /* width: 100%; */
   overflow-y: scroll;
   color: white;
-}
+} */
 
 .materials {
   /* margin-right: 40vw; */
@@ -79,7 +78,7 @@
 		1px 1px 0 #001;
 }
 
-.shadowInventory{
+/* .shadowInventory{
   padding-left: 2vw;
   padding-top: 1vw;
   padding-bottom: 3vw;
@@ -92,48 +91,43 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 /* end main page inventory container css  */
 
 /* main page project container css */
-.projects {
-  /* margin-right: 40vw; */
+/* .projects {
   height: 9vw;
-  /* width: 100%; */
   overflow-y: scroll;
   color: white;
-}
+} */
 
-.projectContainer {
+/* .projectContainer { */
   /* margin-right: 200vw */
-}
+/* } */
 
-.shadowProjects {
+/* .shadowProjects {
   padding-left: 1vw;
   padding-top: 1vw;
-  /* height: 28vw; */
-  /* padding-bottom: -2vw; */
   margin-top: -2vw;
   margin-bottom: 2vw;
   width: 51%;
-  /* margin-left: 6vw; */
   margin-right: 1vw;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 /* end main page project container css */
 
 /* main page gallery container css */
-.mainGalleryButton {
+/* .mainGalleryButton {
   height: 10vw;
   background-color: #1B998B;
   border-color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
+} */
 
-.shadowGallery {
+/* .shadowGallery {
   padding-left:0px;
   padding-right: 0px;
   padding-top: 10px;
@@ -141,14 +135,12 @@
   margin-bottom: 2vw;
   margin-left: -5.2vw;
   margin-right: -5.2vw;
-  /* width: 100%; */
   height: auto;
-  /* overflow-y: scroll; */
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 
 .card {
   width: 10vw;
@@ -158,9 +150,9 @@
 }
 /* end main page gallery container css  */
 
-.deleteButton {
+/* .deleteButton {
   margin-left: 70px;
-}
+} */
 
 .maincontainer {
   margin-left: 300px;
@@ -218,22 +210,22 @@
   background-color: rgba(0,0,0,0.8);
 }
 
-.finishedButton {
+/* .finishedButton {
   height: 35vw;
-}
+} */
 
-.researchButton {
+/* .researchButton {
   height: 120px;
   background-color: #1B998B;
   border-color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.finishedgallery.img {
+} */
+/* .finishedgallery.img {
   width: 100%;
   height: auto;
-}
+} */
 
-.finishedgallery {
+/* .finishedgallery {
   margin-left: 20vw;
   margin-right: 20vw;
   height: 40vw;
@@ -243,7 +235,7 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 
 .centered {
   position: absolute;
@@ -252,7 +244,7 @@
   transform: translate(-50%, -50%);
 }
 
-.finishedimg {
+/* .finishedimg {
     position: relative;
     float: left;
     width: 10vw;
@@ -262,7 +254,7 @@
     background-size:     cover;
     object-fit: scale-down;
     overflow-y: hidden;
-}
+} */
 
 .showimg {
   position: relative;
@@ -288,7 +280,7 @@
   overflow-y: hidden;
 }
 
-.researchContainer{
+/* .researchContainer{
   margin-top: -7px;
   margin-left: 65px;
   margin-bottom: 0px;
@@ -302,9 +294,9 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 
-.processContainer{
+/* .processContainer{
   margin-top: -7px;
   margin-right: 75px;
   margin-bottom: -10px;
@@ -320,7 +312,7 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 
 /* .notesContainer {
   margin-top: -7px;
@@ -366,7 +358,7 @@
   height: 60px;
 } */
 
-.materialsContainer {
+/* .materialsContainer {
   margin-top: -7px;
   margin-left: -20px;
   margin-right: 60px;
@@ -375,19 +367,18 @@
   padding-top: 10px;
   border: 1px solid #ccc;
   width: 400px;
-  /* height: -200; */
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
-
+} */
+/*
 .materialList {
   overflow-y: scroll;
   height: 120px;
-}
+} */
 /* show page css  */
-.startDate {
+/* .startDate {
   position:absolute;
   padding-top: .5vw;
   padding-bottom: .5vw;
@@ -420,9 +411,9 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .3px .3px 5px 5px #5B5B5B;
-}
+} */
 /* end show page css  */
-.projectName {
+/* .projectName {
   position:absolute;
   background-color: #1A535C;
   border-style: solid;
@@ -467,7 +458,7 @@
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
-}
+} */
 
 /* .profile {
   margin-right: 50px;
@@ -524,7 +515,7 @@
   margin-top: 9px
 }
 
-.modalImg {
+/* .modalImg {
   position: relative;
   float: left;
   width: 300px;
@@ -534,7 +525,7 @@
   background-size:     cover;
   object-fit: scale-down;
   overflow-y: hidden;
-}
+} */
 
 .finalNote{
   overflow-y: scroll;
@@ -583,7 +574,6 @@
 
 .underline {
   text-decoration: underline;
-
 }
 
 .headSummary {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Header, Grid } from 'semantic-ui-react'
 
+import '../CSS/MainGalleryCSS.css'
+
 import Gallery from '../Components/Gallery'
 
 const NUM_PROJECTS = 5
@@ -64,7 +66,7 @@ currentSlide(n) {
               <button className="mainGalleryButton" onClick={this.minusSlides}>&#10094;</button>
             </Grid.Column>
             <Grid.Column width={14}><center>
-              <Grid columns={6} padded className="link mainGallery cards">
+              <Grid columns={6} padded className="link cards">
                 {displayedProjects.map(project =>{
                    return <Gallery key={project.id} photo={project.finished_image} title={project.title} details={project.details} finished_image={project.finished_image} projectId={project.id} research={this.props.research} toDoList={this.props.toDoList} allNotes={this.props.allNotes} materials={project.inventories}
                    date={new Date(project.updated_at)} start={new Date(project.start_date)} due={new Date(project.due_date)}/>

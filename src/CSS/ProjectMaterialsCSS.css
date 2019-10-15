@@ -1,0 +1,50 @@
+.materialsContainer {
+  margin-top: -7px;
+  margin-left: -20px;
+  margin-right: 60px;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-top: 10px;
+  border: 1px solid #ccc;
+  width: 400px;
+  background-color: #1A535C;
+  border-style: solid;
+  border-color: #3A3A3A;
+  box-shadow: .5px .5px 10px 10px #5B5B5B;
+}
+
+.materialList {
+  overflow-y: scroll;
+  height: 120px;
+}
+
+.button {
+  background-color: #1B998B;
+  border: 2px solid;
+  border-radius: 8px;
+  height: 40px;
+  font-weight: bold;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.textAll {
+  font-size: 1em;
+  text-shadow: -1px -1px 0 #001,
+  1px -1px 0 #001,
+  -1px 1px 0 #001,
+  1px 1px 0 #001;
+  color: white;
+}
+
+.textLead {
+  text-shadow: -1px -1px 0 #001,
+    1px -1px 0 #001,
+    -1px 1px 0 #001,
+    1px 1px 0 #001;
+  text-decoration: underline;
+  color: #9EA3B0;
+}
+
+.underline {
+  text-decoration: underline;
+}

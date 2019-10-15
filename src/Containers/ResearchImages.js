@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Grid, Popup, Form, Button, Icon } from 'semantic-ui-react'
 
+import '../CSS/ResearchCSS.css'
+
 import ResearchGallery from '../Components/ResearchGallery'
 
 const NUM_PROJECTS = 5
