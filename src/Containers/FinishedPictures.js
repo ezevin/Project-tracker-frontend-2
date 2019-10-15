@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Grid, Search, Container } from 'semantic-ui-react'
+import { Header, Grid, Search } from 'semantic-ui-react'
 
 import '../CSS/FinishedGalleryCSS.css'
 

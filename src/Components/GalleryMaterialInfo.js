@@ -8,7 +8,7 @@ class GalleryMaterialInfo extends Component {
   render(){
 
     return (
-      <Modal size="mini" trigger={<a>{this.props.label}, </a>}>
+      <Modal size="mini" trigger={<a href="label">{this.props.label}, </a>}>
         <Header as="h3" className="underline">{this.props.label}</Header><br />
         <Image
           href={this.props.label}

@@ -45,8 +45,8 @@ class Projects extends Component {
         })
         .then(res=>res.json())
         .then(data => {
-          return this.props.addProject(data),
-          this.props.history.push(`/show/${data.id}`)})
+          return (this.props.addProject(data),
+          this.props.history.push(`/show/${data.id}`))})
         this.setState({isOpen: false})
   }
 

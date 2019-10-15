@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { Grid, Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 
 import '../CSS/MainPageCSS.css'
 
