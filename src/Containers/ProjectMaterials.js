@@ -81,26 +81,22 @@ class ProjectMaterials extends Component {
 
     return (
       <div className="materialsContainer textAll">
-        <Grid>
+        <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
+          <Grid>
             <Grid.Column width={6}>
-              <Grid.Row>
-              <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
-              </Grid.Row> <br />
-              <Grid.Row><center>
               <Popup trigger={<button className="button">Add A Material</button>}
-              content={form}
-              on='click'
-              position='bottom right'
-              open={this.state.isOpen}
-              onOpen={this.handleOpen}
-              onClose={this.handleClose}
-              /></center>
-              </Grid.Row>
+                content={form}
+                on='click'
+                position='bottom right'
+                open={this.state.isOpen}
+                onOpen={this.handleOpen}
+                onClose={this.handleClose}
+                />
             </Grid.Column>
-            <Grid.Column width={3}>
-              <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center><br />
+            <Grid.Column width={6}>
+                <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
             </Grid.Column>
-        </Grid>
+          </Grid>
         <Grid className="">
           <Grid.Column width={4}><span className="textLead"><h3>Item:</h3></span></Grid.Column>
           <Grid.Column width={4}><span className="textLead"><h3>Price:</h3></span></Grid.Column>

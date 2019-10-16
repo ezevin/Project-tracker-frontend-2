@@ -43,7 +43,7 @@ class Notes extends Component {
     return(
       <div className="notesContainer textAll">
         <center>
-          <Header inverted color='grey' as='h2' className="textLead" >Notes:</Header><br />
+          <Header inverted color='grey' as='h2' className="textLead" >Notes:</Header>
         </center>
         <Grid columns={5} padded className="link cards notesList">
           {this.props.notes.map(note =>(
@@ -53,7 +53,7 @@ class Notes extends Component {
         <center>
           <Form ref="form" inverted onSubmit={this.handleSubmit}>
           <center>
-              <Grid>
+              <Grid container>
                 <Grid.Column width={12} textAlign="center">
                   <Form.TextArea  placeholder="Add A New Note" onChange={this.handleChange}/>
                 </Grid.Column>

@@ -8,11 +8,11 @@
 .shadowGallery {
   padding-left:0px;
   padding-right: 0px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  /* padding-top: 10px; */
+  padding-bottom: 2vw;
   margin-bottom: 2vw;
-  margin-left: -5.2vw;
-  margin-right: -5.2vw;
+  margin-left: -4.5vw;
+  margin-right: -4vw;
   height: auto;
   background-color: #1A535C;
   border-style: solid;
