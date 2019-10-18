@@ -83,7 +83,7 @@ class ProjectMaterials extends Component {
       <div className="materialsContainer textAll">
         <Header className="textLead" inverted color='grey' textAlign="center" as='h2'>Inventory</Header>
           <Grid>
-            <Grid.Column width={6}>
+            <Grid.Column width={5}>
               <Popup trigger={<button className="button">Add A Material</button>}
                 content={form}
                 on='click'
@@ -93,7 +93,7 @@ class ProjectMaterials extends Component {
                 onClose={this.handleClose}
                 />
             </Grid.Column>
-            <Grid.Column width={6}>
+            <Grid.Column width={5}>
                 <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
             </Grid.Column>
           </Grid>

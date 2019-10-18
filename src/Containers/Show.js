@@ -210,10 +210,10 @@ class Show extends Component {
                 </Grid.Column>
               </Grid>
               <Grid>
-                <Grid.Column className="" width={7}>
+                <Grid.Column className="" width={6}>
                   <ResearchImages fetchResearchImages={this.fetchResearchImages} researches={this.state.researches} projectId={this.state.id} deleteResearch={this.deleteResearch}/>
                 </Grid.Column>
-                <Grid.Column className="" floated="right" width={7}>
+                <Grid.Column className="" floated="right" width={6}>
                   <ProcessPics fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={projectId} />
                 </Grid.Column>
               </Grid><br />

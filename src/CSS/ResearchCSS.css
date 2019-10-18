@@ -1,13 +1,14 @@
 .researchContainer{
   margin-top: -7px;
-  margin-left: 65px;
+  margin-left: 2vw;
   margin-bottom: 0px;
   padding-top: 10px;
   padding-right: 30px;
   padding-left: 15px;
   padding-bottom: 5px;
   border: 1px solid #ccc;
-  width: 640px;
+  width: 46vw;
+  height: 18vw;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
@@ -15,7 +16,7 @@
 }
 
 .researchButton {
-  height: 120px;
+  height: 12vw;
   background-color: #1B998B;
   border-color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -24,8 +25,8 @@
 .showimg {
   position: relative;
   float: left;
-  width: 200px;
-  height: 100px;
+  width: 20vw;
+  /* height: 5vw; */
   background-position: 50% 50%;
   background-repeat:   no-repeat;
   background-size:     cover;
