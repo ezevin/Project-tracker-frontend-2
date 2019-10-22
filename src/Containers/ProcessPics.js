@@ -60,7 +60,7 @@ fetch(`http://localhost:3000/api/v1/to_do_lists/${id}`, {
           </Header>
           <Grid className="">
             <Grid.Column width={1}>
-              <button className="researchButton" onClick={this.minusSlides}>&#10094;</button>
+              <button className="processButton" onClick={this.minusSlides}>&#10094;</button>
             </Grid.Column>
             <Grid.Column width={14}>
               <Grid columns={5} padded className="cards look">
@@ -70,7 +70,7 @@ fetch(`http://localhost:3000/api/v1/to_do_lists/${id}`, {
               </Grid>
           </Grid.Column>
           <Grid.Column width={1}>
-            <button className="researchButton" onClick={this.plusSlides}>&#10095;</button>
+            <button className="processButton" onClick={this.plusSlides}>&#10095;</button>
           </Grid.Column>
         </Grid>
         </div>

@@ -8,7 +8,7 @@ class ResearchGallery extends Component {
 
   render(){
 
-    const trigger = <Card color='teal' className="look showimg" fluid>
+    const trigger = <Card color='teal' className="look researchimg" fluid>
                       <Image src={this.props.photo}  size='medium'/>
                     </Card>
 

@@ -55,7 +55,7 @@ class StartDate extends Component {
     return (
       <Popup
         content={form}
-        trigger={<h4 className="pointer">Date Started: {this.props.start_date}</h4>}
+        trigger={<div className="pointer">Date Started: {this.props.start_date}</div>}
         on='click'
         position='bottom right'
         open={this.state.isOpen}
