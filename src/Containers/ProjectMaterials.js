@@ -92,7 +92,8 @@ class ProjectMaterials extends Component {
                 onOpen={this.handleOpen}
                 onClose={this.handleClose}
                 />
-            </Grid.Column>    
+            </Grid.Column>
+               
             <Grid.Column width={5}>
                 <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
             </Grid.Column>
