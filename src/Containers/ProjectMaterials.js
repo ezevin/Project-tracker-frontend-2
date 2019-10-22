@@ -97,7 +97,6 @@ class ProjectMaterials extends Component {
                 <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
             </Grid.Column>
           </Grid>
-
         <Grid className="wordBar">
           <Grid.Column width={4} className="textLead">Item:</Grid.Column>
           <Grid.Column width={4} className="textLead">Price:</Grid.Column>
