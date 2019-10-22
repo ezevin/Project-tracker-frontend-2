@@ -28,6 +28,11 @@
   height: 11vw;
   margin-top: 1vw;
   overflow-y: scroll;
+  font-size: 1em;
+  text-shadow: -1px -1px 0 #001,
+    1px -1px 0 #001,
+    -1px 1px 0 #001,
+    1px 1px 0 #001;
   /* margin-bottom: -.7vw; */
 }
 

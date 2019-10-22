@@ -41,8 +41,8 @@
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/* .toDoListContainer {
-  margin-top: -7px;
+.toDoListContainer {
+  /* margin-top: -7px;
   margin-left: 2.8vw;
   padding-left: 20px;
   padding-right: 20px;
@@ -54,13 +54,15 @@
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
-} */
+  box-shadow: .5px .5px 10px 10px #5B5B5B; */
+}
 
 .toDoListList {
   overflow-y: scroll;
-  height: 9.5vw;
-  padding:3vw;
+  margin-top: 1vw;
+  height: 10vw;
+  padding:.2vw;
+  font-size: 1em
 }
 
 .toDoListHeader{
@@ -69,7 +71,15 @@
   text-decoration: underline;
   color: #9EA3B0;
 }
-
+input{
+  height: 3.5vw;
+  width: 15vw;
+}
+/*
+textarea{
+  height: 4vw;
+  width: 3vw;
+} */
 /* form.input{
   height: 4.5vw;
   width: 3vw;

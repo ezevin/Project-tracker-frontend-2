@@ -50,3 +50,7 @@
 .underline {
   text-decoration: underline;
 }
+
+input.search{
+  height: 15vw
+}

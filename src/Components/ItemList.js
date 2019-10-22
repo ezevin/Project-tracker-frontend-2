@@ -12,14 +12,14 @@ class ItemList extends Component {
       return(
         <>
         <Container>
-        <Grid  className={this.props.complete ? "done" : "undone"} >
+        <Grid className={this.props.complete ? "done" : "undone"} >
           <Grid.Column width={2}>
             <Icon name="check" className="blue" onClick={()=> this.props.handleDone(this.props.id)}/>
           </Grid.Column>
-          <Grid.Column width={8}>
-            <h4>{this.props.item}</h4>
+          <Grid.Column width={9}>
+            <span>{this.props.item}</span>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={2}>
             <AddProcess toDoList={this.props.toDoList} process_pics={this.props.pics} id={this.props.id} fetchToDoList={this.props.fetchToDoList}/>
           </Grid.Column>
           <Grid.Column width={3}>

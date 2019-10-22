@@ -56,35 +56,30 @@ class ToDo extends Component {
         <Header inverted color='grey' className="textLead" textAlign="center" as='h2'>To Do List:</Header>
         <center>
           <Form inverted onSubmit={this.handleSubmit}>
-            <center>
               <Grid className="">
                 <Grid.Column  width={2}>
                 </Grid.Column>
                 <Grid.Column width={8}>
-                  <Form.Input  placeholder="Add A New ToDo" onChange={this.handleChange}/>
+                  <Form.Input placeholder="Add A New ToDo" onChange={this.handleChange}/>
                 </Grid.Column>
                 <Grid.Column>
                   <button  className="button" type="submit">Add</button>
                 </Grid.Column>
               </Grid>
-            </center>
           </Form>
         </center>
         <Grid className="">
-          <Grid.Row>
           <Grid.Column width={3}><span className="textLead toDoListHeader">Done?</span></Grid.Column>
           <Grid.Column width={2}><span className="textLead toDoListHeader">Task:</span></Grid.Column>
           <Grid.Column width={7} textAlign="right"><span className="textLead toDoListHeader">Add Picture:</span></Grid.Column>
           <Grid.Column width={3}><span className="textLead toDoListHeader">Remove:</span></Grid.Column>
-          <Grid.Column width={3}></Grid.Column>
-          </Grid.Row>
-          <Grid.Row className="toDoListList">
+          </Grid>
+          <div  className="toDoListList">
           {this.props.toDoList.map(list =>(
-             <><ItemList key={list.id} list={this.props.toDoList}
-              fetchToDoList={this.props.fetchToDoList} toDoList={this.props.toDoList} id={list.id} complete={list.complete} item={list.item} deleteToDo={this.props.deleteToDo} handleDone={this.handleDone} pics={list.process_pic}/><br /></>
+               <ItemList key={list.id} list={this.props.toDoList}
+                fetchToDoList={this.props.fetchToDoList} toDoList={this.props.toDoList} id={list.id} complete={list.complete} item={list.item} deleteToDo={this.props.deleteToDo} handleDone={this.handleDone} pics={list.process_pic}/>
           ))}
-        </Grid.Row>
-        </Grid>
+          </div>
       </div>
     )
   }

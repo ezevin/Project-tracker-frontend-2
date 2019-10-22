@@ -28,9 +28,9 @@ class NoteList extends Component {
                 <NoteUpdate note={this.props.note} fetchNotes={this.props.fetchNotes} id={this.props.id} projectId={this.props.projectId}/>
               </Grid.Column>
               <Grid.Column width={10}>
-               <h4>{this.props.note}</h4>
+               <span>{this.props.note}</span>
               </Grid.Column>
-              <Grid.Column width={4} floated="right">
+              <Grid.Column width={3} floated="right">
                <Icon name="delete" className="inverseText" onClick={()=> this.props.deleteNote(this.props.id)}/>
              </Grid.Column>
             </Grid><br />
