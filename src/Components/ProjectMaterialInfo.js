@@ -6,7 +6,7 @@ class ProjectMaterialInfo extends Component {
   render(){
 
     return (
-      <Modal size="mini" trigger={<button className="button">Info</button  >}>
+      <Modal size="mini" trigger={<button className="infobutton">Info</button  >}>
         <Card fluid float="left">
           <Card.Content>
             <Grid>

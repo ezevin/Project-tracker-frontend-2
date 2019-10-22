@@ -1,7 +1,6 @@
 .materialsContainer {
-  margin-top: -7px;
+  /* margin-top: -7px;
   margin-left: -2vw;
-  /* margin-right: 60px; */
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 10px;
@@ -11,20 +10,34 @@
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
+  box-shadow: .5px .5px 10px 10px #5B5B5B; */
 }
 
 .materialList {
   overflow-y: scroll;
   margin-top: -1vw;
-  height: 7vw;
+  height: 10vw;
+  font-size: 1em;
+}
+
+.wordBar{
+  margin-top: -1vw
 }
 
 .button {
   background-color: #1B998B;
   border: 2px solid;
   border-radius: 8px;
-  height: 40px;
+  height: 4vw;
+  font-weight: bold;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.infobutton {
+  background-color: #1B998B;
+  border: 2px solid;
+  border-radius: 8px;
+  height: 2vw;
   font-weight: bold;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -45,6 +58,8 @@
     1px 1px 0 #001;
   text-decoration: underline;
   color: #9EA3B0;
+  font-size: 1rem;
+  margin-top: -1vw;
 }
 
 .underline {

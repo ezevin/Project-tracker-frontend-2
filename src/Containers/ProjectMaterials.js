@@ -93,16 +93,15 @@ class ProjectMaterials extends Component {
                 onClose={this.handleClose}
                 />
             </Grid.Column>
-               
             <Grid.Column width={5}>
                 <center><Search  onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
             </Grid.Column>
           </Grid>
-        <Grid className="">
-          <Grid.Column width={4}><span className="textLead"><h3>Item:</h3></span></Grid.Column>
-          <Grid.Column width={4}><span className="textLead"><h3>Price:</h3></span></Grid.Column>
-          <Grid.Column width={3}></Grid.Column>
-          <Grid.Column width={5} className="textLead"><h3>Remove Item</h3></Grid.Column>
+        <Grid className="wordBar">
+          <Grid.Column width={4} className="textLead">Item:</Grid.Column>
+          <Grid.Column width={4} className="textLead">Price:</Grid.Column>
+          <Grid.Column width={2}></Grid.Column>
+          <Grid.Column width={6} className="textLead">Remove Item</Grid.Column>
         </Grid><br />
         <div className="materialList">
           {this.props.materials.map(material => (

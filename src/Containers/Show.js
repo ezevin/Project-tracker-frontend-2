@@ -193,22 +193,24 @@ class Show extends Component {
                     <Notes notes={this.state.notes} fetchNotes={this.fetchNotes} deleteNote={this.deleteNote} projectId={this.state.id}/>
                   </div>
                 </Grid.Column>
-                <Grid.Column className="" width={5}>
+                <Grid.Column className="" width={6}>
                   <div className="todoBox">
                     <ToDo fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={this.state.id} deleteToDo={this.deleteToDo}/>
                   </div>
                 </Grid.Column>
                 <Grid.Column className="" floated="right" width={5}>
-                  <ProjectMaterials
-                    id={this.state.id}
-                    materials={filteredMaterials}
-                    handleSearch={this.handleSearch}
-                    allMaterials={allFilteredMaterials}
-                    fetchInventory={this.fetchInventory}
-                    addToInventory={this.addToInventory}
-                    deleteInventory={this.deleteInventory}
-                    fetchMaterials={this.props.fetchMaterials}
-                    pm={this.props.pm}/>
+                  <div className="materialsBox">
+                    <ProjectMaterials
+                      id={this.state.id}
+                      materials={filteredMaterials}
+                      handleSearch={this.handleSearch}
+                      allMaterials={allFilteredMaterials}
+                      fetchInventory={this.fetchInventory}
+                      addToInventory={this.addToInventory}
+                      deleteInventory={this.deleteInventory}
+                      fetchMaterials={this.props.fetchMaterials}
+                      pm={this.props.pm}/>
+                    </div>
                 </Grid.Column>
               </Grid>
               <Grid>

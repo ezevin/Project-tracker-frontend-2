@@ -135,7 +135,20 @@
 
 .todoBox{
   margin-top: -7px;
-  margin-left: -.5vw;
+  margin-left: 2.3vw;
+  padding: 1vw;
+  padding-top:.7vw;
+  padding-bottom: .7vw;
+  border: 1px solid #ccc;
+  width: 30vw;
+  height: 23vw;
+  background-color: #1A535C;
+}
+
+.materialsBox{
+  margin-top: -7px;
+  margin-left: -2.5vw;
+  /* margin-right: 3vw; */
   padding: 1vw;
   padding-top:.7vw;
   padding-bottom: .7vw;
