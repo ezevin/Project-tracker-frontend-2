@@ -104,21 +104,20 @@ class ResearchImages extends Component {
                   />
           </Grid.Column>
         </Grid>
+        <div className="researchdetails">
         <Grid className="">
-          <Grid.Column width={1}>
-            <button className="researchButton" onClick={this.minusSlides}>&#10094;</button>
-          </Grid.Column>
-          <Grid.Column width={14}>
-            <Grid columns={5} padded className="link cards ">
-              {displayedResearch.map(research =>(
-                 <ResearchGallery key={research.id} research={research} id={research.id} photo={research.image} deleteResearch={this.props.deleteResearch}/>
-              ))}
-            </Grid>
-          </Grid.Column>
-          <Grid.Column width={1}>
-            <button className="researchButton" onClick={this.plusSlides}>&#10095;</button>
-          </Grid.Column>
+
+            <button className="researchButtonLeft" onClick={this.minusSlides}>&#10094;</button>
+            <div className="researchgallery">
+              <Grid columns={5} padded className="link cards ">
+                {displayedResearch.map(research =>(
+                   <ResearchGallery key={research.id} research={research} id={research.id} photo={research.image} deleteResearch={this.props.deleteResearch}/>
+                ))}
+              </Grid>
+            </div>
+            <button className="researchButtonRight" onClick={this.plusSlides}>&#10095;</button>
         </Grid>
+        </div>
       </div>
     )
   }

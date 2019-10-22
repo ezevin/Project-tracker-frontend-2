@@ -58,21 +58,20 @@ fetch(`http://localhost:3000/api/v1/to_do_lists/${id}`, {
           <Header inverted color='grey' textAlign="center" as='h2' className="textLead">
             Process Pictures
           </Header>
-          <Grid className="">
-            <Grid.Column width={1}>
-              <button className="processButton" onClick={this.minusSlides}>&#10094;</button>
-            </Grid.Column>
-            <Grid.Column width={14}>
-              <Grid columns={5} padded className="cards look">
-                {real.map(pic =>(
-                   <ProcessList key={pic.id} reset={this.handleReset} photo={pic.process_pic} title={pic.item} details={pic.details} finished_image={pic.finished_image} id={pic.id} research={this.props.research}/>
-                ))}
-              </Grid>
-          </Grid.Column>
-          <Grid.Column width={1}>
-            <button className="processButton" onClick={this.plusSlides}>&#10095;</button>
-          </Grid.Column>
-        </Grid>
+          <div className="processdetails">
+            <Grid className="">
+              <button className="processButtonLeft" onClick={this.minusSlides}>&#10094;</button>
+              <div className="processgallery">
+                <Grid columns={5} padded className="cards look">
+                  {real.map(pic =>(
+                      <ProcessList key={pic.id} reset={this.handleReset} photo={pic.process_pic} title={pic.item} details={pic.details} finished_image={pic.finished_image}id={pic.id}
+                      research={this.props.research}/>
+                  ))}
+                </Grid>
+              </div>
+            <button className="processButtonRight" onClick={this.plusSlides}>&#10095;</button>
+          </Grid>
+        </div>
         </div>
       )
     }

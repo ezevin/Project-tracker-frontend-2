@@ -1,23 +1,42 @@
 .processContainer{
   margin-top: -7px;
-  margin-right: 75px;
-  margin-bottom: -10px;
+  margin-right: 2vw;
   margin-left: -12vw;
-  padding-top: 10px;
-  padding-right: 30px;
-  padding-left: 15px;
-  padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-top: 1vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
   border: 1px solid #ccc;
   width: 46vw;
-  height: 18vw;
+  height: 14vw;
   background-color: #1A535C;
   border-style: solid;
   border-color: #3A3A3A;
   box-shadow: .5px .5px 10px 10px #5B5B5B;
 }
 
-.processButton {
-  height: 12vw;
+.processgallery{
+  width: 38vw;
+}
+
+.processButtonLeft {
+  height: 8vw;
+  margin-top: -1vw;
+  /* margin-left: .3vw; */
+  padding: 1vw;
+  width: .2vw;
+  background-color: #1B998B;
+  border-color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.processButtonRight {
+  height: 8vw;
+  margin-top: -1vw;
+  /* margin-left: .3vw; */
+  padding: 1vw;
+  width: .2vw;
   background-color: #1B998B;
   border-color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -27,12 +46,17 @@
   position: relative;
   float: left;
   width: 20vw;
-  height: 100px;
+  height: 5vw;
   background-position: 50% 50%;
   background-repeat:   no-repeat;
   background-size:     cover;
   object-fit: scale-down;
   overflow-y: hidden;
+}
+
+.processdetails{
+  margin: 1.3vw;
+  margin-top: 2.5vw;
 }
 
 .showmodal {

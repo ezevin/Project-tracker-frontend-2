@@ -15,7 +15,7 @@ class ResearchGallery extends Component {
       return(
         <>
           <Modal size="mini" basic trigger={trigger}>
-          <center>
+            <center>
               <Card className="showmodal">
                 <Image wrapped size='medium' src={this.props.photo} />
               </Card>
