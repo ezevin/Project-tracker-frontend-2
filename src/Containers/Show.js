@@ -161,7 +161,6 @@ class Show extends Component {
         <>
           <div className="">
             <Grid padded className="">
-              <Grid.Row className="">
                   <Grid.Column width={4} textAlign="center">
                     <div className="textAll startDate">
                       <StartDate id={this.state.id} start_date={start_date} fetchProjects={this.fetchProjects}/>
@@ -186,7 +185,6 @@ class Show extends Component {
                       <h4>Remaining Budget: ${budget - (total )}</h4>
                     </div>
                   </Grid.Column>
-                </Grid.Row>
               </Grid>
             <Divider className="" inverted/>
               <Grid padded className="">
