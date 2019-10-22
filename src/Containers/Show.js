@@ -169,15 +169,15 @@ class Show extends Component {
                       <Budget id={this.state.id} fetchProjects={this.fetchProjects} budget={budget}/>
                     </div>
                   </Grid.Column>
-                  <Grid.Column width={6} className="projectName">
-                    <Header inverted color='grey' textAlign='center' as='h1'>
+                  <Grid.Column width={7} className="projectName">
+                      <br / >
                       <Title id={this.state.id} title={title} fetchProjects={this.fetchProjects}/>
-                    </Header><br />
+                      <br />
                     <center>
                       <ProjectDeets id={this.state.id} details={details} fetchProjects={this.fetchProjects}/>
                     </center>
                   </Grid.Column>
-                  <Grid.Column width={4} textAlign="center">
+                  <Grid.Column width={3} textAlign="center">
                     <div className="dueDate textAll">
                     <DueDate id={this.state.id} due_date={due_date} fetchProjects={this.fetchProjects}/>
                     </div><br /><br /><br /><br /><br />

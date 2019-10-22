@@ -57,7 +57,7 @@ class Title extends Component {
     return (
       <Popup
         content={form}
-        trigger={<Header className="textLead pointer"  inverted color='grey'>{this.props.title}</Header>}
+        trigger={<center><span className="projectTitle pointer"  inverted color='grey'>{this.props.title}</span></center>}
         on='click'
         position='bottom center'
         open={this.state.isOpen}
