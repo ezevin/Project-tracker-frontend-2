@@ -215,21 +215,22 @@ class Show extends Component {
               </Grid>
               <Grid>
                 <Grid.Column className="" width={6}>
-                  <ResearchImages fetchResearchImages={this.fetchResearchImages} researches={this.state.researches} projectId={this.state.id} deleteResearch={this.deleteResearch}/>
+                  <div className="researchBox">
+                    <ResearchImages fetchResearchImages={this.fetchResearchImages} researches={this.state.researches} projectId={this.state.id} deleteResearch={this.deleteResearch}/>
+                  </div>
                 </Grid.Column>
                 <Grid.Column className="" floated="right" width={6}>
-                  <ProcessPics fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={projectId} />
+                  <div className="processBox">
+                    <ProcessPics fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={projectId} />
+                  </div>
                 </Grid.Column>
               </Grid><br />
             </div>
-            <Grid>
-              <Grid.Column className="deleteButton" width={8}>
-                <Button inverted color='red' onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
-              </Grid.Column>
-              <Grid.Column width={7} textAlign="right">
-                  <Finished projectId={this.state.id} finished={finished} fetchProjects={this.props.fetchProjects} fetchToDoList={this.fetchToDoList} fetchNotes={this.fetchNotes} refresh={this.props.refresh}/>
-              </Grid.Column>
-            </Grid>
+            <div className="showButtons">
+              <Button className="deleteButton" inverted color='red' onClick={()=> this.props.deleteProject(this.state.id)}>Delete Project</Button>
+              <Finished projectId={this.state.id} finished={finished} fetchProjects={this.props.fetchProjects} fetchToDoList={this.fetchToDoList} fetchNotes={this.fetchNotes} refresh={this.props.refresh}/>
+
+            </div>
           </>
       )
   }

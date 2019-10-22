@@ -82,7 +82,7 @@ class Finished extends Component {
                     </Form>
     return (
       <>
-      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button  className="pointer" inverted color="teal" type="button">I've Finished!</Button>}>
+      <Modal size="mini" open={this.state.isOpen} onOpen={this.handleOpen} trigger={<Button  className="pointer" float="right" inverted color="teal" type="button">I've Finished!</Button>}>
         <center><Modal.Header>CONGRATULATIONS!</Modal.Header></center>
         <Modal.Header as="h6"><center>CONGRATULATIONS! <br /> Would you like to add a final image? </center></Modal.Header>
           <Modal.Actions>
