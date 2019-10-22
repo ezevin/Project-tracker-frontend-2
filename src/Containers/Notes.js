@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { } from 'react-router-dom'
-import { Header, Grid, Form } from 'semantic-ui-react'
+import { Header, Grid, Form, TextArea } from 'semantic-ui-react'
 
 import "../CSS/Notes.css"
 
@@ -41,30 +41,30 @@ class Notes extends Component {
 
 
     return(
-      <div className="notesContainer textAll">
+    <>
         <center>
           <Header inverted color='grey' as='h2' className="textLead" >Notes:</Header>
         </center>
-        <Grid columns={5} padded className="link cards notesList">
+        <div className="link cards notesList">
           {this.props.notes.map(note =>(
              <NoteList key={note.id} handleUpdate={this.handleUpdate} note={note.note} notes={this.props.notes} id={note.id} item={note.item} deleteNote={this.props.deleteNote} fetchNotes={this.props.fetchNotes} projectId={this.props.projectId} />
           ))}
-        </Grid><br />
+        </div><br />
         <center>
           <Form ref="form" inverted onSubmit={this.handleSubmit}>
           <center>
               <Grid container>
-                <Grid.Column width={12} textAlign="center">
-                  <Form.TextArea  placeholder="Add A New Note" onChange={this.handleChange}/>
+                <Grid.Column width={12}>
+                  <TextArea   placeholder="Add A New Note" onChange={this.handleChange}/>
                 </Grid.Column>
-                <Grid.Column width={3} textAlign="center">
+                <Grid.Column width={3}>
                   <button className="button" type="submit">Add</button>
-                </Grid.Column>
+              </Grid.Column>
               </Grid>
               </center>
           </Form>
         </center><br />
-      </div>
+      </>
     )
   }
 }

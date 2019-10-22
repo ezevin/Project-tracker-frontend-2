@@ -69,19 +69,21 @@ class ToDo extends Component {
               </Grid>
             </center>
           </Form>
-        </center><br />
-        <Grid className=" toDoListHeader">
-        <Grid.Column width={3}><span className="textLead"><h3>Done?</h3></span></Grid.Column>
-        <Grid.Column width={2}><span className="textLead"><h3>Task:</h3></span></Grid.Column>
-        <Grid.Column width={7} textAlign="right"><span className="textLead"><h3>Add Picture:</h3></span></Grid.Column>
-        <Grid.Column width={3}><span className="textLead"><h3>Remove:</h3></span></Grid.Column>
-        <Grid.Column width={3}></Grid.Column>
-        </Grid>
-        <Grid columns={5} padded className="link cards toDoListList">
+        </center>
+        <Grid className="">
+          <Grid.Row>
+          <Grid.Column width={3}><span className="textLead toDoListHeader">Done?</span></Grid.Column>
+          <Grid.Column width={2}><span className="textLead toDoListHeader">Task:</span></Grid.Column>
+          <Grid.Column width={7} textAlign="right"><span className="textLead toDoListHeader">Add Picture:</span></Grid.Column>
+          <Grid.Column width={3}><span className="textLead toDoListHeader">Remove:</span></Grid.Column>
+          <Grid.Column width={3}></Grid.Column>
+          </Grid.Row>
+          <Grid.Row className="toDoListList">
           {this.props.toDoList.map(list =>(
              <><ItemList key={list.id} list={this.props.toDoList}
               fetchToDoList={this.props.fetchToDoList} toDoList={this.props.toDoList} id={list.id} complete={list.complete} item={list.item} deleteToDo={this.props.deleteToDo} handleDone={this.handleDone} pics={list.process_pic}/><br /></>
           ))}
+        </Grid.Row>
         </Grid>
       </div>
     )

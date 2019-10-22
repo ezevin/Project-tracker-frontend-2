@@ -8,7 +8,9 @@
 }
 
 .notesContainer {
-  margin-top: -7px;
+  /* border-style: dashed; */
+  /* border-color: purple; */
+  /* margin-top: -7px;
   margin-left: 1vw;
   padding-left: 20px;
   padding-right: 20px;
@@ -16,16 +18,17 @@
   border: 1px solid #ccc;
   width: 30vw;
   height: 23vw;
-  background-color: #1A535C;
-  border-style: solid;
-  border-color: #3A3A3A;
-  box-shadow: .5px .5px 10px 10px #5B5B5B;
+  background-color: #1A535C; */
+  /* border-style: solid; */
+  /* border-color: #3A3A3A; */
+  /* box-shadow: .5px .5px 10px 10px #5B5B5B; */
 }
 
 .notesList {
-  height: 10vw;
-  margin-top: 3vw;
+  height: 11vw;
+  margin-top: 1vw;
   overflow-y: scroll;
+  /* margin-bottom: -.7vw; */
 }
 
 .button {
@@ -47,4 +50,9 @@
 
 .pointer {
   cursor: pointer;
+}
+
+textarea{
+  height: 4.5vw;
+  width: 3vw;
 }

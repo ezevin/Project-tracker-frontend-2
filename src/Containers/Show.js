@@ -189,10 +189,14 @@ class Show extends Component {
             <Divider className="" inverted/>
               <Grid padded className="">
                 <Grid.Column floated='left' className="" width={5}>
-                  <Notes notes={this.state.notes} fetchNotes={this.fetchNotes} deleteNote={this.deleteNote} projectId={this.state.id}/>
+                  <div className="noteBox">
+                    <Notes notes={this.state.notes} fetchNotes={this.fetchNotes} deleteNote={this.deleteNote} projectId={this.state.id}/>
+                  </div>
                 </Grid.Column>
                 <Grid.Column className="" width={6}>
-                  <ToDo fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={this.state.id} deleteToDo={this.deleteToDo}/>
+                  <div className="todoBox">
+                    <ToDo fetchToDoList={this.fetchToDoList} toDoList={this.state.toDoList} projectId={this.state.id} deleteToDo={this.deleteToDo}/>
+                  </div>
                 </Grid.Column>
                 <Grid.Column className="" floated="right" width={5}>
                   <ProjectMaterials

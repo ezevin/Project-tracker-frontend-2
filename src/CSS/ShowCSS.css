@@ -119,3 +119,27 @@
   1px 1px 0 #001;
   color: white;
 }
+
+.noteBox{
+  /* border-style: dashed;
+  border-color: green; */
+  margin-top: -7px;
+  margin-left: 1vw;
+  padding: 1vw;
+  padding-top:.7vw;
+  border: 1px solid #ccc;
+  width: 30vw;
+  height: 23vw;
+  background-color: #1A535C;
+}
+
+.todoBox{
+  margin-top: -7px;
+  margin-left: 3vw;
+  padding: 1vw;
+  padding-top:.7vw;
+  border: 1px solid #ccc;
+  width: 30vw;
+  height: 23vw;
+  background-color: #1A535C;
+}
