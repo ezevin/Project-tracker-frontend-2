@@ -60,19 +60,21 @@ class Main extends Component {
             <Grid.Column width={1}>
             </Grid.Column>
             <Grid.Column width={7}>
-              <Projects
-                slug={this.props.slug}
-                projects={filteredProjects}
-                addProject={this.props.addProject}
-                handleSearch={this.handlePSearch}
-                titles={this.handleTitleSort}
-                dateSort={this.handleDateSort}
-                dates={this.props.dates}
-                id={this.props.id}
-                dropDown={this.props.dropDown}
-                toDoList={this.props.toDoList}
-                handleProgressSort = {this.handleProgressSort}
-              />
+              <div className="projectMain">
+                <Projects
+                  slug={this.props.slug}
+                  projects={filteredProjects}
+                  addProject={this.props.addProject}
+                  handleSearch={this.handlePSearch}
+                  titles={this.handleTitleSort}
+                  dateSort={this.handleDateSort}
+                  dates={this.props.dates}
+                  id={this.props.id}
+                  dropDown={this.props.dropDown}
+                  toDoList={this.props.toDoList}
+                  handleProgressSort = {this.handleProgressSort}
+                />
+              </div>
             </Grid.Column>
             <Grid.Column width={7}>
               <Materials materials={filteredMaterials}

@@ -73,25 +73,12 @@ class Projects extends Component {
                 <center><Search className="textAll" width={15} onSearchChange={this.props.handleSearch} showNoResults={false} /></center>
               </Grid.Column>
             </Grid.Row>
-            <Grid.Row>
-              <Grid.Column width={8} >
-            <center>
-              <h4 className="textAll">
-                Sort By Project Name:
-                <input type="radio" value="Name" checked={value === 'Name'} onChange={this.props.titles}/>
-              </h4>
-            </center><br />
-              </Grid.Column>
-              <Grid.Column width={6}>
-                <center>
-                  <h4 className="textAll">
-                    Sort By Date:
-                    <input  type="radio" value="Name" checked={value === 'Name'} onChange={this.props.dateSort}/>
-                  </h4>
-                </center><br />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
+            </Grid>
+            <div className="sortGrid">
+              <button className="sortbuttonName" onClick={this.props.titles}>
+              Sort By Project Name</button>
+              <button className="sortbuttonDate" onClick={this.props.dateSort}> Sort By Date</button>
+            </div>
             <center><Container align="center">
               <Grid>
                 <Grid.Column width={6}>
