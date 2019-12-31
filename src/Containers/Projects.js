@@ -33,7 +33,7 @@ class Projects extends Component {
   handleSubmit= (e) => {
     const { title } = this.state
 
-    fetch('http://localhost:3000/api/v1/projects', {
+    fetch('https://fabfolio-backend.herokuapp.com/api/v1/projects', {
           method: "POST",
           headers: {
             Accept: 'application/json',
