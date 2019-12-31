@@ -1,0 +1,9 @@
+.topBar {
+  /* border-style: dashed;
+  border-color: green; */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 3.5vw;
+  margin-left: -1vw;
+}

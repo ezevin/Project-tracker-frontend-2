@@ -2,34 +2,35 @@ import React, { Component } from 'react';
 import { Menu, Dropdown, Header } from 'semantic-ui-react'
 import { Link, withRouter } from 'react-router-dom'
 
+import "../CSS/Top.css"
 
 
 class Top extends Component {
 
   render(){
     return (
-       <Menu>
-        <Menu.Menu size="massive">
+       <Menu className="topBar">
+        <div size="large" className="topBar">
         {
           this.props.currentUser ?
           <Link to="/home" onClick={this.props.refresh}>
             <Menu.Item>
-              <Header as="h1" className='underline header'> FabFolio: </Header>
+              <Header as="" className='underline header'> FabFolio: </Header>
             </Menu.Item>
           </Link>
           :
           <Link to="/login">
             <Menu.Item>
-              <Header as="h1" className='underline header'> FabFolio: </Header>
+              <Header as="" className='underline header'> FabFolio: </Header>
             </Menu.Item>
           </Link>
         }
           <Link to="/home" >
             <Menu.Item className="headSummary">
-              <Header as="h3"> A Fabricator's Portfolio </Header>
+              <Header as=""> A Fabricator's Portfolio </Header>
             </Menu.Item>
           </Link>
-        </Menu.Menu>`
+        </div>`
 
         <Menu.Menu position='right'>
           {

@@ -164,3 +164,52 @@
   height: 23vw;
   background-color: #1A535C;
 }
+
+.researchBox {
+  margin-top: -20px;
+  margin-left: 3vw;
+  margin-bottom: 0px;
+  padding-top: 1vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  border: 1px solid #ccc;
+  width: 46vw;
+  height: 13vw;
+  background-color: #1A535C;
+  border: 1px solid #ccc;
+  /* box-shadow: .5px .5px 10px 10px #5B5B5B; */
+}
+
+.processBox {
+  margin-top: -20px;
+  margin-right: 3vw;
+  margin-left: -12.5vw;
+  margin-bottom: 0px;
+  padding-top: 1vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  border: 1px solid #ccc;
+  width: 46vw;
+  height: 13vw;
+  background-color: #1A535C;
+  border: 1px solid #ccc;
+}
+
+.showButtons {
+  /* display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  height: 3.5vw;
+  margin-left: 3vw;
+  margin-right: 40vw
+}
+
+.deleteButton {
+  width: 20vw;
+}
+
+.finishedButton{
+  margin-left: 30vw
+}
